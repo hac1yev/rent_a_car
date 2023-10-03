@@ -1,10 +1,12 @@
 import React from 'react';
-import Filter from '../components/Home/Filter';
+// import Filter from '../components/Home/Filter';
+import OtherCars from '../components/Home/OtherCars';
 
 const Home = () => {
     return (
         <div>
-            <Filter />
+            {/* <Filter /> */}
+            <OtherCars />
         </div>
     );
 };
