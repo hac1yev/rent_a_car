@@ -1,4 +1,4 @@
-.slick-arrow {
+.slider-cont .slick-arrow {
   display: none !important;
 }
 
@@ -30,11 +30,30 @@
   border-radius: 50px;
 }
 
-.slick-div-cont img:focus-visible , .slick-div-cont:focus-visible{
-    border: none;
-    outline: none;
+.slick-div-cont img:focus-visible,
+.slick-div-cont:focus-visible {
+  border: none;
+  outline: none;
 }
 
 .slick-dots {
   bottom: 15px !important;
+}
+
+@media screen and (max-width: 768px) {
+  .slick-div-cont p {
+    font-size: 2rem;
+    line-height: normal;
+  }
+
+  .slick-div-cont {
+    height: 70vh !important;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .slick-div-cont p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
 }

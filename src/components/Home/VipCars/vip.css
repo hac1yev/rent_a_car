@@ -1,0 +1,79 @@
+.vip-card div{
+    height: 350px;
+    background-color: red;
+}
+
+.vip-slider-cards {
+  margin-bottom: 100px;
+}
+
+.vip-slider-cards .slick-dots{
+    display: none !important;
+}
+
+.vip-slider-cards h3{
+    padding: 10px;
+    background-color: red;
+    margin: 10px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black !important;
+  font-size: 25px !important;
+}
+
+.vip-container {
+  position: relative;
+  margin-top: 50px;
+}
+
+.vip-slider-cards .slick-next {
+  top: -48px;
+  right: 15px !important;
+  display: flex;
+}
+
+.vip-slider-cards .slick-prev {
+  top: -48px;
+  right: 60px !important;
+  left: initial;
+}
+
+.vip-slider-cards .slick-prev:before {
+  content: "<" !important;
+  color: rgb(0, 0, 0) !important;
+  padding: 3px 10px;
+  font-size: 30px;
+  border: 2px solid black;
+  border-radius: 50%;
+  font-weight: 600;
+  font-family: 'Inter';
+  text-align: center;
+}
+
+.vip-slider-cards .slick-next:before {
+  content: ">" !important;
+  color: black !important;
+  padding: 3px 10px;
+  font-size: 30px;
+  border: 2px solid black;
+  border-radius: 50%;
+  font-weight: 600;
+  text-align: center;
+  font-family: 'Inter';
+}
+
+.vip-container-1 {
+  margin-bottom: 30px;
+}
+
+.vip-container-1 h1 {
+  color: #000;
+  font-family: "Inter";
+  font-size: 29px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.87px;
+}

@@ -6,7 +6,7 @@ import "./main.css";
 import element from "../../../assets/images/main-slider/1.png";
 
 const MainSlider = () => {
-  const settings = {
+  const settings1 = {
     dots: true,
     infinite: true,
     slidesToShow: 1,
@@ -16,22 +16,42 @@ const MainSlider = () => {
   };
   return (
     <div className="slider-cont">
-      <Slider {...settings}>
+      <Slider {...settings1}>
         <div className="slick-div-cont">
           <img src={element} alt="" />
-          <p>Avtomobil <span>rahatlığı <br /> səyahətinizi mükəmməlləşdirsin!</span></p>
+          <p>
+            Avtomobil{" "}
+            <span>
+              rahatlığı <br /> səyahətinizi mükəmməlləşdirsin!
+            </span>
+          </p>
         </div>
         <div className="slick-div-cont">
           <img src={element} alt="" />
-         <p>Avtomobil <span>rahatlığı <br /> səyahətinizi mükəmməlləşdirsin!</span></p>
+          <p>
+            Avtomobil{" "}
+            <span>
+              rahatlığı <br /> səyahətinizi mükəmməlləşdirsin!
+            </span>
+          </p>
         </div>
         <div className="slick-div-cont">
           <img src={element} alt="" />
-         <p>Avtomobil <span>rahatlığı <br /> səyahətinizi mükəmməlləşdirsin!</span></p>
+          <p>
+            Avtomobil{" "}
+            <span>
+              rahatlığı <br /> səyahətinizi mükəmməlləşdirsin!
+            </span>
+          </p>
         </div>
         <div className="slick-div-cont">
           <img src={element} alt="" />
-         <p>Avtomobil <span>rahatlığı <br /> səyahətinizi mükəmməlləşdirsin!</span></p>
+          <p>
+            Avtomobil{" "}
+            <span>
+              rahatlığı <br /> səyahətinizi mükəmməlləşdirsin!
+            </span>
+          </p>
         </div>
       </Slider>
     </div>
