@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FormControl, Box, InputLabel, NativeSelect } from '@mui/material';
-import { DatePicker } from 'react-datepicker';
+// import { DatePicker } from 'react-datepicker';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { styled } from '@mui/system';
@@ -82,7 +82,7 @@ const Filter = () => {
             <option value={30}>Thirty</option>
           </NativeSelect>
         </FormControl>
-        <FormControl>
+        {/* <FormControl>
           <DatePicker
             selected={startDate}
             onChange={onChange}
@@ -91,7 +91,7 @@ const Filter = () => {
             selectsRange
             inline
           />
-        </FormControl>
+        </FormControl> */}
       </StyledBox>
     </LocalizationProvider>
   );

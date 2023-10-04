@@ -1,3 +1,7 @@
+.vip-card {
+  padding: 0 10px;
+}
+
 .vip-card div{
     height: 350px;
     background-color: red;
