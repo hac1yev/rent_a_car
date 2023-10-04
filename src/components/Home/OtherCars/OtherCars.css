@@ -106,6 +106,34 @@
     height: 60%;
 }
 
+.other-cars-button {
+    margin-top: 78px;
+}
+
+.other-cars-button button {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 37px; 
+    background-color: transparent;
+    width: 255px;
+    height: 62px;
+    border-radius: 16px;
+    background: #475EE9;
+    border: none;
+    outline: none;
+}
+
+@media screen and (max-width: 992px) {
+    .other-cars-button button {
+        font-size: 17px;
+        width: 220px;
+        height: 52px;
+    }
+}
+
 @media screen and (max-width: 767.5px) {
     .car-card {
         max-width: 350px;
@@ -115,5 +143,23 @@
     .car-card-col {
         display: flex;
         justify-content: center;
+    }
+
+    .other-cars-button {
+        margin-top: 48px;
+    }
+
+    .other-cars-button button {
+        font-size: 16px;
+        width: 200px;
+        height: 45px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .other-cars-button button {
+        font-size: 15px;
+        width: 180px;
+        height: 40px;
     }
 }
