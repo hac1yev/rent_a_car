@@ -19,19 +19,39 @@ const MainSlider = () => {
       <Slider {...settings}>
         <div className="slick-div-cont">
           <img src={element} alt="" />
-          <p>Avtomobil <span>rahatlığı <br /> səyahətinizi mükəmməlləşdirsin!</span></p>
+          <p>
+            Avtomobil{" "}
+            <span>
+              rahatlığı <br /> səyahətinizi mükəmməlləşdirsin!
+            </span>
+          </p>
         </div>
         <div className="slick-div-cont">
           <img src={element} alt="" />
-         <p>Avtomobil <span>rahatlığı <br /> səyahətinizi mükəmməlləşdirsin!</span></p>
+          <p>
+            Avtomobil{" "}
+            <span>
+              rahatlığı <br /> səyahətinizi mükəmməlləşdirsin!
+            </span>
+          </p>
         </div>
         <div className="slick-div-cont">
           <img src={element} alt="" />
-         <p>Avtomobil <span>rahatlığı <br /> səyahətinizi mükəmməlləşdirsin!</span></p>
+          <p>
+            Avtomobil{" "}
+            <span>
+              rahatlığı <br /> səyahətinizi mükəmməlləşdirsin!
+            </span>
+          </p>
         </div>
         <div className="slick-div-cont">
           <img src={element} alt="" />
-         <p>Avtomobil <span>rahatlığı <br /> səyahətinizi mükəmməlləşdirsin!</span></p>
+          <p>
+            Avtomobil{" "}
+            <span>
+              rahatlığı <br /> səyahətinizi mükəmməlləşdirsin!
+            </span>
+          </p>
         </div>
       </Slider>
     </div>
