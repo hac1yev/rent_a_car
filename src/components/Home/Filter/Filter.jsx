@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FormControl, Box, InputLabel, NativeSelect } from '@mui/material';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import { DatePicker } from 'react-datepicker';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { styled } from '@mui/system';
-
 
 const styles = (theme) => ({
   padding: theme.spacing(1),
@@ -23,6 +22,15 @@ const styledBox = {
 const StyledBox = styled(Box)(({ theme }) => styles(theme));
 
 const Filter = () => {
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(null);
+
+  const onChange = (dates) => {
+    const [start, end] = dates;
+    setStartDate(start);
+    setEndDate(end);
+  };
+
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <StyledBox sx={styledBox}>
@@ -75,7 +83,14 @@ const Filter = () => {
           </NativeSelect>
         </FormControl>
         <FormControl>
-            <DatePicker label="Basic date picker" />
+          <DatePicker
+            selected={startDate}
+            onChange={onChange}
+            startDate={startDate}
+            endDate={endDate}
+            selectsRange
+            inline
+          />
         </FormControl>
       </StyledBox>
     </LocalizationProvider>
