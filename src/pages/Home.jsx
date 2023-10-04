@@ -1,6 +1,6 @@
 import React from 'react';
 // import Filter from '../components/Home/Filter';
-import OtherCars from '../components/Home/OtherCars';
+import OtherCars from '../components/Home/OtherCars/OtherCars';
 
 const Home = () => {
     return (
