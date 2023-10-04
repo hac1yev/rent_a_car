@@ -22,14 +22,14 @@ const styledBox = {
 const StyledBox = styled(Box)(({ theme }) => styles(theme));
 
 const Filter = () => {
-  const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(null);
+  // const [startDate, setStartDate] = useState(new Date());
+  // const [endDate, setEndDate] = useState(null);
 
-  const onChange = (dates) => {
-    const [start, end] = dates;
-    setStartDate(start);
-    setEndDate(end);
-  };
+  // const onChange = (dates) => {
+  //   const [start, end] = dates;
+  //   setStartDate(start);
+  //   setEndDate(end);
+  // };
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
