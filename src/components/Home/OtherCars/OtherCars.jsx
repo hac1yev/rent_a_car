@@ -1,7 +1,7 @@
 import React from 'react';
 import './OtherCars.css';
 import { BsBookmarks } from 'react-icons/bs';
-import { BsBookmarksFill } from 'react-icons/bs';
+// import { BsBookmarksFill } from 'react-icons/bs';
 import { carApis } from '../../../assets/api/dummyCarsApi';
 import { MdUpdate } from 'react-icons/md';
 import { PiEngineBold } from 'react-icons/pi';
