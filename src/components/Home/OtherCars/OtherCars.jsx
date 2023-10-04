@@ -50,7 +50,7 @@ const OtherCars = () => {
                     </div>
                 ))}
             </div>
-            <div className='text-center'>
+            <div className='text-center other-cars-button'>
                 <button>Hamısını göstər</button>
             </div>
         </div>
