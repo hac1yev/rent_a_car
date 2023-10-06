@@ -13,7 +13,7 @@ const OtherCars = () => {
             <h2 className='other-cars-title'>Digər Avtomobillər</h2>
             <div className="row">
                 {carApis.map((item) => (
-                    <div className="col-xl-3 col-lg-4 col-md-6 car-card-col">
+                    <div className="col-xl-3 col-lg-4 col-md-6 car-card-col" key={item.id}>
                         <div className="card car-card">
                             <div className='car-imgs'>
                                 <img className="card-img-top" src={item.car_img.default} alt={item.car_name} />
