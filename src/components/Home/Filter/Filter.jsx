@@ -3,11 +3,13 @@ import DatePicker from "react-datepicker";
 import { AiOutlineSearch } from 'react-icons/ai';
 import "react-datepicker/dist/react-datepicker.css";
 import Select from 'react-select';
+import filterIcon from '../../../assets/images/home/menu.png';
 import './Filter.css';
 
 const Filter = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(null);
+  const [filterIsVisible,setFilterIsVisible] = useState(false);
 
   const [isDateVisible,setIsDateVisible] = useState(false);
 
@@ -22,6 +24,10 @@ const Filter = () => {
     setIsDateVisible(prev => !prev); 
   }
 
+  const showHideFilter = () => {
+    setFilterIsVisible(prev => !prev);
+  };
+
   const options = [
     { value: 'strawberry', label: 'Strawberry' },
     { value: 'vanilla', label: 'Vanilla' },
@@ -33,9 +39,13 @@ const Filter = () => {
       <div className="container">
         <h2 className='filter-title'>Özünə ən uyğun avtomobili seç</h2>
           <form action="" className='filter-form row'>
+            <div className='filter-parametr' onClick={showHideFilter}>
+              Yüksək filter 
+              <img src={filterIcon} alt="filter-icon" />
+            </div>
             <div className='filter-selects col-md-12'>
               <div className="row w-100">
-                <div className='select-group col-lg-3 col-md-6'>
+                <div className={filterIsVisible ? 'select-group col-lg-4 col-md-6' : 'select-group col-lg-3 col-md-6'}>
                   <label htmlFor="marka">Götürümə yeri</label>
                   <div className="select2-icon-wrap">
                     <svg className='select2-icon' xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 24 27" fill="none">
@@ -51,7 +61,7 @@ const Filter = () => {
                     />
                   </div>
                 </div>
-                <div className='select-group col-lg-3 col-md-6'>
+                <div className={filterIsVisible ? 'select-group col-lg-4 col-md-6' : 'select-group col-lg-3 col-md-6'}>
                   <label htmlFor="model">Təhvil yeri</label>
                   <div className='select2-icon-wrap'>
                     <svg className='select2-icon' xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 24 27" fill="none">
@@ -67,7 +77,7 @@ const Filter = () => {
                     />
                   </div>
                 </div>
-                <div className='filter-date-wrap col-lg-4 col-md-6'>
+                <div className={filterIsVisible ? 'filter-date-wrap col-lg-4 col-md-6' : 'filter-date-wrap col-lg-4 col-md-6'}>
                   
                   <div className='filter-datepicker'>
                     <label htmlFor="">Götürülmə və təhvil tarixi</label>
@@ -88,6 +98,60 @@ const Filter = () => {
                     />}
                   </div>
                 </div>
+                
+                {filterIsVisible && <>
+                  <div className="col-lg-4 col-md-6 high-filter-col">
+                    <div className='select-group-high'>
+                      <label htmlFor="otrsay">Oturacaq sayı</label>
+                      <select name="otrsay" id="otrsay">
+                        <option value="2">2</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div className="col-lg-4 col-md-6 high-filter-col">
+                    <div className='select-group-high'>
+                      <label htmlFor="relyear">Buraxılış ili</label>
+                      <select name="relyear" id="relyear">
+                        <option value="2000">2000</option>
+                        <option value="2010">2010</option>
+                        <option value="2020">2020</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div className="col-lg-4 col-md-6 high-filter-col">
+                    <div className='input-group-high'>
+                      <label htmlFor="">Qiymət aralığı</label>
+                      <div className='filter-inputs-wrap'>
+                        <input type="number" placeholder='Min' />
+                        <span></span>
+                        <input type="number" placeholder='Max' />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-lg-4 col-md-6 high-filter-col">
+                    <div className='select-group-high'>
+                      <label htmlFor="surqut">Sürət qutusu</label>
+                      <select name="surqut" id="surqut">
+                        <option value="">2</option>
+                        <option value="">5</option>
+                        <option value="">10</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div className="col-lg-4 col-md-6 high-filter-col">
+                    <div className='select-group-high'>
+                      <label htmlFor="mothecm">Motor həcmi</label>
+                      <select name="mothecm" id="mothecm">
+                        <option value="">2</option>
+                        <option value="">5</option>
+                        <option value="">10</option>
+                      </select>
+                    </div>
+                  </div>
+                </>}
+
                 <div className="filter-search-button col-lg-2 col-md-4">
                   <button>
                     Axtar

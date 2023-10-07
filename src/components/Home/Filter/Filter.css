@@ -1,4 +1,5 @@
 .filter-form {
+    position: relative;
     display: flex;
     align-items: flex-end;
     border-radius: 18px;
@@ -58,6 +59,57 @@
     margin-bottom: 14px;
 }
 
+.high-filter-col {
+    margin-top: 1rem;
+}
+
+.select-group-high {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-inputs-wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.filter-inputs-wrap span {
+    width: 50px;
+    height: 2px;
+    background: rgba(0, 0, 0, 0.30);
+}
+
+.select-group-high label,
+.input-group-high label {
+    color: #000;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.36px;
+    margin-bottom: 14px;
+}
+
+.select-group-high select,
+.filter-inputs-wrap input {
+    width: 100%;
+    border: none!important;
+    color: #757575;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 18px;
+    /* padding-right: 35px; */
+    border-radius: 11px;
+    background: #F0F5F5;
+    cursor: pointer;
+}
+
 .select2-icon-wrap,
 .filter-date-div {
     position: relative;
@@ -66,7 +118,8 @@
 .datepicker-icon {
     width: 20px;
     position: absolute;
-    bottom: 15px;
+    bottom: 50%;
+    transform: translateY(50%);
     right: 10px;
     z-index: 10;
 }
@@ -144,7 +197,6 @@
 .filter-search-button {
     display: flex;
     align-items: flex-end;
-    justify-content: flex-end;
 }
 
 .filter-search-button button {
@@ -172,9 +224,34 @@
     opacity: 0.8;
 }
 
+.filter-parametr {
+    width: max-content;
+    position: absolute;
+    z-index: 10;
+    top: 15px;
+    right: 26px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    color: #000;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.36px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.filter-parametr img {
+    width: 20px;
+}
+
 @media screen and (max-width: 991.5px) {
     .filter-search-button {
         justify-content: flex-start;
+        margin-top: 1.3rem;
     }
 
     .filter-form {
@@ -183,10 +260,11 @@
 
     .select-group,
     .filter-date-wrap {
-        margin-top: 0.6rem;
+        margin-top: 1rem;
     }
 
-    .filter-selects {
+    .filter-selects,
+    .high-filter-selects {
         display: flex;
         justify-content: center;
     }
@@ -215,14 +293,23 @@
     }
 
     .filter-selects select, 
-    .filter-date-div {
+    .filter-date-div,
+    .select-group-high select,
+    .filter-inputs-wrap input {
         padding: 15px;
     }
 
     .select-group label, 
-    .filter-datepicker label {
+    .filter-datepicker label,
+    .select-group-high label, 
+    .input-group-high label {
         font-size: 16px;
         margin-bottom: 6px;
+    }
+
+    .filter-parametr,
+    .filter-parametr img {
+        font-size: 16px;
     }
 
     .filter-title {
