@@ -1,24 +1,129 @@
-.vip-card {
+.vip-cards {
   padding: 0 10px;
 }
 
-.vip-card div{
-    height: 350px;
-    background-color: red;
+.vip-cards {
+  height: 350px;
+  /* background-color: red; */
+  /* border: 1px solid black; */
+}
+
+.vip-car-img {
+  width: 100% !important;
+  object-fit: cover;
+  height: 250px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.vip-img {
+  position: relative;
+}
+
+.car-brand {
+  position: absolute;
+  top: 15px;
+  margin-left: 5%;
+  width: 221px;
+  height: 47px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 10px;
+  border-radius: 12px;
+}
+
+.car-brand img {
+  width: 26px;
+  height: 26px;
+}
+
+.car-brand p,
+.vipcar-info p {
+  margin: 0;
+}
+
+.vip-info {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.05));
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.vipcar-info {
+  gap: 10px;
+}
+
+.vipcar-info,
+.formal-part,
+.vipcar-price {
+  display: flex;
+  align-items: center;
+}
+
+.vipcar-price b {
+  color: #000;
+  font-family: "Inter";
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.vipcar-price span {
+  color: #000;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.vipcar-info img {
+  width: 36px;
+  height: 36px;
+}
+
+.formal-part img {
+  width: 11px;
+  height: 11px;
+}
+
+.vip-brand-name {
+  color: #000;
+  font-family: "Inter";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.vip-model-name {
+  color: #000;
+  font-family: "Inter";
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .vip-slider-cards {
-  margin-bottom: 100px;
+  margin: 60px 0;
 }
 
-.vip-slider-cards .slick-dots{
-    display: none !important;
+.vip-slider-cards .slick-dots {
+  display: none !important;
 }
 
-.vip-slider-cards h3{
-    padding: 10px;
-    background-color: red;
-    margin: 10px;
+.vip-slider-cards h3 {
+  padding: 10px;
+  background-color: red;
+  margin: 10px;
 }
 
 .slick-prev:before,
@@ -33,14 +138,14 @@
 }
 
 .vip-slider-cards .slick-next {
-  top: -48px;
-  right: 15px !important;
+  top: -75px;
+  right: 20px !important;
   display: flex;
 }
 
 .vip-slider-cards .slick-prev {
-  top: -48px;
-  right: 60px !important;
+  top: -75px;
+  right: 65px !important;
   left: initial;
 }
 
@@ -52,7 +157,7 @@
   border: 2px solid black;
   border-radius: 50%;
   font-weight: 600;
-  font-family: 'Inter';
+  font-family: "Inter";
   text-align: center;
 }
 
@@ -65,11 +170,7 @@
   border-radius: 50%;
   font-weight: 600;
   text-align: center;
-  font-family: 'Inter';
-}
-
-.vip-container-1 {
-  margin-bottom: 30px;
+  font-family: "Inter";
 }
 
 .vip-container-1 h1 {
@@ -80,4 +181,48 @@
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.87px;
+}
+
+.rent-store {
+  color: #000;
+  font-family: "Inter";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.formal-part p {
+  color: #000;
+  font-family: "Inter";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media screen and (max-width: 600px) {
+  .vip-slider-cards .slick-prev,
+  .vip-slider-cards .slick-next {
+    display: none !important;
+  }
+
+  .vip-slider-cards{
+    margin: 30px 0;
+  }
+
+  .vip-cards{
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .vip-info {
+    padding: 16px 5px;
+  }
+
+  .vipcar-price b,
+  .vipcar-price span {
+    font-size: 15px;
+  }
 }
