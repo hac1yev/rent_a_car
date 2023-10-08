@@ -1,362 +1,361 @@
 .filter-form {
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    border-radius: 18px;
-    background: #F9FBFC;
-    box-shadow: -3px 10px 24px 3px rgba(29, 160, 255, 0.13);
-    padding-top: 45px;
-    padding-bottom: 68px;
-    padding-left: 52px;
-    padding-right: 73px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 18px;
+  background: #f9fbfc;
+  box-shadow: -3px 10px 24px 3px rgba(29, 160, 255, 0.13);
+  padding-top: 45px;
+  padding-bottom: 68px;
+  padding-left: 52px;
+  padding-right: 73px;
 }
 
 .filter-title {
-    color: #000;
-    font-family: Inter;
-    font-size: 29px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 0.87px;
-    margin-bottom: 34px;
+  color: #000;
+  font-family: Inter;
+  font-size: 29px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.87px;
+  margin-bottom: 34px;
 }
 
 .filter-selects {
-    display: flex;
+  display: flex;
 }
 
 .filter-selects select,
 .filter-date-div {
-    width: 100%;
-    border: none!important;
-    color: #757575;
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    padding: 18px 15px;
-    padding-right: 35px;
-    border-radius: 11px;
-    background: #F0F5F5;
-    cursor: pointer;
+  width: 100%;
+  border: none !important;
+  color: #757575;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 18px 15px;
+  padding-right: 35px;
+  border-radius: 11px;
+  background: #f0f5f5;
+  cursor: pointer;
 }
 
 .filter-date-div {
-    display: block;
+  display: block;
 }
 
 .select-group label,
 .filter-datepicker label {
-    color: #000;
-    font-family: Inter;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 0.36px;
-    margin-bottom: 14px;
+  color: #000;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.36px;
+  margin-bottom: 14px;
 }
 
 .high-filter-col {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .select-group-high {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .filter-inputs-wrap {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .filter-inputs-wrap span {
-    width: 50px;
-    height: 2px;
-    background: rgba(0, 0, 0, 0.30);
+  width: 50px;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .select-group-high label,
 .input-group-high label {
-    color: #000;
-    font-family: Inter;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 0.36px;
-    margin-bottom: 14px;
+  color: #000;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.36px;
+  margin-bottom: 14px;
 }
 
 .select-group-high select,
 .filter-inputs-wrap input {
-    width: 100%;
-    border: none!important;
-    color: #757575;
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    padding: 18px;
-    /* padding-right: 35px; */
-    border-radius: 11px;
-    background: #F0F5F5;
-    cursor: pointer;
+  width: 100%;
+  border: none !important;
+  color: #757575;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 18px;
+  /* padding-right: 35px; */
+  border-radius: 11px;
+  background: #f0f5f5;
+  cursor: pointer;
 }
 
 .select2-icon-wrap,
 .filter-date-div {
-    position: relative;
+  position: relative;
 }
 
 .datepicker-icon {
-    width: 20px;
-    position: absolute;
-    bottom: 50%;
-    transform: translateY(50%);
-    right: 10px;
-    z-index: 10;
+  width: 20px;
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+  right: 10px;
+  z-index: 10;
 }
 
 .select2-icon {
-    width: 20px;
-    position: absolute;
-    bottom: 50%;
-    transform: translateY(50%);
-    right: 10px;
-    z-index: 10;
+  width: 20px;
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+  right: 10px;
+  z-index: 10;
 }
 
 .select__value-container,
 .css-1fdsijx-ValueContainer {
-    padding-left: 0!important;
+  padding-left: 0 !important;
 }
 
 .select__indicators,
 .css-1hb7zxy-IndicatorsContainer {
-    display: none!important;
+  display: none !important;
 }
 
 .select__menu {
-    z-index: 30!important;
+  z-index: 30 !important;
 }
 
 .select__control,
 .css-13cymwt-control,
 .css-t3ipsp-control {
-    width: 100%;
-    border: none!important;
-    color: #757575;
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    padding: 11px 15px;
-    padding-right: 35px;
-    border-radius: 11px!important;
-    background: #F0F5F5!important;
-    cursor: pointer;
+  width: 100%;
+  border: none !important;
+  color: #757575;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 11px 15px;
+  padding-right: 35px;
+  border-radius: 11px !important;
+  background: #f0f5f5 !important;
+  cursor: pointer;
 }
 
 .react-datepicker {
-    width: 100%;
-    z-index: 10;
-    border-radius: 0px 0px 21px 21px;
-    background: #F0F5F5;
-    box-shadow: 0px 14px 20px 0px rgba(0, 0, 0, 0.06);
-    border: none;
+  width: 100%;
+  z-index: 10;
+  border-radius: 0px 0px 21px 21px;
+  background: #f0f5f5;
+  box-shadow: 0px 14px 20px 0px rgba(0, 0, 0, 0.06);
+  border: none;
 }
 
 .react-datepicker__month-container {
-    width: 100%;
+  width: 100%;
 }
 
 .react-datepicker__day,
 .react-datepicker__day-name {
-    width: 12%;
+  width: 12%;
 }
 
 .filter-date-wrap {
-    height: 90px;
-    position: relative;
+  height: 90px;
+  position: relative;
 }
 
 .filter-datepicker {
-    width: 94%;
-    position: absolute;
-    top: 0;
+  width: 94%;
+  position: absolute;
+  top: 0;
 }
 
 .filter-search-button {
-    display: flex;
-    align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
 }
 
 .filter-search-button button {
-    width: 157px;
-    height: 56px;
-    border-radius: 11px;
-    background: #475EE9;
-    border: none;
-    outline: none;
-    color: #FFF;
-    font-family: Inter;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 0.36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-    transition: all 0.2s ease;
+  width: 157px;
+  height: 56px;
+  border-radius: 11px;
+  background: #475ee9;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  transition: all 0.2s ease;
 }
 
 .filter-search-button button:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .filter-parametr {
-    width: max-content;
-    position: absolute;
-    z-index: 10;
-    top: 15px;
-    right: 26px;
-    display: flex;
-    align-items: center;
-    gap: 3px;
-    color: #000;
-    font-family: Inter;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 0.36px;
-    cursor: pointer;
-    padding: 0;
+  width: max-content;
+  position: absolute;
+  z-index: 10;
+  top: 15px;
+  right: 26px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: #000;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.36px;
+  cursor: pointer;
+  padding: 0;
 }
 
 .filter-parametr img {
-    width: 20px;
+  width: 20px;
 }
 
 @media screen and (max-width: 991.5px) {
-    .filter-search-button {
-        justify-content: flex-start;
-        margin-top: 1.3rem;
-    }
+  .filter-search-button {
+    justify-content: flex-start;
+    margin-top: 1.3rem;
+  }
 
-    .filter-form {
-        padding: 40px 35px;
-    }
+  .filter-form {
+    padding: 40px 35px;
+  }
 
-    .select-group,
-    .filter-date-wrap {
-        margin-top: 1rem;
-    }
+  .select-group,
+  .filter-date-wrap {
+    margin-top: 1rem;
+  }
 
-    .filter-selects,
-    .high-filter-selects {
-        display: flex;
-        justify-content: center;
-    }
+  .filter-selects,
+  .high-filter-selects {
+    display: flex;
+    justify-content: center;
+  }
 
-    .filter-title {
-        font-size: 25px;
-    }
+  .filter-title {
+    font-size: 25px;
+  }
 }
 
 @media screen and (max-width: 767.5px) {
-    .filter-search-button {
-        margin-top: 1rem;
-    }
+  .filter-search-button {
+    margin-top: 1rem;
+  }
 
-    .select-group,
-    .filter-date-wrap {
-        margin-top: 1rem;
-    }
+  .select-group,
+  .filter-date-wrap {
+    margin-top: 1rem;
+  }
 
-    .filter-datepicker {
-        width: 96%;
-    }
+  .filter-datepicker {
+    width: 96%;
+  }
 
-    .filter-form {
-        padding: 40px 20px;
-    }
+  .filter-form {
+    padding: 40px 20px;
+  }
 
-    .filter-selects select, 
-    .filter-date-div,
-    .select-group-high select,
-    .filter-inputs-wrap input {
-        padding: 15px;
-    }
+  .filter-selects select,
+  .filter-date-div,
+  .select-group-high select,
+  .filter-inputs-wrap input {
+    padding: 15px;
+  }
 
-    .select-group label, 
-    .filter-datepicker label,
-    .select-group-high label, 
-    .input-group-high label {
-        font-size: 16px;
-        margin-bottom: 6px;
-    }
+  .select-group label,
+  .filter-datepicker label,
+  .select-group-high label,
+  .input-group-high label {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
 
-    .filter-parametr,
-    .filter-parametr img {
-        font-size: 16px;
-    }
+  .filter-parametr,
+  .filter-parametr img {
+    font-size: 16px;
+  }
 
-    .filter-title {
-        font-size: 23px;
-    }
+  .filter-title {
+    font-size: 23px;
+  }
 
-    .filter-search-button button {
-        width: 147px;
-        height: 50px;
-        font-size: 16px;
-    }
+  .filter-search-button button {
+    width: 147px;
+    height: 50px;
+    font-size: 16px;
+  }
 
-    .select__control,
-    .css-13cymwt-control,
-    .css-t3ipsp-control {
-        padding: 8px 15px;
-        padding-right: 35px;
-    }
+  .select__control,
+  .css-13cymwt-control,
+  .css-t3ipsp-control {
+    padding: 8px 15px;
+    padding-right: 35px;
+  }
 
-    .datepicker-icon {
-        bottom: 13px;
-    }
-    
+  .datepicker-icon {
+    bottom: 13px;
+  }
 }
 
-@media screen and (max-width:600px) {
-    .filter-datepicker {
-        width: 94%;
-    }
+@media screen and (max-width: 600px) {
+  .filter-datepicker {
+    width: 94%;
+  }
 
-    .filter-form {
-        padding: 40px 10px;
-    }
+  .filter-form {
+    padding: 40px 10px;
+  }
 
-    .filter-title {
-        font-size: 21px;
-        margin-bottom: 20px;
-    }
+  .filter-title {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
 }
 
-@media screen and (max-width:400px) {
-    .filter-datepicker {
-        width: 92%;
-    }
+@media screen and (max-width: 400px) {
+  .filter-datepicker {
+    width: 92%;
+  }
 
-    .filter-form {
-        padding: 40px 0px;
-    }
+  .filter-form {
+    padding: 40px 0px;
+  }
 }
-

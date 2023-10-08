@@ -227,11 +227,16 @@
   }
 
   .vip-container-1 h1{
-    font-size: 25px;
+    font-size: 20px;
+    text-align: center;
   }
 
   .vipcar-price b,
   .vipcar-price span {
     font-size: 15px;
+  }
+
+  .car-card{
+    margin-top: 30px;
   }
 }
