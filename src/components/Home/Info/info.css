@@ -2,6 +2,7 @@
   background: #060b1f;
   padding: 100px 0;
   margin-top: 80px;
+  /* height: 100vh; */
 }
 
 .info-header {
@@ -13,7 +14,9 @@
   line-height: normal;
 }
 
-.info-bottom h1 {
+.bottom-1 h1,
+.bottom-2-info h1,
+.bottom-3 h1 {
   color: #fff;
   font-family: "Inter";
   font-size: 45px;
@@ -22,12 +25,50 @@
   line-height: normal;
 }
 
-.info-bottom p {
+.bottom-1 p,
+.bottom-2-info p,
+.bottom-3 p {
   color: #bebebe;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-size: 28px;
   font-style: normal;
   font-weight: 400;
   line-height: 45px; /* 160.714% */
   margin-bottom: 0;
+}
+
+.bottom-1 {
+  display: flex;
+  position: relative;
+  height: 480px;
+}
+
+.bottom-2 {
+  display: flex;
+  justify-content: space-between;
+  height: 520px;
+}
+
+.bottom-2 img {
+  /* margin-left: 10%; */
+}
+
+.bottom-2-info {
+  max-width: 550px;
+  margin-right: 150px;
+}
+
+.bottom-3 {
+  max-width: 620px;
+}
+
+.bottom-1 div {
+  max-width: 650px;
+}
+
+.bottom-1 img {
+  /* margin-right: 50%; */
+  position: absolute;
+  right: 400px;
+  top: 10%;
 }
