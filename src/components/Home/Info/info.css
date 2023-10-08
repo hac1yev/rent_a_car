@@ -1,0 +1,33 @@
+.info-container {
+  background: #060b1f;
+  padding: 100px 0;
+  margin-top: 80px;
+}
+
+.info-header {
+  color: #1da0ff;
+  font-family: "Inter";
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.info-bottom h1 {
+  color: #fff;
+  font-family: "Inter";
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.info-bottom p {
+  color: #bebebe;
+  font-family: 'Inter';
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 45px; /* 160.714% */
+  margin-bottom: 0;
+}
