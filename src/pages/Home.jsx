@@ -10,8 +10,10 @@ const Home = () => {
         <div>
             <MainSlider />
             <Filter />
-            <VipCars />
-            <OtherCars />
+            <div className="other-card-wrap">
+                <VipCars />
+                <OtherCars />
+            </div>
             <Info />
         </div>
     );
