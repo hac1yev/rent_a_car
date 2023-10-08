@@ -214,6 +214,11 @@
   .vip-cards{
     padding: 5px;
   }
+
+  .vip-slider-cards .slick-dots {
+    display: block !important;
+    bottom: -8px !important;
+  }
 }
 
 @media screen and (max-width: 375px) {

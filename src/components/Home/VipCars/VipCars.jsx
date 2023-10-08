@@ -34,7 +34,8 @@ const VipCars = () => {
           autoplaySpeed: 3000,
           cssEase: "linear",
           pauseOnHover: false,
-          infinite: true
+          infinite: true,
+          dots: true
         },
       },
     ],
