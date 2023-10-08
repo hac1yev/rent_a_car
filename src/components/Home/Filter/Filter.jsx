@@ -84,7 +84,7 @@ const Filter = () => {
                       <svg className='datepicker-icon' xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
                         <path d="M6.88889 10.5556H19.1111M6.88889 15.4444H13M6.88889 2V4.44444M19.1111 2V4.44444M5.91111 24H20.0889C21.4579 24 22.1425 24 22.6653 23.7336C23.1253 23.4993 23.4993 23.1253 23.7336 22.6653C24 22.1425 24 21.4579 24 20.0889V8.35556C24 6.98653 24 6.30203 23.7336 5.77914C23.4993 5.31918 23.1253 4.94523 22.6653 4.71088C22.1425 4.44444 21.4579 4.44444 20.0889 4.44444H5.91111C4.5421 4.44444 3.85758 4.44444 3.33469 4.71088C2.87473 4.94523 2.50078 5.31918 2.26643 5.77914C2 6.30203 2 6.98653 2 8.35556V20.0889C2 21.4579 2 22.1425 2.26643 22.6653C2.50078 23.1253 2.87473 23.4993 3.33469 23.7336C3.85758 24 4.54209 24 5.91111 24Z" stroke="#475EE9" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
-                      {endDate === null ? 'Tarixi seç' : `${startDate === null ? null : startDate.toDateString()}, ${endDate === null ? null : endDate.toDateString()}`}
+                      {endDate === null ? 'Tarixi seç' : `${startDate === null ? null : moment(startDate).subtract(10, 'days').calendar()}, ${endDate === null ? null : moment(endDate).subtract(10, 'days').calendar()}`}
                     </span>
                     {isDateVisible && <DatePicker
                       selected={startDate}
