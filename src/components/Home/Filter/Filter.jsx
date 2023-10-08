@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import DatePicker from "react-datepicker";
 import { AiOutlineSearch } from 'react-icons/ai';
-import { FiChevronDown } from 'react-icons/fi';
 import "react-datepicker/dist/react-datepicker.css";
 import Select from 'react-select';
 import filterIcon from '../../../assets/images/home/menu.png';
@@ -16,9 +15,21 @@ const Filter = () => {
 
   const onChange = (dates) => {
     const [start, end] = dates;
-    setStartDate(start.toDateString());
-    setEndDate(end.toDateString());
-    setIsDateVisible(false);
+  
+    // Check if start and end are valid Date objects
+    if (start instanceof Date && end instanceof Date) {
+      const startDateString = start.toISOString().slice(0, 10);
+      const endDateString = end.toISOString().slice(0, 10);
+  
+      setStartDate(startDateString);
+      setEndDate(endDateString);
+      setIsDateVisible(false);
+    } else {
+      // Handle the case where dates are not valid Date objects (e.g., if the user clears the selection)
+      setStartDate(null);
+      setEndDate(null);
+      setIsDateVisible(false);
+    }
   };
 
   const handleDatePicker = () => {
@@ -41,7 +52,7 @@ const Filter = () => {
         <h2 className='filter-title'>Özünə ən uyğun avtomobili seç</h2>
           <form action="" className='filter-form row'>
             <div className='filter-parametr' onClick={showHideFilter}>
-              {filterIsVisible ? 'Sade Filtr' : 'Yüksək Filtr'} &nbsp;
+              {filterIsVisible ? 'Sadə Filter' : 'Yüksək Filtr'} &nbsp;
               <img src={filterIcon} alt="filter-icon" />
             </div>
             <div className='filter-selects col-md-12'>
