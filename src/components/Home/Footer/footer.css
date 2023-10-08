@@ -1,0 +1,109 @@
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-big-cont {
+  padding: 90px 0;
+  background: #060b1f;
+  margin-top: 50px;
+}
+
+.footer-info {
+  display: flex;
+  gap: 100px;
+}
+
+.footer-info h2 {
+  color: #fff;
+  font-family: "Inter";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 37px; /* 168.182% */
+}
+
+.logo h1 {
+  color: #fff;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  line-height: 37px; /* 168.182% */
+}
+
+.footer-info a,
+.email li {
+  color: #fff;
+  font-family: "Inter";
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 37px; /* 194.737% */
+}
+
+.newssettler {
+  position: relative;
+  margin-top: 30px;
+}
+
+.newssettler input {
+  width: 280px;
+  height: 48px;
+  border-radius: 13px;
+  background: #fff;
+  border: none;
+  padding: 0 10px;
+}
+
+.newssettler button {
+  border-radius: 12px;
+  background: #475ee9;
+  width: 92px;
+  height: 43px;
+  border: none;
+  color: #fff;
+  font-family: "Inter";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 37px; /* 284.615% */
+  position: absolute;
+  right: 3px;
+  top: 3px;
+}
+
+.newssettler input:focus-visible {
+  outline: none;
+  border: none;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+  }
+
+  .footer-info {
+    flex-wrap: wrap;
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .footer-info {
+    gap: 40px;
+  }
+
+  .footer-big-cont{
+    padding: 50px 0;
+  }
+}
