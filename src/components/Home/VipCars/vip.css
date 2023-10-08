@@ -226,6 +226,10 @@
     padding: 16px 5px;
   }
 
+  .vip-container-1 h1{
+    font-size: 25px;
+  }
+
   .vipcar-price b,
   .vipcar-price span {
     font-size: 15px;
