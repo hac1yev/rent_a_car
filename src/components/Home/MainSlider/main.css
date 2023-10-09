@@ -2,6 +2,11 @@
   display: none !important;
 }
 
+.slider-cont{
+  background: #060B1F;
+  padding-bottom: -10px;
+}
+
 .slick-div-cont {
   position: relative;
   height: 100vh !important;
@@ -25,7 +30,7 @@
 
 .slick-div-cont img {
   width: 100%;
-  height: 100%;
+  height: 102%;
   object-fit: cover;
   border-radius: 50px;
 }
