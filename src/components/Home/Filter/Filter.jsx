@@ -41,7 +41,7 @@ const Filter = () => {
         <h2 className='filter-title'>Özünə ən uyğun avtomobili seç</h2>
           <form action="" className='filter-form row'>
             <div className='filter-parametr' onClick={showHideFilter}>
-              {filterIsVisible ? 'Sadə Filter' : 'Yüksək Filtr'} &nbsp;
+              {filterIsVisible ? 'Sadə Filter' : 'Yüksək Filter'} &nbsp;
               <img src={filterIcon} alt="filter-icon" />
             </div>
             <div className='filter-selects col-md-12'>
