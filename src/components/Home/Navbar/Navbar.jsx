@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./nav.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import menupng from "../../../assets/images/main-slider/menu.png";
 
 const Navbar = () => {
