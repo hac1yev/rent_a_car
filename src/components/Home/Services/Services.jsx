@@ -195,7 +195,7 @@ const Services = () => {
                         </div>                     
                     </Slider>
                 </div>
-            </div>
+            </div> 
             <div className="row settings-bottom-row">
                 <div className="col-lg-4 settings-col3">
                     <div className='settings-bottom-left'>
