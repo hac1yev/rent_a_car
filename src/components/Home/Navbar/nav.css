@@ -1,0 +1,87 @@
+.nav-container {
+  background: #060b1f;
+  padding: 36px 0;
+}
+
+.nav-second-container {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  align-items: center;
+  padding: 0;
+}
+
+.middle-sec {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: 30px;
+}
+
+.middle-sec li {
+  height: 52px;
+  width: 177px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  border-radius: 9px;
+  /* border: 1px solid #fff; */
+}
+
+.middle-sec li a {
+  color: #fff;
+  font-family: "Inter";
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.57px;
+}
+
+.middle-sec li svg {
+  fill: #8c8e99;
+}
+
+.middle-sec li:hover {
+  border-radius: 9px;
+  background: #fff;
+}
+
+.middle-sec li:hover a {
+  color: #060b1f;
+}
+
+.middle-sec li:hover svg {
+  fill: black !important;
+}
+
+.right-sec {
+  display: flex;
+  gap: 30px;
+}
+
+.right-sec .rent {
+  border-radius: 10px;
+  background: #475ee9;
+  width: 176px;
+  height: 51px;
+  color: #fff;
+  font-family: 'Inter';
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.right-sec button {
+  background: transparent;
+  border: none;
+}
+
+.right-sec button img {
+  filter: invert(1);
+  width: 40px;
+  height: 40px;
+}
