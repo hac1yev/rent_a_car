@@ -15,7 +15,7 @@ const Navbar = () => {
         </div>
 
         <div className="right-sec">
-          <button className="rent">+ İcarəyə ver</button>
+          <button className="rent"><span style={{fontSize: '25px'}}>+</span>&nbsp;&nbsp;İcarəyə ver</button>
           <button onClick={() => setShowSec(!showSec)} className="menu">
             <img src={menupng} alt="" />
           </button>
