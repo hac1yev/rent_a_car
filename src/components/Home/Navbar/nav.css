@@ -4,14 +4,12 @@
   position: relative;
 }
 
-
-
 .nav-second-container {
   display: flex;
   justify-content: space-between;
   color: #fff;
   align-items: center;
-  padding: 0;
+  /* padding: 0; */
 }
 
 .middle-sec li {
@@ -76,10 +74,21 @@
   border: none;
 }
 
-.right-sec button img {
+.right-sec button img,
+.close-btn img {
   filter: invert(1);
   width: 40px;
   height: 40px;
+}
+.close-btn img {
+  filter: invert(1);
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease-in-out;
+}
+
+.close-btn img:hover {
+  transform: rotate(180deg);
 }
 
 .hidden-sec {
@@ -88,16 +97,24 @@
   top: 0;
   right: 0;
   height: 100vh;
-  width: 370px;
-  /* width: 100%; */
-  border: 1px solid #fff;
+  width: 400px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
   z-index: 100;
-  background: #000;
+  background: #060b1f;
   transition: all 0.5s ease-in-out;
+  /* border: 2px inset #fff ; */
+}
+
+.close-btn {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  border: none;
+  background-color: transparent;
 }
 
 .hide-menu {
-  /* display: none; */
   transition: all 0.5s ease-in-out;
   transform: translateX(1000%);
 }
@@ -107,18 +124,52 @@
   transition: all 0.5s ease-in-out;
 }
 
+.hidden-inner {
+  margin-top: 10%;
+  padding: 80px 30px 50px 30px;
+}
+
+.hidden-inner li {
+  margin: 15px 0;
+}
+
+.hidden-inner li a svg{
+    fill: #8c8e99;
+}
+
+.hidden-inner li a {
+  color: #8b8b8b;
+  font-family: 'Inter';
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.63px;
+}
+
+.hidden-inner li a:hover{
+    color: #fff;
+}
+
+.hidden-inner li a:hover  svg{
+    fill: #fff;
+}
+
+.hidden-inner svg {
+  width: 20px;
+}
 
 @media screen and (max-width: 500px) {
-    .hidden-sec{
-        width: 100%;
-    }
+  .hidden-sec {
+    width: 100%;
+    border-radius: initial;
+    border: none;
+  }
 
+  .nav-second-container {
+    padding: 0 20px;
+  }
 
-    .nav-second-container{
-        padding: 0 20px;
-    }
-
-    .rent{
-        display: none;
-    }
+  .rent {
+    display: none;
+  }
 }
