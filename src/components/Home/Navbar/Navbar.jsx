@@ -11,7 +11,7 @@ const Navbar = () => {
     <nav className="nav-container">
       <div className="container nav-second-container">
         <div className="logo-sec">
-          <h1>Logo</h1>
+          <Link to='/'><h1 style={{color: '#fff'}}>Logo</h1></Link>
         </div>
 
         <div className="right-sec">

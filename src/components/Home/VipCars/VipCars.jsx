@@ -8,6 +8,7 @@ import opel from "../../../assets/images/home/opel-car.svg";
 import opellogo from "../../../assets/images/home/opel-logo.svg";
 import rent from "../../../assets/images/vip-slider/rent.png";
 import formaltick from "../../../assets/images/vip-slider/formal.svg";
+import { Link } from "react-router-dom";
 
 const VipCars = () => {
   var settings2 = {
@@ -51,7 +52,7 @@ const VipCars = () => {
         </div>
         <div className="vip-slider-cards">
           <Slider {...settings2}>
-            <div className="vip-cards">
+            <Link to='#' className="vip-cards">
               <div>
                 <div className="vip-card">
                   <div className="vip-img">
@@ -82,8 +83,9 @@ const VipCars = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="vip-cards">
+            </Link>
+
+            <Link className="vip-cards">
               <div>
                 <div className="vip-card">
                   <div className="vip-img">
@@ -114,8 +116,9 @@ const VipCars = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="vip-cards">
+            </Link>
+
+            <Link className="vip-cards">
               <div>
                 <div className="vip-card">
                   <div className="vip-img">
@@ -146,8 +149,9 @@ const VipCars = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="vip-cards">
+            </Link>
+
+            <Link className="vip-cards">
               <div>
                 <div className="vip-card">
                   <div className="vip-img">
@@ -178,7 +182,7 @@ const VipCars = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           </Slider>
         </div>
       </div>
