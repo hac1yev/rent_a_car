@@ -135,15 +135,16 @@ letter-spacing: 0.69px;
     opacity: 0.8;
 }
 
-.css-1elwnq4-MuiPaper-root-MuiAccordion-root {
+.result-accordion {
     box-shadow: none!important;
+    margin: 5px 0!important;
 }
 
-.css-1elwnq4-MuiPaper-root-MuiAccordion-root:before {
+.result-accordion:before {
     height: 0!important;
 }
 
-.css-ahj2mt-MuiTypography-root {
+.result-text {
     color: #000;
     font-family: Inter!important;
     font-size: 18px!important;
@@ -153,8 +154,10 @@ letter-spacing: 0.69px;
     letter-spacing: 0.69px!important;
 }
 
-.css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root {
+#panel1a-header,
+#panel2a-header {
     padding: 0!important;
+    min-height: 40px!important;
 }
 
 .plus-icon {
@@ -162,12 +165,9 @@ letter-spacing: 0.69px;
     color: #000;
 }
 
-.css-15v22id-MuiAccordionDetails-root {
+.result-detail {
     display: flex;
     flex-direction: column;
     padding: 0px 16px 0px!important;
-}
-
-.css-1elwnq4-MuiPaper-root-MuiAccordion-root.Mui-expanded {
     margin: 5px 0!important;
 }

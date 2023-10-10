@@ -122,73 +122,72 @@ const SearchResult = () => {
                                 <input type="number" placeholder='Max' />
                             </div>
                             <div className='mt-5'>
-                                <Accordion>
+                                <Accordion className="result-accordion">
                                     <AccordionSummary
                                         expandIcon={<BiPlus className='plus-icon' />}
                                         aria-controls="panel1a-content"
                                         id="panel1a-header"
                                     >
-                                        <Typography>Accordion 1</Typography>
+                                        <Typography className="result-text">Oturacaq sayı</Typography>
                                     </AccordionSummary>
-                                    <AccordionDetails>
+                                    <AccordionDetails className="result-detail">
                                         <FormControlLabel control={<Checkbox />} label="2-4 nəfərlik" />
                                         <FormControlLabel control={<Checkbox />} label="5 nəfərdən çox" />
                                     </AccordionDetails>
                                 </Accordion>
-                                <Accordion>
+                                <Accordion className="result-accordion">
                                     <AccordionSummary
                                         expandIcon={<BiPlus className='plus-icon' />}
                                         aria-controls="panel2a-content"
                                         id="panel2a-header"
                                     >
-                                        <Typography>Accordion 2</Typography>
+                                        <Typography className="result-text">Buraxılış ili</Typography>
                                     </AccordionSummary>
-                                    <AccordionDetails>
+                                    <AccordionDetails className="result-detail">
                                         <FormControlLabel control={<Checkbox />} label="2-4 nəfərlik" />
                                         <FormControlLabel control={<Checkbox />} label="5 nəfərdən çox" />
                                     </AccordionDetails>
                                 </Accordion>
-                                <Accordion>
+                                <Accordion className="result-accordion">
                                     <AccordionSummary
                                         expandIcon={<BiPlus className='plus-icon' />}
                                         aria-controls="panel2a-content"
                                         id="panel2a-header"
                                     >
-                                        <Typography>Accordion 2</Typography>
+                                        <Typography className="result-text">Yanacaq növü</Typography>
                                     </AccordionSummary>
-                                    <AccordionDetails>
+                                    <AccordionDetails className="result-detail">
                                         <FormControlLabel control={<Checkbox />} label="2-4 nəfərlik" />
                                         <FormControlLabel control={<Checkbox />} label="5 nəfərdən çox" />
                                     </AccordionDetails>
                                 </Accordion>
-                                <Accordion>
+                                <Accordion className="result-accordion">
                                     <AccordionSummary
                                         expandIcon={<BiPlus className='plus-icon' />}
                                         aria-controls="panel2a-content"
                                         id="panel2a-header"
                                     >
-                                        <Typography>Accordion 2</Typography>
+                                        <Typography className="result-text">Sürət qutusu</Typography>
                                     </AccordionSummary>
-                                    <AccordionDetails>
+                                    <AccordionDetails className="result-detail">
                                         <FormControlLabel control={<Checkbox />} label="2-4 nəfərlik" />
                                         <FormControlLabel control={<Checkbox />} label="5 nəfərdən çox" />
                                     </AccordionDetails>
                                 </Accordion>
-                                <Accordion>
+                                <Accordion className="result-accordion">
                                     <AccordionSummary
                                         expandIcon={<BiPlus className='plus-icon' />}
                                         aria-controls="panel2a-content"
                                         id="panel2a-header"
                                     >
-                                        <Typography>Accordion 2</Typography>
+                                        <Typography className="result-text">Motor həcmi</Typography>
                                     </AccordionSummary>
-                                    <AccordionDetails>
+                                    <AccordionDetails className="result-detail">
                                         <FormControlLabel control={<Checkbox />} label="2-4 nəfərlik" />
                                         <FormControlLabel control={<Checkbox />} label="5 nəfərdən çox" />
                                     </AccordionDetails>
                                 </Accordion>
                             </div>
-                            
                         </div>
                     </div>
                 </div>
