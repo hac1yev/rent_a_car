@@ -12,10 +12,11 @@ import formaltick from "../../../assets/images/vip-slider/formal.svg";
 const VipCars = () => {
   var settings2 = {
     dots: false,
-    infinite: false,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    autoplay: true,
+    infinite: true,
     responsive: [
       {
         breakpoint: 900,
