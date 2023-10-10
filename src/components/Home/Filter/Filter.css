@@ -81,8 +81,8 @@
     background: rgba(0, 0, 0, 0.30);
 }
 
-.select-group-high label,
-.input-group-high label {
+.select-group-high-label,
+.input-group-high-label {
     color: #000;
     font-family: Inter;
     font-size: 18px;
@@ -304,8 +304,8 @@
 
     .select-group label, 
     .filter-datepicker label,
-    .select-group-high label, 
-    .input-group-high label {
+    .select-group-high-label, 
+    .input-group-high-label {
         font-size: 16px;
         margin-bottom: 6px;
     }

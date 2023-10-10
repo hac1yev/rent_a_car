@@ -101,7 +101,7 @@ const Filter = () => {
                 {filterIsVisible && <>
                   <div className="col-lg-4 col-md-6 high-filter-col">
                     <div className='select-group-high'>
-                      <label htmlFor="otrsay">Oturacaq sayı</label>
+                      <label className='select-group-high-label' htmlFor="otrsay">Oturacaq sayı</label>
                       <div className="select2-icon-wrap">
                         <svg className='select2-icon' xmlns="http://www.w3.org/2000/svg" width="19" height="10" viewBox="0 0 19 10" fill="none">
                           <path d="M0.421688 0.412833C-0.140562 0.956456 -0.140562 1.83795 0.421688 2.38157L7.46558 9.18547C8.59036 10.2719 10.4129 10.2715 11.5371 9.18451L18.5783 2.37656C19.1406 1.83294 19.1406 0.951445 18.5783 0.407822C18.016 -0.135941 17.1044 -0.135941 16.5421 0.407822L10.5155 6.23468C9.95315 6.7783 9.0416 6.7783 8.47935 6.23468L2.45788 0.412833C1.89563 -0.13079 0.983938 -0.13079 0.421688 0.412833Z" fill="#475EE9"/>
@@ -118,7 +118,7 @@ const Filter = () => {
                   </div>
                   <div className="col-lg-4 col-md-6 high-filter-col">
                     <div className='select-group-high'>
-                      <label htmlFor="relyear">Buraxılış ili</label>
+                      <label className='select-group-high-label' htmlFor="relyear">Buraxılış ili</label>
                       <div className="select2-icon-wrap">
                         <svg className='select2-icon' xmlns="http://www.w3.org/2000/svg" width="19" height="10" viewBox="0 0 19 10" fill="none">
                           <path d="M0.421688 0.412833C-0.140562 0.956456 -0.140562 1.83795 0.421688 2.38157L7.46558 9.18547C8.59036 10.2719 10.4129 10.2715 11.5371 9.18451L18.5783 2.37656C19.1406 1.83294 19.1406 0.951445 18.5783 0.407822C18.016 -0.135941 17.1044 -0.135941 16.5421 0.407822L10.5155 6.23468C9.95315 6.7783 9.0416 6.7783 8.47935 6.23468L2.45788 0.412833C1.89563 -0.13079 0.983938 -0.13079 0.421688 0.412833Z" fill="#475EE9"/>
@@ -135,7 +135,7 @@ const Filter = () => {
                   </div>
                   <div className="col-lg-4 col-md-6 high-filter-col">
                     <div className='input-group-high'>
-                      <label htmlFor="">Qiymət aralığı</label>
+                      <label className='input-group-high-label' htmlFor="">Qiymət aralığı</label>
                       <div className='filter-inputs-wrap'>
                         <input type="number" placeholder='Min' />
                         <span></span>
@@ -145,7 +145,7 @@ const Filter = () => {
                   </div>
                   <div className="col-lg-4 col-md-6 high-filter-col">
                     <div className='select-group-high'>
-                      <label htmlFor="surqut">Sürət qutusu</label>
+                      <label className='select-group-high-label' htmlFor="surqut">Sürət qutusu</label>
                       <div className="select2-icon-wrap">
                         <svg className='select2-icon' xmlns="http://www.w3.org/2000/svg" width="19" height="10" viewBox="0 0 19 10" fill="none">
                           <path d="M0.421688 0.412833C-0.140562 0.956456 -0.140562 1.83795 0.421688 2.38157L7.46558 9.18547C8.59036 10.2719 10.4129 10.2715 11.5371 9.18451L18.5783 2.37656C19.1406 1.83294 19.1406 0.951445 18.5783 0.407822C18.016 -0.135941 17.1044 -0.135941 16.5421 0.407822L10.5155 6.23468C9.95315 6.7783 9.0416 6.7783 8.47935 6.23468L2.45788 0.412833C1.89563 -0.13079 0.983938 -0.13079 0.421688 0.412833Z" fill="#475EE9"/>
@@ -162,7 +162,7 @@ const Filter = () => {
                   </div>
                   <div className="col-lg-4 col-md-6 high-filter-col">
                     <div className='select-group-high'>
-                      <label htmlFor="mothecm">Motor həcmi</label>
+                      <label className='select-group-high-label' htmlFor="mothecm">Motor həcmi</label>
                       <div className="select2-icon-wrap">
                         <svg className='select2-icon' xmlns="http://www.w3.org/2000/svg" width="19" height="10" viewBox="0 0 19 10" fill="none">
                           <path d="M0.421688 0.412833C-0.140562 0.956456 -0.140562 1.83795 0.421688 2.38157L7.46558 9.18547C8.59036 10.2719 10.4129 10.2715 11.5371 9.18451L18.5783 2.37656C19.1406 1.83294 19.1406 0.951445 18.5783 0.407822C18.016 -0.135941 17.1044 -0.135941 16.5421 0.407822L10.5155 6.23468C9.95315 6.7783 9.0416 6.7783 8.47935 6.23468L2.45788 0.412833C1.89563 -0.13079 0.983938 -0.13079 0.421688 0.412833Z" fill="#475EE9"/>
