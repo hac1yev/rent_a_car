@@ -153,7 +153,7 @@ const CarDetail = () => {
             <div className="col-12 auto-situation-inner">
               <h1>Avtomobilin vəziyyəti</h1>
               <hr />
-              <div className="row px-4">
+              <div className="row auto-situation-pad">
                 <div className="col-lg-6 col-12">
                   <div className="auto-situ-inner">
                     <div className="auto-left-side">
