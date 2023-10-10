@@ -6,6 +6,7 @@ import { carApis } from '../../../assets/api/dummyCarsApi';
 import { MdUpdate } from 'react-icons/md';
 import { PiEngineBold } from 'react-icons/pi';
 import { BiDroplet } from 'react-icons/bi';
+import { Link } from 'react-router-dom';
 
 const OtherCars = () => {
     return (
@@ -14,7 +15,7 @@ const OtherCars = () => {
             <div className="row">
                 {carApis.map((item) => (
                     <div className="col-xl-3 col-lg-4 col-md-6 car-card-col" key={item.id}>
-                        <div className="card car-card">
+                        <Link className="card car-card">
                             <div className='car-imgs'>
                                 <img className="card-img-top" src={item.car_img.default} alt={item.car_name} />
                                 <div className="car-logo">
@@ -46,7 +47,7 @@ const OtherCars = () => {
                                     <span>{item.price_per_day}/</span>günlük
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     </div>  
                 ))}
             </div>

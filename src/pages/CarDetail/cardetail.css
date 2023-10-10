@@ -1,0 +1,290 @@
+.detail-wrapper {
+  background: #060b1f;
+}
+
+.detail-container {
+  /* height: 100vh; */
+  background: #fff;
+  border-radius: 60px 60px 0 0;
+}
+
+.detail-inner-container {
+  padding-top: 70px;
+}
+
+.star-svg {
+  height: 25px !important;
+  width: 25px !important;
+}
+
+.detail-right-side {
+  border-radius: 25px;
+  background: #fff;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.08);
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.detail-middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-middle h1 {
+  color: #000;
+  font-family: "Inter";
+  font-size: 33px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.detail-right-side a {
+  border-radius: 11px;
+  background: #edf3fd;
+  width: 154px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4557bb;
+  font-family: "Inter";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.rating-div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.rating-div span {
+  color: #1da0ff;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.detail-premium {
+  color: #000;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.rentlogo {
+  width: 74px;
+  height: 74px;
+}
+
+.detail-right-side-brand {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.detail-right-side-brand p {
+  color: #000;
+  font-family: "Inter";
+  margin-bottom: 0;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.detail-right-side-brand span {
+  color: #000;
+  font-family: "Inter";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.rent-infos {
+  margin-top: 80px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.rent-infos b {
+  color: #000;
+  font-family: "Inter";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.rent-infos p {
+  color: #000;
+  font-family: "Inter";
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.rent-btns {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.apply-now {
+  border-radius: 19px;
+  background: #1da0ff;
+  width: 215px;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: "Inter";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.discount {
+  border-radius: 9px;
+  background: #00db58;
+  width: 180px;
+  height: 51px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: "Inter";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.middle-side {
+  margin-bottom: 25px;
+}
+
+.middle-right-side {
+  border-radius: 17px;
+  background: #fff;
+  box-shadow: 0px 4px 21px 0px rgba(0, 0, 0, 0.08);
+  /* width: 351px; */
+  height: 198px;
+  /* flex-shrink: 0; */
+  padding: 25px 25px;
+}
+
+.middle-right-side h1 {
+  color: #000;
+  font-family: "Inter";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.middle-right-side p {
+  color: #000;
+  font-family: "Inter";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.middle-left-side h1 {
+  color: #000;
+  font-family: "Inter";
+  margin-bottom: 20px;
+  font-size: 29px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.middle-left-side p {
+  color: #000;
+  font-family: "Inter";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px; /* 194.444% */
+}
+
+.auto-situation-inner {
+  /* height: 303px; */
+  margin-bottom: 80px;
+  padding: 20px 0;
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: 0px 4px 20px 0px rgba(195, 195, 195, 0.43);
+}
+
+.auto-situation-inner h1 {
+  color: #000;
+  font-family: "Inter";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 35px; /* 125% */
+  text-align: center;
+  margin: 28px 0;
+}
+
+.auto-situ-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.auto-situ-inner p {
+  color: #1da0ff;
+  font-family: 'Inter';
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 35px;
+  margin-bottom: 0;
+}
+
+.auto-left-side {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #000;
+  font-family: "Inter";
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 35px; /* 166.667% */
+}
+
+@media screen and (max-width: 500px) {
+  .rent-infos {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
