@@ -47,7 +47,7 @@ const OtherCars = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>  
                 ))}
             </div>
             <div className='text-center other-cars-button'>
