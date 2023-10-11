@@ -29,6 +29,7 @@ const CarDetail = () => {
     <div className="detail-wrapper">
       <div className="detail-container">
         <div className="container detail-inner-container">
+          <div className="container">
           <div className="row">
             <div className="col-lg-8 col-12">
               <h1>Under Construction</h1>
@@ -83,6 +84,7 @@ const CarDetail = () => {
                 </div>
               </div>
             </div>
+          </div>
           </div>
 
           <div className="container">
