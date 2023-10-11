@@ -3,7 +3,6 @@
 }
 
 .detail-container {
-  /* height: 100vh; */
   background: #fff;
   border-radius: 60px 60px 0 0;
 }
@@ -188,9 +187,7 @@
   border-radius: 17px;
   background: #fff;
   box-shadow: 0px 4px 21px 0px rgba(0, 0, 0, 0.08);
-  /* width: 351px; */
   height: 198px;
-  /* flex-shrink: 0; */
   padding: 25px 25px;
 }
 
@@ -230,11 +227,10 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 35px; /* 194.444% */
+  line-height: 35px;
 }
 
 .auto-situation-inner {
-  /* height: 303px; */
   margin-bottom: 80px;
   padding: 20px 0;
   border-radius: 28px;
@@ -252,7 +248,7 @@
   font-size: 28px;
   font-style: normal;
   font-weight: 700;
-  line-height: 35px; /* 125% */
+  line-height: 35px;
   text-align: center;
   margin: 28px 0;
 }
@@ -283,7 +279,165 @@
   font-size: 21px;
   font-style: normal;
   font-weight: 500;
-  line-height: 35px; /* 166.667% */
+  line-height: 35px;
+}
+
+.comments-ratings h1 {
+  color: #000;
+  font-family: "Inter";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.rating-text {
+  color: #000;
+  font-family: "Inter";
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.rating-text svg {
+  width: 47px;
+  height: 47px;
+}
+
+.comment-text {
+  color: #000;
+  font-family: "Inter";
+  font-size: 27px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.rating-bar-text {
+  color: #000;
+  font-family: "Inter";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 0;
+}
+
+.rating-bars {
+  margin: 40px 0 100px 0;
+}
+
+.rating-bar {
+  display: flex;
+  max-width: 1050px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.rating-bar div[dir="ltr"] {
+  width: 700px;
+  display: block !important;
+}
+
+.rating-bar div[dir="ltr"] div {
+  height: 15px !important;
+  border-radius: 20px !important;
+}
+
+.rating-bar div[dir="ltr"] div div {
+  background: #475ee9 !important;
+}
+
+.rating-bar div[dir="ltr"] div div span {
+  display: none !important;
+}
+
+.person-comments {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.person-comment {
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.06);
+  max-width: 612px !important;
+  width: 90% !important;
+  /* height: 235px; */
+  padding: 35px;
+}
+
+.person-real-comment {
+  color: #000;
+  font-family: "Inter";
+  margin-top: 16px;
+  margin-bottom: 34px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.person-prof {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.comment-name {
+  color: #000;
+  font-family: "Inter";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 4px;
+}
+
+.comment-role {
+  color: #000;
+  font-family: "Inter";
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 0;
+}
+
+.look-all-comments {
+  border-radius: 13px;
+  background: #475ee9;
+  width: 302px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: #fff;
+  font-family: "Inter";
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 100px;
+}
+
+.similar-cars-container {
+  display: flex;
+  margin: 52px 0 100px 0;
+  flex-wrap: wrap;
+}
+
+.similar-card {
+  width: 420px;
+  /* width: 100%; */
 }
 
 @media screen and (max-width: 500px) {
@@ -296,5 +450,17 @@
     padding: 0 15px;
     margin-left: 5px;
     margin-right: 5px;
+  }
+
+  .similar-cars-container {
+    justify-content: center;
+  }
+  .look-all-comments {
+    width: 90%;
+  }
+
+  .similar-card {
+    width: 95%;
+    /* width: 100%; */
   }
 }
