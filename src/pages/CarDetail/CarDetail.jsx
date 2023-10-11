@@ -10,6 +10,13 @@ import opel from "../../assets/images/home/opel-car.svg";
 import opellogo from "../../assets/images/home/opel-logo.svg";
 import rent from "../../assets/images/vip-slider/rent.png";
 import formaltick from "../../assets/images/vip-slider/formal.svg";
+// import main from '../../assets/images/detail/main.svg'
+// import first from '../../assets/images/detail/first.svg'
+// import second from '../../assets/images/detail/second.svg'
+// import third from '../../assets/images/detail/third.svg'
+// import fourth from '../../assets/images/detail/fourth.svg'
+import "react-image-gallery/styles/css/image-gallery.css";
+import ImageGallery from "react-image-gallery";
 
 const CarDetail = () => {
   const [rating, setRating] = useState(0);
@@ -19,6 +26,34 @@ const CarDetail = () => {
   };
 
   console.log(rating);
+
+
+  // const images = [main,second,first,third,fourth]
+  // console.log(images)
+
+  const images = [
+    {
+      original: "https://picsum.photos/id/1018/1000/600/",
+      thumbnail: "https://picsum.photos/id/1018/250/150/",
+    },
+    {
+      original: "https://picsum.photos/id/1015/1000/600/",
+      thumbnail: "https://picsum.photos/id/1015/250/150/",
+    },
+    {
+      original: "https://picsum.photos/id/1019/1000/600/",
+      thumbnail: "https://picsum.photos/id/1019/250/150/",
+    },
+    {
+      original: "https://picsum.photos/id/1015/1000/600/",
+      thumbnail: "https://picsum.photos/id/1015/250/150/",
+    },
+    {
+      original: "https://picsum.photos/id/1019/1000/600/",
+      thumbnail: "https://picsum.photos/id/1019/250/150/",
+    }
+  ];
+
 
   // Optinal callback functions
   //   const onPointerEnter = () => console.log("Enter");
@@ -32,7 +67,7 @@ const CarDetail = () => {
           <div className="container">
           <div className="row">
             <div className="col-lg-8 col-12">
-              <h1>Under Construction</h1>
+            <ImageGallery items={images} />
             </div>
             <div className="col-lg-4 col-12 detail-right-side-cont">
               <div className="detail-right-side">
