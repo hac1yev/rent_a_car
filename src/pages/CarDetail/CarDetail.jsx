@@ -85,6 +85,7 @@ const CarDetail = () => {
             </div>
           </div>
 
+          <div className="container">
           <div className="row middle-side">
             <div className="col-lg-8 col-12 middle-left-side">
               <h1>Avtomobil haqqında</h1>
@@ -154,7 +155,9 @@ const CarDetail = () => {
               </div>
             </div>
           </div>
+          </div>
 
+          <div className="container">
           <div className="row auto-situation">
             <div className="col-12 auto-situation-inner">
               <h1>Avtomobilin vəziyyəti</h1>
@@ -297,6 +300,7 @@ const CarDetail = () => {
               </div>
             </div>
           </div>
+          </div>
 
           <div className="comments-ratings">
             <h1>Şərhlər və qiymətləndirmə</h1>
@@ -340,7 +344,8 @@ const CarDetail = () => {
             </div>
           </div>
 
-          <div className="row person-comments-all">
+         <div className="container">
+         <div className="row person-comments-all">
             <div className="person-comments">
             <div className="person-comment">
               <div className="svgs">
@@ -635,6 +640,7 @@ const CarDetail = () => {
                 Şərhlərə bax
             </Link>
           </div>
+         </div>
 
           <div className="detail-similar-cars">
             <h1>Bənzər avtomobillər</h1>
