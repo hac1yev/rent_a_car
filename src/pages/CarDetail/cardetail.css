@@ -444,34 +444,146 @@
   width: 420px;
   /* width: 100%; */
 }
-
-/* button[aria-label='Open Fullscreen']{
-  display: none;
+/* App.css */
+/* .app {
+  text-align: center;
+  font-family: Arial, sans-serif;
 } */
 
-.image-gallery-image,
-.image-gallery-thumbnail-image {
+/* Thumbnail Slider */
+.slider-container > img {
+  position: relative;
+  max-width: 860px !important;
+  width: 100%;
+  height: 479px;
+  object-fit: cover;
   border-radius: 20px;
+  cursor: pointer;
 }
 
-.image-gallery-thumbnail:first-child{
-  margin-left: 0 !important;
+/* .slider-container img {
+  cursor: pointer;
+} */
+
+/* img[alt="Main"] {
+
+} */
+
+/* .col-my-lg-8{
+  width: 65% !important;
+} */
+
+.thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  overflow-x: scroll;
+  padding-bottom: 5px;
 }
 
-.image-gallery-thumbnail{
-  margin-left: 15px !important;
-}
-
-.image-gallery-thumbnail .image-gallery-thumbnail-image{
-  height: 100px;
-}
-
-
-.image-gallery-thumbnail {
-  width: 150px !important;
-  height: 100px;
-  border: none !important;
+.thumbnails img {
   border-radius: 22px;
+  width: 180px;
+  height: 147px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* Modal */
+.modal {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  margin: 0 auto;
+  display: block;
+}
+
+.modal .modal-thumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.modal-thumbnails img {
+  width: 80px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-inner {
+  top: 25%;
+  position: absolute;
+}
+
+.thumbnails::-webkit-scrollbar{
+  /* display: none; */
+  height: 8px !important;
+  cursor: pointer !important;
+
+}
+
+.thumbnails::-webkit-scrollbar-thumb {
+  background-color: #000; 
+  border-radius: 20px;       
+}
+
+/* For screens with a width of 600px or less (adjust as needed) */
+@media (max-width: 600px) {
+  .thumbnails img {
+    width: 100px; /* Reduce thumbnail size */
+    height: 100px;
+  }
+
+  .thumbnails::-webkit-scrollbar{
+    display: none;
+  }
+
+  .slider-container > img {
+    height: 300px;
+  }
+
+  .modal .modal-thumbnails {
+    overflow: scroll;
+    justify-content: initial;
+  }
+
+  .modal > img {
+    width: 300px; /* Make the modal image responsive */
+    height: 300px; /* Limit modal height to 70% of the viewport height */
+    object-fit: cover;
+  }
+}
+
+/* For screens with a width of 400px or less (adjust as needed) */
+@media (max-width: 400px) {
+  .thumbnails img {
+    width: 100px; /* Reduce thumbnail size */
+    height: 100px;
+    border-radius: 15px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
