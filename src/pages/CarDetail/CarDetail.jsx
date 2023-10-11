@@ -66,7 +66,7 @@ const CarDetail = () => {
         <div className="container detail-inner-container">
           <div className="container">
           <div className="row">
-            <div className="col-lg-8 col-12">
+            <div className="col-lg-7 col-12">
             <ImageGallery items={images} />
             </div>
             <div className="col-lg-4 col-12 detail-right-side-cont">
