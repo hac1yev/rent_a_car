@@ -18,23 +18,22 @@ import fourth from "../../assets/images/detail/fourth.svg";
 
 const CarDetail = () => {
   const [rating, setRating] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   // Catch Rating value
   const handleRating = (rate) => {
     setRating(rate);
   };
 
+  console.log(rating)
+  
   const images = [main, second, first, third, fourth, fourth, fourth, fourth];
-  console.log(images);
-
-  console.log(rating);
+  const [selectedImage, setSelectedImage] = useState(images[0]);
 
   // Optinal callback functions
   //   const onPointerEnter = () => console.log("Enter");
   //   const onPointerLeave = () => console.log("Leave");
   //   const onPointerMove = (value, index) =>
   //     console.log(value, index);
-  const [selectedImage, setSelectedImage] = useState(images[0]);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleThumbnailClick = (image) => {
     setSelectedImage(image);

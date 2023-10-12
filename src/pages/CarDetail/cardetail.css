@@ -100,7 +100,7 @@
   color: #000;
   font-family: "Inter";
   margin-bottom: 0;
-  font-size: 35px;
+  font-size: 33px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -601,7 +601,8 @@
     border-radius: 10px;
   }
 
-  .thumbnails::-webkit-scrollbar , .modal .modal-thumbnails::-webkit-scrollbar{
+  .thumbnails::-webkit-scrollbar,
+  .modal .modal-thumbnails::-webkit-scrollbar {
     display: none;
   }
 
@@ -671,6 +672,7 @@
 
   .similar-cars-container {
     justify-content: center;
+    margin-top: 30px;
   }
 
   .look-all-comments,
@@ -679,12 +681,14 @@
     width: 100% !important;
   }
 
+  .person-comments , .look-all-comments{
+    margin-bottom: 50px;
+  }
+
   .person-comment {
     padding: 20px;
   }
-}
 
-@media screen and (max-width: 380px) {
   .detail-right-side-brand p {
     font-size: 22px;
   }
@@ -693,31 +697,22 @@
     font-size: 20px;
   }
 
-  .detail-right-side-brand img {
-    width: 70px;
-    height: 70px;
-  }
-
-  .rent-infos {
-    margin-top: 30px;
-  }
-
   .middle-left-side p {
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
   }
 
-  .middle-right-side {
-    padding: 15px 10px;
+  .detail-middle h1{
+    font-size: 25px;
+  }
+
+  .detail-right-side{
+    margin-top: 20px;
   }
 
   .auto-situ-inner p,
   .auto-left-side {
     font-size: 15px;
-  }
-
-  .auto-situ-inner {
-    margin-bottom: 10px;
   }
 
   .middle-right-side p {
@@ -730,18 +725,9 @@
   .comments-ratings h1,
   .rating-text,
   .comment-text,
-  .rating-bar-text {
+  .rating-bar-text,.detail-similar-cars h1 {
     text-align: center;
     font-size: 22px;
-  }
-
-  .rating-bar {
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .rating-text svg {
-    width: 20px;
   }
 
   .rent-infos p {
@@ -750,6 +736,39 @@
 
   .rent-infos b {
     font-size: 25px;
+  }
+
+  .rating-bar {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .person-real-comment{
+    font-size: 16px;
+    margin-bottom: 18px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .detail-right-side-brand img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .rent-infos {
+    margin-top: 30px;
+  }
+
+  .middle-right-side {
+    padding: 15px 10px;
+  }
+
+  .auto-situ-inner {
+    margin-bottom: 10px;
+  }
+
+  .rating-text svg {
+    width: 20px;
   }
 
   .thumbnails img {
@@ -765,13 +784,13 @@
   }
 
   .main-image {
-    width: 90% !important;
-    height: 200px !important;
+    width: 95% !important;
+    height: 250px !important;
   }
 
   .modal-thumbnails img {
     width: 100px;
-    height: 50px;
+    height: 60px;
     border-radius: 10px;
   }
 }
