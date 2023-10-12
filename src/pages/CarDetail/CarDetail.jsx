@@ -23,7 +23,7 @@ const CarDetail = () => {
     setRating(rate);
   };
 
-  const images = [main, second, first, third, fourth ,  fourth , fourth,  fourth];
+  const images = [main, second, first, third, fourth, fourth, fourth, fourth];
   console.log(images);
 
   console.log(rating);
@@ -88,11 +88,15 @@ const CarDetail = () => {
                   </div>
                   {isModalOpen && (
                     <div className="modal">
+                      <span className="close-button" onClick={closeModal}>
+                        &times;
+                      </span>
                       <div className="modal-inner">
-                        <span className="close-button" onClick={closeModal}>
-                          &times;
-                        </span>
-                        <img className="main-image" src={selectedImage} alt="Main" />
+                        <img
+                          className="main-image"
+                          src={selectedImage}
+                          alt="Main"
+                        />
                         <div className="modal-thumbnails">
                           {images.map((image, index) => (
                             <img
