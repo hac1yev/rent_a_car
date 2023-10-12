@@ -475,7 +475,7 @@
 
 .thumbnails {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   margin-top: 10px;
   overflow-x: scroll;
   padding-bottom: 5px;
@@ -483,9 +483,37 @@
 
 .thumbnails img {
   border-radius: 22px;
-  width: 180px;
   height: 147px;
   object-fit: cover;
+  cursor: pointer;
+  width: 201px;
+  height: 147px;
+}
+
+.latest-thumbnail {
+  position: relative;
+}
+
+.latest-thumbnail .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 22px;
+}
+
+.latest-thumbnail p {
+  position: absolute;
+  top: 40%;
+  left: 15%;
+  color: #fff;
+  font-family: "Inter";
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
   cursor: pointer;
 }
 
@@ -538,16 +566,15 @@
   position: absolute;
 }
 
-.thumbnails::-webkit-scrollbar{
+.thumbnails::-webkit-scrollbar {
   /* display: none; */
   height: 8px !important;
   cursor: pointer !important;
-
 }
 
 .thumbnails::-webkit-scrollbar-thumb {
-  background-color: #000; 
-  border-radius: 20px;       
+  background-color: #000;
+  border-radius: 20px;
 }
 
 /* For screens with a width of 600px or less (adjust as needed) */
@@ -555,14 +582,28 @@
   .thumbnails img {
     width: 100px; /* Reduce thumbnail size */
     height: 100px;
+    border-radius: 10px;
   }
 
-  .thumbnails::-webkit-scrollbar{
+  .thumbnails::-webkit-scrollbar {
     display: none;
+  }
+
+  .detail-inner-container {
+    padding-top: 30px;
+  }
+
+  .detail-right-side-brand p {
+    font-size: 18px;
   }
 
   .slider-container > img {
     height: 300px;
+  }
+
+  .latest-thumbnail p {
+    font-size: 10px;
+    top: 45%;
   }
 
   .modal .modal-thumbnails {
@@ -571,20 +612,12 @@
   }
 
   .modal > img {
-    width: 300px; /* Make the modal image responsive */
-    height: 300px; /* Limit modal height to 70% of the viewport height */
+    width: 300px;
+    height: 300px;
     object-fit: cover;
   }
 }
 
-/* For screens with a width of 400px or less (adjust as needed) */
-@media (max-width: 400px) {
-  .thumbnails img {
-    width: 100px; /* Reduce thumbnail size */
-    height: 100px;
-    border-radius: 15px;
-  }
-}
 
 @media screen and (max-width: 1024px) {
   .detail-right-side-brand {
@@ -680,6 +713,18 @@
 
   .rent-infos b {
     font-size: 25px;
+  }
+
+  .thumbnails img {
+    width: 90px;
+    height: 70px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .slider-container > img{
+    height: 200px;
+    border-radius: 10px;
   }
 }
 
