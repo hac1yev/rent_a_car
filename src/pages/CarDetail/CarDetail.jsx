@@ -23,7 +23,7 @@ const CarDetail = () => {
     setRating(rate);
   };
 
-  const images = [main, second, first, third, fourth];
+  const images = [main, second, first, third, fourth ,  fourth , fourth,  fourth];
   console.log(images);
 
   console.log(rating);
@@ -92,7 +92,7 @@ const CarDetail = () => {
                         <span className="close-button" onClick={closeModal}>
                           &times;
                         </span>
-                        <img src={selectedImage} alt="Main" />
+                        <img className="main-image" src={selectedImage} alt="Main" />
                         <div className="modal-thumbnails">
                           {images.map((image, index) => (
                             <img
