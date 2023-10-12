@@ -58,14 +58,32 @@ const CarDetail = () => {
                   <div className="slider-container">
                     <img src={selectedImage} alt="Main" onClick={openModal} />
                     <div className="thumbnails">
-                      {images.map((image, index) => (
+                      <img
+                        src={images[0]}
+                        alt="Thumbnail"
+                        onClick={() => handleThumbnailClick(images[0])}
+                      />
+                      <img
+                        src={images[1]}
+                        alt="Thumbnail"
+                        onClick={() => handleThumbnailClick(images[1])}
+                      />
+
+                      <img
+                        src={images[2]}
+                        alt="Thumbnail"
+                        onClick={() => handleThumbnailClick(images[2])}
+                      />
+
+                      <div className="latest-thumbnail">
+                        <div className="overlay"></div>
                         <img
-                          key={index}
-                          src={image}
-                          alt={`Thumbnail ${index}`}
-                          onClick={() => handleThumbnailClick(image)}
+                          src={images[3]}
+                          alt="Thumbnail"
+                          onClick={() => handleThumbnailClick(images[3])}
                         />
-                      ))}
+                        <p onClick={openModal}>Hamısına Bax</p>
+                      </div>
                     </div>
                   </div>
                   {isModalOpen && (
