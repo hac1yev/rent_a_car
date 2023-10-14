@@ -666,6 +666,18 @@
     margin-right: 5px;
   }
 
+  .rating-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .rating-text svg{
+    width: 30px;
+    height: 30px;
+  }
+
   .main-image {
     height: 250px !important;
   }
@@ -675,10 +687,15 @@
     margin-top: 30px;
   }
 
-  .look-all-comments,
+
   .similar-card,
   .person-comment {
     width: 100% !important;
+  }
+
+  .look-all-comments{
+    width: 80%;
+    height: 60px;
   }
 
   .person-comments , .look-all-comments{
@@ -724,10 +741,14 @@
   .auto-situation-inner h1,
   .comments-ratings h1,
   .rating-text,
-  .comment-text,
-  .rating-bar-text,.detail-similar-cars h1 {
+  .comment-text,.detail-similar-cars h1 {
     text-align: center;
     font-size: 22px;
+  }
+
+  .rating-bar-text{
+    font-size: 18px;
+    text-align: center;
   }
 
   .rent-infos p {
@@ -757,6 +778,13 @@
 
   .rent-infos {
     margin-top: 30px;
+  }
+
+  
+
+  .middle-left-side p , .person-real-comment{
+    font-size: 14px;
+    line-height: normal;
   }
 
   .middle-right-side {
