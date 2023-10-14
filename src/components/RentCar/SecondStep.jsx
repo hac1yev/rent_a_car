@@ -7,7 +7,7 @@ const SecondStep = () => {
     const dispatch = useDispatch();
 
     const submitForm = () => {
-        
+        dispatch(stepSliceAction.continueStep(1));
     };
 
     const backStep = () => {
