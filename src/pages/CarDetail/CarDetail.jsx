@@ -23,8 +23,6 @@ const CarDetail = () => {
   const handleRating = (rate) => {
     setRating(rate);
   };
-
-  console.log(rating)
   
   const images = [main, second, first, third, fourth, fourth, fourth, fourth];
   const [selectedImage, setSelectedImage] = useState(images[0]);
@@ -156,7 +154,7 @@ const CarDetail = () => {
                     <b>150₼/</b>günlük
                   </p>
                   <div className="rent-btns">
-                    <Link className="apply-now">İndi icarə et</Link> <br />
+                    <Link to='/rent-car' className="apply-now">İndi icarə et</Link> <br />
                     <Link className="discount">+3 Gün endirimi</Link>
                   </div>
                 </div>
