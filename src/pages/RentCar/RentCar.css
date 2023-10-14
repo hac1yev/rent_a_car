@@ -1,0 +1,391 @@
+.rent-car-wrapper {
+    background-color: #060b1f;
+}
+
+.rent-car-section {
+    background: #F0F5F5;
+    border-top-right-radius: 60px;
+    border-top-left-radius: 60px;
+}
+
+/* .step-container {
+} */
+
+.firststep-row {
+    background-color: #fff;
+    border-radius: 46px;
+    padding: 50px 125px;
+}
+
+.firststep-car {
+    max-width: 345px;
+    width: 100%;
+    height: 200px!important;
+}
+
+.firststep-car img {
+    width: 100%;
+    height: 100%;
+}
+
+.firststep-col {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.car-info {
+    display: flex;
+    gap: 20px;
+}
+
+.car-perday {
+    color: #000;
+    font-family: Inter;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 40px;
+}
+
+.car-perday span {
+    color: #000;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.car-info div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.car-info div h2 {
+    color: #000;
+    font-family: Inter;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.car-info div span {
+    color: #000;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.first-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.first-input-col {
+    margin-top: 20px;
+}
+
+.first-input-group label {
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.first-datepicker {
+    width: 100%;
+    color: #757575;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 16px 15px;
+    padding-right: 35px;
+    border-radius: 11px!important;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.first-input-group .select__control, 
+.first-input-group .css-13cymwt-control, 
+.first-input-group .css-t3ipsp-control {
+    width: 100%;
+    color: #757575;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 11px 15px;
+    padding-right: 35px;
+    border-radius: 11px!important;
+    cursor: pointer;
+    background-color: transparent!important;
+    outline: none;
+}
+
+.first-input-group .basic-multi-select {
+    border: 1px solid #ccc;
+    border-radius: 11px!important;
+}
+
+.firststep-bottom {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    padding: 35px 0;
+    gap: 15px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.daily-rent,
+.service-fee {
+    display: flex;
+    justify-content: space-between;
+}
+
+.daily-rent p,
+.service-fee p {
+    color: rgba(0, 0, 0, 0.50);
+    font-family: Inter;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.daily-rent span,
+.service-fee span {
+    color: #000;
+    font-family: Inter;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.first-total-price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.first-total-price span {
+    color: #1DA0FF;
+    font-family: Inter;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.step-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0;
+}
+
+.step-cancel-button {
+    border: 2px solid #ABABAB;
+    outline: none;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 12px 35px;
+    transition: all 0.2s ease;
+}
+
+.step-cancel-button:hover {
+    background-color: #475EE9;
+    color: #fff;
+    border: 2px solid #475EE9;
+}
+
+.step-continue-button {
+    border: 2px solid #475EE9;
+    outline: none;
+    border-radius: 10px;
+    background: #475EE9;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 12px 35px;
+    transition: all 0.2s ease;
+}
+
+.step-continue-button:hover {
+    opacity: 0.8;
+}
+
+.stepper-wrap {
+    background-color: #fff;
+    border-top-right-radius: 60px;
+    border-top-left-radius: 60px;
+    padding-top: 75px;
+    padding-bottom: 135px;
+}
+
+.stepper-wrap h3 {
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.stepper-wrap p {
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.stepper-container {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+@media screen and (max-width: 991.5px) {
+    .firststep-row {
+        padding: 30px 80px;
+    }
+
+    .firststep-col {
+        justify-content: center;
+    }
+
+    .car-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .car-info div {
+        text-align: center;
+    }
+
+    .car-perday {
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    .car-info img {
+        width: 80px;
+        height: 109px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .firststep-row {
+        padding: 30px 50px;
+    }
+
+    .car-perday {
+        font-size: 20px;
+    }
+
+    .car-perday span {
+        font-size: 32px;
+    }
+
+    .car-info div h2 {
+        font-size: 28px;
+    }
+
+    .car-info div span {
+        font-size: 22px;
+    }
+
+    .first-input-group label {
+        font-size: 18px;
+    }
+
+    .first-datepicker {
+        width: 100%;
+        color: #757575;
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        padding: 14px 15px;
+    }
+
+    .first-input-group .select__control, 
+    .first-input-group .css-13cymwt-control, 
+    .first-input-group .css-t3ipsp-control {
+        padding: 8px 15px;
+    }
+
+    .car-info img {
+        width: 80px;
+        height: 109px;
+    }
+
+    .daily-rent p, 
+    .service-fee p {
+        font-size: 18px;
+    }
+
+    .daily-rent span, 
+    .service-fee span,
+    .first-total-price span {
+        font-size: 18px;
+    }
+
+    .firststep-bottom {
+        margin-top: 40px;
+        margin-bottom: 20px;
+        padding: 25px 0;
+    }
+
+    .service-fee p {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .firststep-row {
+        padding: 20px;
+    }
+
+    .daily-rent p, 
+    .service-fee p {
+        font-size: 16px;
+    }
+
+    .daily-rent span, 
+    .service-fee span, 
+    .first-total-price span {
+        font-size: 16px;
+    }
+
+    .first-input-group label {
+        font-size: 16px;
+    }
+}

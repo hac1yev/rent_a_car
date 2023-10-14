@@ -5,6 +5,7 @@ import Footer from "./components/Home/Footer/Footer";
 import Navbar from "./components/Home/Navbar/Navbar";
 import SearchResult from "./pages/SearchResult/SearchResult";
 import CarDetail from "./pages/CarDetail/CarDetail";
+import RentCar from "./pages/RentCar/RentCar";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/search-result" element={<SearchResult />} />
         <Route path="/detail" element={<CarDetail />} />
+        <Route path="/rent-car" element={<RentCar />} />
       </Routes>
       <Footer />
     </div>
