@@ -6,6 +6,7 @@
     background: #F0F5F5;
     border-top-right-radius: 60px;
     border-top-left-radius: 60px;
+    padding-bottom: 100px;
 }
 
 /* .step-container {
@@ -194,7 +195,7 @@
 .step-buttons {
     display: flex;
     justify-content: space-between;
-    padding: 100px 0;
+    padding: 100px 0 0 0;
 }
 
 .step-cancel-button {
@@ -270,6 +271,27 @@
     flex-direction: column;
     gap: 35px;
 }
+
+.step-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 160px 0;
+    background-color: #fff;
+    border-radius: 46px;
+}
+
+.step-loading > div {
+    width: 15%;
+    height: 15%;
+}
+
+.step-loading > div > span {
+    width: 100%!important;
+    height: 100%!important;
+} 
 
 @media screen and (max-width: 991.5px) {
     .firststep-row {
