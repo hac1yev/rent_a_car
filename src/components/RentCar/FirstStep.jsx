@@ -21,6 +21,7 @@ const FirstStep = () => {
 
     const continueStep = () => {
         dispatch(stepSliceAction.continueStep(1));
+        window.scrollTo(0,0);
     };
 
     return (
