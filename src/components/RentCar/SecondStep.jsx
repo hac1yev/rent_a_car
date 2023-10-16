@@ -14,6 +14,7 @@ const SecondStep = () => {
         if(step > 0) {
             dispatch(stepSliceAction.backStep(1));
         }
+        window.scrollTo(0,0);
     };
 
     return (

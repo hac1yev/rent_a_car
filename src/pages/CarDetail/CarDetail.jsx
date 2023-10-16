@@ -120,6 +120,7 @@ const CarDetail = () => {
                         // onPointerLeave={onPointerLeave}
                         // onPointerMove={onPointerMove}
                         /* Available Props */
+                        
                       />{" "}
                       <span>(134)</span>
                     </div>
