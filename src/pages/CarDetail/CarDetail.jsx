@@ -23,6 +23,8 @@ const CarDetail = () => {
   const handleRating = (rate) => {
     setRating(rate);
   };
+
+  console.log(rating)
   
   const images = [main, second, first, third, fourth, fourth, fourth, fourth];
   const [selectedImage, setSelectedImage] = useState(images[0]);
