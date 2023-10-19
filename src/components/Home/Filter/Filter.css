@@ -183,7 +183,7 @@
 
 .react-datepicker__day,
 .react-datepicker__day-name {
-    width: 12%;
+    /* width: 12%; */
 }
 
 .filter-date-wrap {
@@ -195,6 +195,10 @@
     width: 94%;
     position: absolute;
     top: 0;
+}
+
+.filter-datepicker > div {
+    width: fit-content!important;
 }
 
 .filter-search-button {
