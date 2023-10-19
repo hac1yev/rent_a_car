@@ -9,16 +9,16 @@ import { useSelector } from 'react-redux';
 const RentCar = () => {
     const step = useSelector(state => state.stepReducer.step);
 
-    function showStep(step) {
-        switch(step){
-            case 0: 
-                return <FirstStep />
-            case 1:
-                return <SecondStep />
-            case 2:
-                return <ThirdStep />
-        }
-    }
+    // function showStep(step) {
+    //     switch(step){
+    //         case 0: 
+    //             return <FirstStep />
+    //         case 1:
+    //             return <SecondStep />
+    //         case 2:
+    //             return <ThirdStep />
+    //     }
+    // };
 
     return (
         <div className='rent-car-wrapper'>
@@ -41,7 +41,9 @@ const RentCar = () => {
                     </div>
                 </div>
                 <form className='container step-container mt-5'>
-                    {showStep(step)}
+                    {step === 0 && <FirstStep />}
+                    {step === 1 && <SecondStep />}
+                    {step === 2 && <ThirdStep />}
                 </form>
             </div>
         </div>
