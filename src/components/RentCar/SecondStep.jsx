@@ -4,7 +4,10 @@ import { stepSliceAction } from '../../store/step-slice';
 
 const SecondStep = () => {
     const step = useSelector(state => state.stepReducer.step);
+    const rentCarData = useSelector(state => state.rentCarReducer.rent_car_data)
     const dispatch = useDispatch();
+
+    console.log(rentCarData);
 
     const submitForm = () => {
         dispatch(stepSliceAction.continueStep(1));
@@ -22,7 +25,7 @@ const SecondStep = () => {
             SecondStep
             <div className="step-buttons">
                 <button className='step-cancel-button' onClick={backStep}>Öncəkinə qayıt</button>
-                <button className='step-continue-button' onClick={submitForm}>Tamamla</button>
+                <button type='submit' className='step-continue-button' onClick={submitForm}>Tamamla</button>
             </div>
         </div>
     );

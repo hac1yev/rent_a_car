@@ -34,7 +34,7 @@
     justify-content: flex-end;
 }
 
-.car-info {
+.car-info-first {
     display: flex;
     gap: 20px;
 }
@@ -58,13 +58,13 @@
     line-height: normal;
 }
 
-.car-info div {
+.car-info-first div {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.car-info div h2 {
+.car-info-first div h2 {
     color: #000;
     font-family: Inter;
     font-size: 35px;
@@ -73,7 +73,7 @@
     line-height: normal;
 }
 
-.car-info div span {
+.car-info-first div span {
     color: #000;
     font-family: Inter;
     font-size: 25px;
@@ -117,9 +117,24 @@
     outline: none;
 }
 
+.MuiInputBase-root {
+    width: 100%!important;
+}
+
+.first-input-group {
+    width: 100%!important;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.MuiFormControl-root {
+    margin: 0!important;
+}
+
 .first-input-group .select__control, 
 .first-input-group .css-13cymwt-control, 
-.first-input-group .css-t3ipsp-control {
+.first-input-group .css-t3ipsp-control,
+.first-input-group .MuiSelect-select {
     width: 100%;
     color: #757575;
     font-family: Inter;
@@ -133,6 +148,26 @@
     cursor: pointer;
     background-color: transparent!important;
     outline: none;
+}
+
+.first-input-col .MuiSelect-select {
+    width: 100%!important;
+    color: #757575!important;
+    font-family: Inter!important;
+    font-size: 16px!important;
+    font-style: normal!important;
+    font-weight: 600!important;
+    line-height: normal!important;
+    padding: 15px!important;
+    padding-right: 35px!important;
+    border-radius: 11px!important;
+    cursor: pointer!important;
+    background-color: transparent!important;
+    outline: none!important;
+}
+
+.first-input-group .MuiOutlinedInput-notchedOutline {
+    border-radius: 11px!important;
 }
 
 .first-input-group .basic-multi-select {
@@ -452,12 +487,12 @@
         justify-content: center;
     }
 
-    .car-info {
+    .car-info-first {
         flex-direction: column;
         align-items: center;
     }
 
-    .car-info div {
+    .car-info-first div {
         text-align: center;
     }
 
@@ -466,7 +501,7 @@
         margin: 15px 0;
     }
 
-    .car-info img {
+    .car-info-first img {
         width: 80px;
         height: 109px;
     }
@@ -485,11 +520,11 @@
         font-size: 32px;
     }
 
-    .car-info div h2 {
+    .car-info-first div h2 {
         font-size: 28px;
     }
 
-    .car-info div span {
+    .car-info-first div span {
         font-size: 22px;
     }
 
@@ -514,7 +549,11 @@
         padding: 8px 15px;
     }
 
-    .car-info img {
+    .first-input-col .MuiSelect-select {
+        padding: 12px 15px!important ;
+    }
+
+    .car-info-first img {
         width: 80px;
         height: 109px;
     }
@@ -567,14 +606,14 @@
     }
 
     .wave {
-        width: 250px!important;
-        height: 250px!important;
+        width: 220px!important;
+        height: 220px!important;
     }
 
     @keyframes ripple {
         0% {
-            top: 125px;
-            left: 125px;
+            top: 110px;
+            left: 110px;
             width: 0;
             height: 0;
             opacity: 1;
@@ -583,15 +622,15 @@
         100% {
             top: 0;
             left: 0;
-            width: 250px;
-            height: 250px;
+            width: 220px;
+            height: 220px;
             opacity: 0;
         }
     }
 
     .wave__icon {
-        width: 150px;
-        height: 150px;
+        width: 130px;
+        height: 130px;
         background-color: #475EE9;
         border-radius: 50%;
         display: flex;
