@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import porsche_logo from '../../assets/images/detail/porshce.svg';
 import porsche_car from '../../assets/images/detail/main.svg';
 import DatePicker from "react-datepicker";
@@ -7,14 +7,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { stepSliceAction } from '../../store/step-slice';
 import { Link } from 'react-router-dom';
 import { rentCarSliceAction } from '../../store/rent_car-slice';
-import { FormControl, InputLabel, MenuItem, OutlinedInput, Select } from '@mui/material';
+import { FormControl, MenuItem, OutlinedInput, Select } from '@mui/material';
 
 const FirstStep = () => {
-    const options = [
-        { value: 'strawberry', label: 'Strawberry' },
-        { value: 'vanilla', label: 'Vanilla' },
-        { value: 'chocolate', label: 'Chocolate' },
-    ];
+    // const options = [
+    //     { value: 'strawberry', label: 'Strawberry' },
+    //     { value: 'vanilla', label: 'Vanilla' },
+    //     { value: 'chocolate', label: 'Chocolate' },
+    // ];
 
     const dispatch = useDispatch();
     const rentCarData = useSelector(state => state.rentCarReducer.rent_car_data);
