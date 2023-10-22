@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import porsche_logo from '../../assets/images/detail/porshce.svg';
 import porsche_car from '../../assets/images/detail/main.svg';
 import DatePicker from "react-datepicker";
@@ -10,16 +10,9 @@ import { rentCarSliceAction } from '../../store/rent_car-slice';
 import { FormControl, MenuItem, OutlinedInput, Select } from '@mui/material';
 
 const FirstStep = () => {
-    // const options = [
-    //     { value: 'strawberry', label: 'Strawberry' },
-    //     { value: 'vanilla', label: 'Vanilla' },
-    //     { value: 'chocolate', label: 'Chocolate' },
-    // ];
-
+    const [validation,setValidation] = useState(false);
     const dispatch = useDispatch();
     const rentCarData = useSelector(state => state.rentCarReducer.rent_car_data);
-
-    console.log(rentCarData);
 
     const continueStep = () => {
         var timeDifference = rentCarData[0].deliveryDate - rentCarData[0].takeDate;
@@ -38,13 +31,18 @@ const FirstStep = () => {
             plus_three_day
         }
 
-        dispatch(stepSliceAction.continueStep(1));
-
-        dispatch(rentCarSliceAction.getCarData(car_Data));
-
+        setValidation(true);
         window.scrollTo(0,0);
-    };
 
+        if(rentCarData[0].takeDate && rentCarData[0].deliveryDate && rentCarData[0].takePlace && rentCarData[0].deliveryPlace) {
+            if(rentCarData[0].deliveryDate > rentCarData[0].takeDate){
+                dispatch(stepSliceAction.continueStep(1));
+                dispatch(rentCarSliceAction.getCarData(car_Data));
+            }
+        }else{
+            return;
+        }
+    };
 
     return (
         <>
@@ -69,26 +67,33 @@ const FirstStep = () => {
                 <div className='col-lg-6 first-input-col'>
                     <div className='first-input-group'>
                         <label htmlFor="">Götürülmə tarixi</label>
-                        <DatePicker 
-                            className='first-datepicker' 
-                            selected={rentCarData[0].takeDate} 
-                            onChange={(date) => dispatch(rentCarSliceAction.getTakeDate(date))} 
-                            value={rentCarData[0].takeDate}
+                        <DatePicker
+                            className={(!rentCarData[0].takeDate && validation) ? 'first-datepicker error-first-datepicker' : 'first-datepicker'}
+                            selected={rentCarData[0].takeDate}
+                            onChange={(date) => dispatch(rentCarSliceAction.getTakeDate(date))}
+                            selectsStart
+                            startDate={rentCarData[0].takeDate}
+                            endDate={rentCarData[0].deliveryDate}
                         />
+                        {!rentCarData[0].takeDate && validation && <p className='validation-error'>Götürülmə tarixini daxil edin!!!</p>}
                     </div>
                 </div>
                 <div className="col-lg-6 first-input-col">
                     <div className='first-input-group'>
                         <label htmlFor="">Qaytarılma tarixi</label>
-                        <DatePicker 
-                            className='first-datepicker' 
-                            selected={rentCarData[0].deliveryDate} 
-                            onChange={(date) => dispatch(rentCarSliceAction.getDeliveryDate(date))} 
-                            value={rentCarData[0].deliveryDate}
+                        <DatePicker
+                            className={(!rentCarData[0].deliveryDate && validation) ? 'first-datepicker error-first-datepicker' : 'first-datepicker'} 
+                            selected={rentCarData[0].deliveryDate}
+                            onChange={(date) => dispatch(rentCarSliceAction.getDeliveryDate(date))}
+                            selectsEnd
+                            startDate={rentCarData[0].takeDate}
+                            endDate={rentCarData[0].deliveryDate}
+                            minDate={rentCarData[0].takeDate}
                         />
+                        {!rentCarData[0].deliveryDate && validation && <p className='validation-error'>Qaytarılma tarixini daxil edin!!!</p>}
                     </div>
                 </div>
-                <div className="col-lg-6 first-input-col">
+                <div className={(!rentCarData[0].takePlace && validation) ? "col-lg-6 error-input-col first-input-col" : "col-lg-6 first-input-col"}>
                     <FormControl sx={{ m: 1, minWidth: 80 }} className='first-input-group'>
                         <label htmlFor="">Götürülmə yeri</label>
                         <Select
@@ -108,11 +113,12 @@ const FirstStep = () => {
                             <MenuItem value='Twenty one'>Twenty one</MenuItem>
                             <MenuItem value='Twenty one and a half'>Twenty one and a half</MenuItem>
                         </Select>
+                        {!rentCarData[0].takePlace && validation && <p className='validation-error'>Götürülmə yerini daxil edin!!!</p>}
                     </FormControl>
                 </div>
-                <div className="col-lg-6 first-input-col">
+                <div className={(!rentCarData[0].deliveryPlace && validation) ? "col-lg-6 error-input-col first-input-col" : "col-lg-6 first-input-col"}>
                     <FormControl sx={{ m: 1, minWidth: 80 }} className='first-input-group'>
-                        <label htmlFor="">Götürülmə yeri</label>
+                        <label htmlFor="">Qaytarılma yeri</label>
                         <Select
                             labelId="demo-simple-select-autowidth-label"
                             id="demo-simple-select-autowidth"
@@ -130,6 +136,7 @@ const FirstStep = () => {
                             <MenuItem value='Twenty one'>Twenty one</MenuItem>
                             <MenuItem value='Twenty one and a half'>Twenty one and a half</MenuItem>
                         </Select>
+                        {!rentCarData[0].deliveryPlace && validation && <p className='validation-error'>Qaytarılma yerini daxil edin!!!</p>}    
                     </FormControl>
                 </div>
                 <div className="col-lg-12">

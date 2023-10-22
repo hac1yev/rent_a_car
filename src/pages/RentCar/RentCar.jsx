@@ -9,17 +9,6 @@ import { useSelector } from 'react-redux';
 const RentCar = () => {
     const step = useSelector(state => state.stepReducer.step);
 
-    // function showStep(step) {
-    //     switch(step){
-    //         case 0: 
-    //             return <FirstStep />
-    //         case 1:
-    //             return <SecondStep />
-    //         case 2:
-    //             return <ThirdStep />
-    //     }
-    // };
-
     return (
         <div className='rent-car-wrapper'>
             <div className="rent-car-section">
