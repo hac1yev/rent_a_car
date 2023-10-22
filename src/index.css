@@ -21,3 +21,9 @@
   max-width: 1200px!important;
   width: 100%;
 }
+
+.validation-error {
+  color: rgb(248, 52, 52);
+  font-size: 16px;
+  font-weight: 600;
+}

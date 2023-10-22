@@ -3,8 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialRentCarSlice = {
     rent_car_data: [
         {
-            takeDate: new Date(),
-            deliveryDate: new Date(),
+            takeDate: null,
+            deliveryDate: null,
             takePlace: '',
             deliveryPlace: '',
             rent_fee: 0,
