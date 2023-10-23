@@ -11,6 +11,7 @@ import { FormControl, MenuItem, OutlinedInput, Select } from '@mui/material';
 
 const FirstStep = () => {
     const [validation,setValidation] = useState(false);
+    const [isTakeOverDelivery,setIsTakeOverDelivery] = useState(false);
     const dispatch = useDispatch();
     const rentCarData = useSelector(state => state.rentCarReducer.rent_car_data);
 
@@ -22,13 +23,11 @@ const FirstStep = () => {
         let plus_three_day = dayCount > 3 ? true : false;
 
         let total_fee = plus_three_day ? per_day_rent : per_day_rent + 30;
-        
 
         const car_Data = {
-            per_day_rent,
-            service_fee: 30,
-            total_fee,
-            plus_three_day
+            perDayRent: per_day_rent,
+            totalFee: total_fee,
+            plusThreeDay: plus_three_day
         }
 
         setValidation(true);
@@ -38,6 +37,8 @@ const FirstStep = () => {
             if(rentCarData[0].deliveryDate > rentCarData[0].takeDate){
                 dispatch(stepSliceAction.continueStep(1));
                 dispatch(rentCarSliceAction.getCarData(car_Data));
+            }else{
+                setIsTakeOverDelivery(true);
             }
         }else{
             return;
@@ -68,7 +69,7 @@ const FirstStep = () => {
                     <div className='first-input-group'>
                         <label htmlFor="">Götürülmə tarixi</label>
                         <DatePicker
-                            className={(!rentCarData[0].takeDate && validation) ? 'first-datepicker error-first-datepicker' : 'first-datepicker'}
+                            className={(!rentCarData[0].takeDate && validation) || (isTakeOverDelivery) ? 'first-datepicker error-first-datepicker' : 'first-datepicker'}
                             selected={rentCarData[0].takeDate}
                             onChange={(date) => dispatch(rentCarSliceAction.getTakeDate(date))}
                             selectsStart
@@ -76,13 +77,14 @@ const FirstStep = () => {
                             endDate={rentCarData[0].deliveryDate}
                         />
                         {!rentCarData[0].takeDate && validation && <p className='validation-error'>Götürülmə tarixini daxil edin!!!</p>}
+                        {isTakeOverDelivery && <p className='validation-error'>Avtomobilin götürülmə və qaytarılma tarixini düzgün daxil edin!!!</p>}
                     </div>
                 </div>
                 <div className="col-lg-6 first-input-col">
                     <div className='first-input-group'>
                         <label htmlFor="">Qaytarılma tarixi</label>
                         <DatePicker
-                            className={(!rentCarData[0].deliveryDate && validation) ? 'first-datepicker error-first-datepicker' : 'first-datepicker'} 
+                            className={(!rentCarData[0].deliveryDate && validation) || (isTakeOverDelivery) ? 'first-datepicker error-first-datepicker' : 'first-datepicker'} 
                             selected={rentCarData[0].deliveryDate}
                             onChange={(date) => dispatch(rentCarSliceAction.getDeliveryDate(date))}
                             selectsEnd
@@ -91,6 +93,7 @@ const FirstStep = () => {
                             minDate={rentCarData[0].takeDate}
                         />
                         {!rentCarData[0].deliveryDate && validation && <p className='validation-error'>Qaytarılma tarixini daxil edin!!!</p>}
+                        {isTakeOverDelivery && <p className='validation-error'>Avtomobilin götürülmə və qaytarılma tarixini düzgün daxil edin!!!</p>}
                     </div>
                 </div>
                 <div className={(!rentCarData[0].takePlace && validation) ? "col-lg-6 error-input-col first-input-col" : "col-lg-6 first-input-col"}>
@@ -149,6 +152,10 @@ const FirstStep = () => {
                             <p>Servis haqqı</p>
                             <span>30₼</span>
                         </div>
+                        {rentCarData[0].plusThreeDay && <div className='service-fee'>
+                            <p style={{ color: 'rgba(4, 176, 0, 0.50)' }}>+3 gün endirimi</p>
+                            <span>-30₼</span>
+                        </div>}
                     </div>
                 </div>
                 <div className="col-lg-12">
