@@ -11,7 +11,7 @@ import { FormControl, MenuItem, OutlinedInput, Select } from '@mui/material';
 
 const FirstStep = () => {
     const [validation,setValidation] = useState(false);
-    const [isTakeOverDelivery,setIsTakeOverDelivery] = useState(false);
+    const isTakeOverDelivery = useSelector(state => state.rentCarReducer.isTakeOverDelivery);
     const dispatch = useDispatch();
     const rentCarData = useSelector(state => state.rentCarReducer.rent_car_data);
 
@@ -31,19 +31,25 @@ const FirstStep = () => {
         }
 
         setValidation(true);
-        window.scrollTo(0,0);
+        window.scrollTo(0,550);
+
+        if(rentCarData[0].takeDate > rentCarData[0].deliveryDate){
+            dispatch(rentCarSliceAction.getIsTakeOverDelivery());
+        }
 
         if(rentCarData[0].takeDate && rentCarData[0].deliveryDate && rentCarData[0].takePlace && rentCarData[0].deliveryPlace) {
-            if(rentCarData[0].deliveryDate > rentCarData[0].takeDate){
+            if(rentCarData[0].deliveryDate >= rentCarData[0].takeDate){
                 dispatch(stepSliceAction.continueStep(1));
                 dispatch(rentCarSliceAction.getCarData(car_Data));
-            }else{
-                setIsTakeOverDelivery(true);
             }
         }else{
             return;
         }
     };
+
+    const handleTakeDate = (date) => {
+        dispatch(rentCarSliceAction.getTakeDate(date));
+    }
 
     return (
         <>
@@ -71,7 +77,7 @@ const FirstStep = () => {
                         <DatePicker
                             className={(!rentCarData[0].takeDate && validation) || (isTakeOverDelivery) ? 'first-datepicker error-first-datepicker' : 'first-datepicker'}
                             selected={rentCarData[0].takeDate}
-                            onChange={(date) => dispatch(rentCarSliceAction.getTakeDate(date))}
+                            onChange={handleTakeDate}
                             selectsStart
                             startDate={rentCarData[0].takeDate}
                             endDate={rentCarData[0].deliveryDate}

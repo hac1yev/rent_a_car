@@ -88,6 +88,14 @@
     gap: 15px;
 }
 
+.first-input-group .react-datepicker-popper {
+    padding-top: 0!important;
+}
+
+.first-input-group .react-datepicker__triangle {
+    display: none!important;
+}
+
 .first-input-col {
     margin-top: 20px;
 }

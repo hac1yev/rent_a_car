@@ -22,7 +22,8 @@ const initialRentCarSlice = {
             contactNumber: '',
             contition: false,
         }
-    ]
+    ],
+    isTakeOverDelivery: false
 };
 
 export const rentCarSlice = createSlice({
@@ -33,7 +34,14 @@ export const rentCarSlice = createSlice({
             state.rent_car_data[0] = {...state.rent_car_data[0], ...action.payload}
         },
         getTakeDate(state,action) {
-            state.rent_car_data[0].takeDate = action.payload
+            state.rent_car_data[0].takeDate = action.payload;
+
+            if(state.rent_car_data[0].takeDate && state.rent_car_data[0].deliveryDate){
+                if(state.rent_car_data[0].takeDate <= state.rent_car_data[0].deliveryDate) {
+                    state.isTakeOverDelivery = false;
+                }
+            }
+
             var timeDifference = state.rent_car_data[0].deliveryDate - action.payload;
             var dayCount = timeDifference / (24 * 60 * 60 * 1000);
 
@@ -43,12 +51,21 @@ export const rentCarSlice = createSlice({
                 state.rent_car_data[0].plusThreeDay = false;
             }
         },
+        getIsTakeOverDelivery(state) {
+            if(state.rent_car_data[0].takeDate && state.rent_car_data[0].deliveryDate) {
+                if(state.rent_car_data[0].takeDate > state.rent_car_data[0].deliveryDate) {
+                    state.isTakeOverDelivery = true;
+                }else{
+                    state.isTakeOverDelivery = false;
+                }
+            }
+        },
         getDeliveryDate(state,action) {
             state.rent_car_data[0].deliveryDate = action.payload
             var timeDifference = action.payload - state.rent_car_data[0].takeDate;
             var dayCount = timeDifference / (24 * 60 * 60 * 1000);
 
-            if(dayCount > 3) {
+            if(dayCount >= 3) {
                 state.rent_car_data[0].plusThreeDay = true;
             }else{
                 state.rent_car_data[0].plusThreeDay = false;
