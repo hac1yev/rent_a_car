@@ -22,7 +22,27 @@ const SecondStep = () => {
 
     return (
         <div>
-            SecondStep
+            <ul>
+                <li>SecondStep</li>
+                <li>SecondStep</li>
+                <li>SecondStep</li>
+                <li>SecondStep</li>
+                <li>SecondStep</li>
+                <li>SecondStep</li>
+                <li>SecondStep</li>
+                <li>SecondStep</li>
+                <li>SecondStep</li>
+                <li>SecondStep</li>
+                <li>SecondStep</li>
+                <li>SecondStep</li>
+                <li>SecondStep</li>
+                <li>SecondStep</li>
+                <li>SecondStep</li>
+                <li>SecondStep</li>
+                <li>SecondStep</li>
+                <li>SecondStep</li>
+                <li>SecondStep</li>
+            </ul>
             <div className="step-buttons">
                 <button className='step-cancel-button' onClick={backStep}>Öncəkinə qayıt</button>
                 <button type='submit' className='step-continue-button' onClick={submitForm}>Tamamla</button>
