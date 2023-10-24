@@ -7,6 +7,10 @@ const store = configureStore({
         stepReducer: stepSlice.reducer,
         rentCarReducer: rentCarSlice.reducer
     },
+    middleware: getDefaultMiddleware =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }),
 });
 
 export default store;

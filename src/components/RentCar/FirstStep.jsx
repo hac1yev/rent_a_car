@@ -20,7 +20,7 @@ const FirstStep = () => {
         var dayCount = timeDifference / (24 * 60 * 60 * 1000);
         let per_day_rent = dayCount * 150;
 
-        let plus_three_day = dayCount > 3 ? true : false;
+        let plus_three_day = dayCount >= 3 ? true : false;
 
         let total_fee = plus_three_day ? per_day_rent : per_day_rent + 30;
 
@@ -49,7 +49,13 @@ const FirstStep = () => {
 
     const handleTakeDate = (date) => {
         dispatch(rentCarSliceAction.getTakeDate(date));
-    }
+    };
+
+
+    const cancelStepForm = () => {
+        window.scrollTo(0,0);
+        dispatch(rentCarSliceAction.resetStepForm());
+    };
 
     return (
         <>
@@ -172,7 +178,7 @@ const FirstStep = () => {
                 </div>
             </div>
             <div className="step-buttons">
-                <Link to='/detail' onClick={() => window.scrollTo(0,0)} className='step-cancel-button'>Ləgv et</Link>
+                <Link to='/detail' onClick={cancelStepForm} className='step-cancel-button'>Ləgv et</Link>
                 <button type='button' className='step-continue-button' onClick={continueStep}>Davam et</button>
             </div>
         </>

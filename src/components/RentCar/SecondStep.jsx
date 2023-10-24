@@ -7,8 +7,6 @@ const SecondStep = () => {
     const rentCarData = useSelector(state => state.rentCarReducer.rent_car_data)
     const dispatch = useDispatch();
 
-    console.log(rentCarData);
-
     const submitForm = () => {
         dispatch(stepSliceAction.continueStep(1));
     };
