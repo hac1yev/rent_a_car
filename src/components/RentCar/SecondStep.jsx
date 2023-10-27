@@ -4,7 +4,7 @@ import { stepSliceAction } from '../../store/step-slice';
 
 const SecondStep = () => {
     const step = useSelector(state => state.stepReducer.step);
-    const rentCarData = useSelector(state => state.rentCarReducer.rent_car_data)
+    // const rentCarData = useSelector(state => state.rentCarReducer.rent_car_data)
     const dispatch = useDispatch();
 
     const submitForm = () => {
