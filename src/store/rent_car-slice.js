@@ -63,9 +63,11 @@ export const rentCarSlice = createSlice({
             }
         },
         getDeliveryDate(state,action) {
+            state.isTakeOverDelivery = false;
             state.rent_car_data[0].deliveryDate = action.payload.getTime()
             var timeDifference = action.payload - state.rent_car_data[0].takeDate;
             var dayCount = timeDifference / (24 * 60 * 60 * 1000);
+
 
             if(state.rent_car_data[0].takeDate && state.rent_car_data[0].deliveryDate){
                 if(dayCount >= 3) {
