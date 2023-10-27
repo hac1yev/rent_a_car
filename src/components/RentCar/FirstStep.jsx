@@ -30,10 +30,10 @@ const FirstStep = () => {
             plusThreeDay: plus_three_day
         }
 
+        dispatch(rentCarSliceAction.getIsTakeOverDelivery());
         setValidation(true);
         window.scrollTo(0,550);
 
-        dispatch(rentCarSliceAction.getIsTakeOverDelivery());
 
         if(rentCarData[0].takeDate && rentCarData[0].deliveryDate && rentCarData[0].takePlace && rentCarData[0].deliveryPlace) {
             if(rentCarData[0].deliveryDate >= rentCarData[0].takeDate){
