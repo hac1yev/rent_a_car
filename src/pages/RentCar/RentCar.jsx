@@ -30,8 +30,8 @@ const RentCar = () => {
                     </div>
                 </div>
                 <form className='container step-container mt-5'>
-                    {step === 1 && <FirstStep />}
-                    {step === 0 && <SecondStep />}
+                    {step === 0 && <FirstStep />}
+                    {step === 1 && <SecondStep />}
                     {step === 2 && <ThirdStep />}
                 </form>
             </div>
