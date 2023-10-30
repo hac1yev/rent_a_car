@@ -144,6 +144,10 @@
     margin: 0!important;
 }
 
+.MuiStepLabel-iconContainer {
+    padding-right: 0!important;
+}
+
 .first-input-group .select__control, 
 .first-input-group .css-13cymwt-control, 
 .first-input-group .css-t3ipsp-control,
@@ -553,6 +557,18 @@
 
 .paycart-img img {
     width: 35%;
+}
+
+.paycart-numbers {
+    position: relative;
+}
+
+.paycart-numbers img {
+    width: 50px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .second-step-group {

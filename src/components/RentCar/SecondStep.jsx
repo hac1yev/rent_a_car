@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { stepSliceAction } from '../../store/step-slice';
 import rent_car_cart from '../../assets/images/rent-car/step-form-cart.svg';
+import cart_numbers from '../../assets/images/rent-car/cart-numbers.svg';
 
 const SecondStep = () => {
     const step = useSelector(state => state.stepReducer.step);
@@ -42,7 +43,10 @@ const SecondStep = () => {
                         <div className='row'>
                             <div className='second-step-group col-xl-9 col-md-8 mt-4'>
                                 <label htmlFor="cartNumbers">Kartın üzərindəki rəqəmlər</label>
-                                <input type="number" id="cartNumbers" className='form-control' />
+                                <div className='paycart-numbers'>
+                                    <input type="number" id="cartNumbers" className='form-control' />
+                                    <img src={cart_numbers} alt="cart-numbers" />
+                                </div>
                             </div>
                             <div className='second-step-group col-xl-3 col-md-4 col-6 mt-4'>
                                 <label htmlFor="usageDate">İstifadə tarixi</label>
@@ -56,7 +60,7 @@ const SecondStep = () => {
                                 <label style={{ visibility: 'hidden' }} htmlFor="cartNumbers">Digər Kartlar</label>
                                 <div className='other-paycarts'>
                                     <label htmlFor="otherCarts">Digər Kartlar</label>
-                                    <button>Kartı yadda saxla</button>
+                                    <button type='button'>Kartı yadda saxla</button>
                                 </div>
                             </div>
                         </div>
