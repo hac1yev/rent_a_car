@@ -639,6 +639,10 @@
     margin-top: 100px;
 }
 
+.paycart-terms-conditions h4 {
+    width: 100%;
+}
+
 .paycart-terms-conditions .second-step-group {
     display: flex;
     flex-direction: row;
@@ -739,7 +743,6 @@
 
     .first-datepicker,
     .second-step-group input {
-        width: 100%;
         color: #757575;
         font-family: Inter;
         font-size: 15px;
@@ -747,6 +750,28 @@
         font-weight: 600;
         line-height: normal;
         padding: 14px 15px;
+    }
+
+    .paycart-check {
+        width: 30px;
+        height: 30px;
+    }
+
+    .paycart-terms-conditions {
+        margin-top: 50px;
+    }
+
+    .paycart-terms-conditions .second-step-group {
+        width: 50%;
+        gap: 10px;
+    }
+
+    .paycart-terms-conditions h4 {
+        font-size: 20px!important;
+    }
+
+    .paycart-terms-conditions label {
+        font-size: 14px!important;
     }
 
     .first-input-group .select__control, 
@@ -998,4 +1023,22 @@
     .secondstep-row {
         margin-top: 180px;
     }
+
+    .paycart-terms-conditions .second-step-group {
+        gap: 5px;
+    }
+
+    .paycart-terms-conditions h4 {
+        font-size: 18px!important;
+    }
+
+    .paycart-terms-conditions label {
+        font-size: 12px!important;
+    }
+
+    .paycart-check {
+        width: 25px;
+        height: 25px;
+    }
+
 }

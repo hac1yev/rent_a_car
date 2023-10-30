@@ -82,11 +82,11 @@ const SecondStep = () => {
                             
                         </div>
                     </div>
-                    <div className='paycart-terms-conditions row'>
-                        <div className='col-md-6 d-flex align-items-center'>
+                    <div className='paycart-terms-conditions'>
+                        <div className='d-flex align-items-center'>
                             <h4 className='mb-0'>Şərtlər və qaydalar</h4>
                         </div>
-                        <div className='second-step-group col-md-6'>
+                        <div className='second-step-group'>
                             <label htmlFor="acceptCondition">Bütün şərtlərlə razıyam</label>
                             <input type="checkbox" id="acceptCondition" className='paycart-check' />
                         </div>
