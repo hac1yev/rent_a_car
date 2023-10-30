@@ -505,6 +505,167 @@
 /* END WAVE SECTION */
 
 
+/* START SECOND STEPFORM SECTION */
+
+.secondstep-row {
+    position: relative;
+    border-radius: 46px;
+    background: #FFF;
+    margin-top: 300px;
+    padding: 120px 30px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.secondstep-row h4 {
+    width: 65%;
+    color: #000;
+    font-family: Inter;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.secondstep-total-price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.secondstep-total-price h3 {
+    color: #1DA0FF;
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.paycart-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-70%);
+    display: flex;
+    justify-content: center;
+}
+
+.paycart-img img {
+    width: 35%;
+}
+
+.second-step-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.second-step-group label {
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.second-step-group input {
+    /* width: 100%!important; */
+    border: 1px solid #ccc;
+    border-radius: 11px!important;
+    color: #000;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    outline: none;
+    padding: 16px 15px 16px 15px;
+    line-height: 1!important;
+}
+
+#CVV,
+#usageDate {
+    text-align: center;
+}
+
+.paycart-info-row {
+    margin-top: 70px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #C5C5C5;
+}
+.paycart-info-row2 {
+    margin-top: 40px;
+    padding-bottom: 50px;
+}
+
+.other-paycarts {
+    display: flex;
+    gap: 15px;
+}
+
+.other-paycarts label {
+    color: #4B4B4B;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+.other-paycarts button {
+    color: #000;
+    width: 50%;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+    line-height: normal;
+    background-color: #fff;
+    border-radius: 15px;
+    border: 3px solid #475EE9;
+    padding: 16px 0px;
+    transition: all 0.2s ease;
+}
+
+.other-paycarts button:hover {
+    background-color: #fafafa;
+}
+
+.paycart-terms-conditions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.paycart-terms-conditions .second-step-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.paycart-check {
+    width: 52px;
+    height: 52px;
+    border: 1px solid #ccc;
+    border-radius: 11px!important;
+}
+
+.paycart-check:focus {
+    color: #000;
+    background-color: transparent;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* END SECOND STEPFORM SECTION */
+
+
+
 @media screen and (max-width: 991.5px) {
     .firststep-row {
         padding: 30px 80px;
@@ -532,6 +693,22 @@
         width: 80px;
         height: 109px;
     }
+
+    .paycart-info-row .col-lg-7 {
+        margin-top: 30px;
+    }
+
+    .paycart-info-row2 .col-lg-7 {
+        margin-top: 30px;
+    }
+
+    .paycart-img img {
+        width: 45%;
+    }
+
+    .secondstep-row {
+        margin-top: 250px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -555,11 +732,13 @@
         font-size: 22px;
     }
 
-    .first-input-group label {
-        font-size: 18px;
+    .first-input-group label,
+    .second-step-group label {
+        font-size: 16px;
     }
 
-    .first-datepicker {
+    .first-datepicker,
+    .second-step-group input {
         width: 100%;
         color: #757575;
         font-family: Inter;
@@ -677,7 +856,48 @@
     .step-loading {
         padding: 100px 0;
     }
-      
+
+    .secondstep-row {
+        padding: 80px 15px 80px;
+    }
+
+    .secondstep-total-price h3 {
+        font-size: 22px;
+    }
+
+    .secondstep-row h4 {
+        font-size: 22px;
+    }
+
+    .other-paycarts {
+        display: flex;
+        justify-content: center;
+    }
+
+    .other-paycarts label {
+        display: flex;
+        justify-content: flex-start;
+        width: 30%;
+        font-size: 16px;
+    }
+
+    .other-paycarts button {
+        width: 40%;
+        font-size: 16px;
+        padding: 14px;
+    }
+
+    .paycart-img img {
+        width: 50%;
+    } 
+
+    .secondstep-row {
+        margin-top: 200px;
+    }
+
+    .secondstep-row h4 {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -696,7 +916,8 @@
         font-size: 16px;
     }
 
-    .first-input-group label {
+    .first-input-group label,
+    .second-step-group label {
         font-size: 16px;
     }
 
@@ -727,8 +948,8 @@
     }
 
     .stepper-wrap {
-        padding-top: 45px;
-        padding-bottom: 95px;
+        padding-top: 35px;
+        padding-bottom: 55px;
     }
 
     .stepper-wrap p {
@@ -741,4 +962,40 @@
         padding: 0 15px;
     }
 
+    .secondstep-row {
+        padding: 80px 5px 80px;
+    }
+
+    .secondstep-total-price h3 {
+        font-size: 20px;
+    }
+
+    .secondstep-row h4 {
+        font-size: 20px;
+    }
+
+    .other-paycarts {
+        gap: 0px;
+    }
+
+    .other-paycarts label {
+        display: flex;
+        justify-content: flex-start;
+        width: 40%;
+        font-size: 14px;
+    }
+
+    .other-paycarts button {
+        width: 60%;
+        font-size: 14px;
+        padding: 14px 5px;
+    }
+
+    .paycart-img img {
+        width: 70%;
+    }
+
+    .secondstep-row {
+        margin-top: 180px;
+    }
 }
