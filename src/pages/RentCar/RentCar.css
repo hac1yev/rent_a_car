@@ -125,9 +125,9 @@
     outline: none;
 }
 
-.error-first-datepicker {
+.error {
     border: 1px solid rgb(248, 52, 52)!important;
-    box-shadow: 0 0 0 0.15rem rgba(248, 52, 52, 0.25);
+    box-shadow: 0 0 0 0.15rem rgba(248, 52, 52, 0.25)!important;
 }
 
 .MuiInputBase-root {

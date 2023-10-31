@@ -4,10 +4,31 @@ import './RentCar.css';
 import SecondStep from '../../components/RentCar/SecondStep';
 import ThirdStep from '../../components/RentCar/ThirdStep';
 import { Stepper, StepLabel, Step } from '@mui/material';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useFormik } from "formik";
+import { rentCarSchema } from '../../assets/schema/rentCarSchema';
+import { stepSliceAction } from '../../store/step-slice';
 
 const RentCar = () => {
     const step = useSelector(state => state.stepReducer.step);
+    const dispatch = useDispatch();
+
+    let handleSubmitForm = async (e) => {
+        dispatch(stepSliceAction.continueStep(1));
+    };
+
+    const { values, errors, touched, handleBlur, handleChange, handleSubmit } = useFormik({
+        initialValues: {
+          phone: "",
+          email: "",
+          fullName: "",
+          CVV: "",
+          usageDate: "",
+          cartNumbers: ""
+        },
+        validationSchema: rentCarSchema,
+        onSubmit: handleSubmitForm
+    });
 
     return (
         <div className='rent-car-wrapper'>
@@ -29,9 +50,16 @@ const RentCar = () => {
                         </Stepper>
                     </div>
                 </div>
-                <form className='container step-container mt-5'>
+                <form className='container step-container mt-5' onSubmit={handleSubmit}>
                     {step === 0 && <FirstStep />}
-                    {step === 1 && <SecondStep />}
+                    {step === 1 && 
+                        <SecondStep 
+                            values={values} 
+                            handleBlur={handleBlur} 
+                            handleChange={handleChange} 
+                            errors={errors}
+                            touched={touched}
+                        />}
                     {step === 2 && <ThirdStep />}
                 </form>
             </div>

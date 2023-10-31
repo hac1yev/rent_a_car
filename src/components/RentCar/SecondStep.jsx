@@ -4,13 +4,13 @@ import { stepSliceAction } from '../../store/step-slice';
 import rent_car_cart from '../../assets/images/rent-car/step-form-cart.svg';
 import cart_numbers from '../../assets/images/rent-car/cart-numbers.svg';
 
-const SecondStep = () => {
+const SecondStep = ({ values,handleBlur,handleChange,errors,touched }) => {
     const step = useSelector(state => state.stepReducer.step);
-    const dispatch = useDispatch();
+    const rentCarData = useSelector(state => state.rentCarReducer.rent_car_data);
 
-    const submitForm = () => {
-        dispatch(stepSliceAction.continueStep(1));
-    };
+    console.log(rentCarData);
+
+    const dispatch = useDispatch();
 
     const backStep = () => {
         if(step > 0) {
@@ -28,7 +28,7 @@ const SecondStep = () => {
                 <div className="secondstep-total-price row">
                     <div className="col-12 d-flex justify-content-between">
                         <h3>Ümumi qiymət</h3>
-                        <h3>1050₼</h3>
+                        <h3>{rentCarData[0].totalFee}₼</h3>
                     </div>
                 </div>
                 <div className="row paycart-info-row">
@@ -38,23 +38,59 @@ const SecondStep = () => {
                     <div className="col-lg-7">
                         <div className='second-step-group col-12'>
                             <label htmlFor="fullName">Kartın üzərindəki ad və soyad</label>
-                            <input type="text" id="fullName" value="Mahammad Ahmadzada" className='form-control' />
+                            <input 
+                                type="text" 
+                                id="fullName" 
+                                value={values.fullName} 
+                                placeholder='Ad və Soyadınızı daxil edin...'
+                                className={errors.fullName && touched.fullName ? 'form-control error' : 'form-control'}
+                                onChange={handleChange}
+                                onBlur={handleBlur} 
+                            />
+                            {errors.fullName && touched.fullName && <p className='validation-error'>{errors.fullName}</p>}
                         </div>
                         <div className='row'>
                             <div className='second-step-group col-xl-9 col-md-8 mt-4'>
                                 <label htmlFor="cartNumbers">Kartın üzərindəki rəqəmlər</label>
                                 <div className='paycart-numbers'>
-                                    <input type="number" id="cartNumbers" className='form-control' />
+                                    <input 
+                                        type="number" 
+                                        id="cartNumbers" 
+                                        placeholder='Kart nömrəsini daxil edin...'
+                                        value={values.cartNumbers} 
+                                        className={errors.cartNumbers && touched.cartNumbers ? 'form-control error' : 'form-control'}
+                                        onChange={handleChange}
+                                        onBlur={handleBlur} 
+                                    />
                                     <img src={cart_numbers} alt="cart-numbers" />
                                 </div>
+                                {errors.cartNumbers && touched.cartNumbers && <p className='validation-error'>{errors.cartNumbers}</p>}
                             </div>
                             <div className='second-step-group col-xl-3 col-md-4 col-6 mt-4'>
                                 <label htmlFor="usageDate">İstifadə tarixi</label>
-                                <input type="number" id="usageDate" className='form-control' />
+                                <input 
+                                    type="number" 
+                                    id="usageDate" 
+                                    placeholder='İstifadə tarixini daxil edin...'
+                                    value={values.usageDate} 
+                                    className={errors.usageDate && touched.usageDate ? 'form-control error' : 'form-control'}
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}                                 
+                                />
+                                {errors.usageDate && touched.usageDate && <p className='validation-error'>{errors.usageDate}</p>}
                             </div>
                             <div className='second-step-group col-xl-3 col-md-4 col-6 mt-4'>
                                 <label htmlFor="CVV">CVV</label>
-                                <input type="password" value="123" id="CVV" className='form-control' />
+                                <input 
+                                    type="password" 
+                                    id="CVV" 
+                                    value={values.CVV} 
+                                    placeholder='CVV daxil edin...'
+                                    className={errors.CVV && touched.CVV ? 'form-control error' : 'form-control'}
+                                    onChange={handleChange}
+                                    onBlur={handleBlur} 
+                                />
+                                {errors.CVV && touched.CVV && <p className='validation-error'>{errors.CVV}</p>}
                             </div>
                             <div className='second-step-group col-xl-9 col-md-8 mt-4'>
                                 <label style={{ visibility: 'hidden' }} htmlFor="cartNumbers">Digər Kartlar</label>
@@ -75,15 +111,30 @@ const SecondStep = () => {
                     </div>
                     <div className="col-lg-7">
                         <div className='second-step-group col-12'>
-                            <label htmlFor="cartEmail">Email</label>
-                            <input type="text" id="cartEmail" value="Ahmadovm@gmail.com" className='form-control' />
+                            <label htmlFor="email">Email</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                placeholder='Email-nizi daxil edin...'
+                                className={errors.email && touched.email ? 'form-control error' : 'form-control'}
+                                value={values.email}
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                            />
+                            {errors.email && touched.email && <p className='validation-error'>{errors.email}</p>}
                         </div>
                         <div className='second-step-group col-12 mt-4'>
-                            <label htmlFor="contactNumber">Əlaqə nömrəsi</label>
-                            <input type="text" id="contactNumber" value="+994 51 545 3432" className='form-control' />
-                        </div>
-                        <div className='row'>
-                            
+                            <label htmlFor="phone">Əlaqə nömrəsi</label>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                placeholder='+994*********'
+                                value={values.phone} 
+                                className={errors.phone && touched.phone ? 'form-control error' : 'form-control'}
+                                onChange={handleChange}
+                                onBlur={handleBlur} 
+                            />
+                            {errors.phone && touched.phone && <p className='validation-error'>{errors.phone}</p>}
                         </div>
                     </div>
                     <div className='paycart-terms-conditions'>
@@ -99,7 +150,7 @@ const SecondStep = () => {
             </div>
             <div className="step-buttons">
                 <button className='step-cancel-button' onClick={backStep}>Öncəkinə qayıt</button>
-                <button type='submit' className='step-continue-button' onClick={submitForm}>Tamamla</button>
+                <button type='submit' className='step-continue-button'>Tamamla</button>
             </div>
         </>
     );

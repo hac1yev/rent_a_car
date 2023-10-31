@@ -16,20 +16,6 @@ const FirstStep = () => {
     const rentCarData = useSelector(state => state.rentCarReducer.rent_car_data);
 
     const continueStep = () => {
-        var timeDifference = rentCarData[0].deliveryDate - rentCarData[0].takeDate;
-        var dayCount = timeDifference / (24 * 60 * 60 * 1000);
-        let per_day_rent = dayCount * 150;
-
-        let plus_three_day = dayCount >= 3 ? true : false;
-
-        let total_fee = plus_three_day ? per_day_rent : per_day_rent + 30;
-
-        const car_Data = {
-            perDayRent: per_day_rent,
-            totalFee: total_fee,
-            plusThreeDay: plus_three_day
-        }
-
         dispatch(rentCarSliceAction.getIsTakeOverDelivery());
         setValidation(true);
         window.scrollTo(0,550);
@@ -38,7 +24,6 @@ const FirstStep = () => {
         if(rentCarData[0].takeDate && rentCarData[0].deliveryDate && rentCarData[0].takePlace && rentCarData[0].deliveryPlace) {
             if(rentCarData[0].deliveryDate >= rentCarData[0].takeDate){
                 dispatch(stepSliceAction.continueStep(1));
-                dispatch(rentCarSliceAction.getCarData(car_Data));
             }
         }else{
             return;
@@ -79,7 +64,7 @@ const FirstStep = () => {
                     <div className='first-input-group'>
                         <label htmlFor="">Götürülmə tarixi</label>
                         <DatePicker
-                            className={(!rentCarData[0].takeDate && validation) || (isTakeOverDelivery) ? 'first-datepicker error-first-datepicker' : 'first-datepicker'}
+                            className={(!rentCarData[0].takeDate && validation) || (isTakeOverDelivery) ? 'first-datepicker error' : 'first-datepicker'}
                             selected={rentCarData[0].takeDate}
                             onChange={handleTakeDate}
                             selectsStart
@@ -94,7 +79,7 @@ const FirstStep = () => {
                     <div className='first-input-group'>
                         <label htmlFor="">Qaytarılma tarixi</label>
                         <DatePicker
-                            className={(!rentCarData[0].deliveryDate && validation) || (isTakeOverDelivery) ? 'first-datepicker error-first-datepicker' : 'first-datepicker'} 
+                            className={(!rentCarData[0].deliveryDate && validation) || (isTakeOverDelivery) ? 'first-datepicker error' : 'first-datepicker'} 
                             selected={rentCarData[0].deliveryDate}
                             onChange={(date) => dispatch(rentCarSliceAction.getDeliveryDate(date))}
                             selectsEnd
@@ -156,7 +141,7 @@ const FirstStep = () => {
                     <div className='firststep-bottom'>
                         <div className='daily-rent'>
                             <p>Günlük icarə haqqı</p>
-                            <span>150₼ x 0 gün</span>
+                            <span>150₼ x {rentCarData[0].dayCount} gün</span>
                         </div>
                         <div className='service-fee'>
                             <p>Servis haqqı</p>
@@ -171,7 +156,7 @@ const FirstStep = () => {
                 <div className="col-lg-12">
                     <div className="first-total-price">
                         <span>Ümumi qiymət</span>
-                        <span>30₼</span>
+                        <span>{rentCarData[0].plusThreeDay ? rentCarData[0].dayCount * 150 : rentCarData[0].dayCount * 150 + 30}₼</span>
                     </div>
                 </div>
             </div>
