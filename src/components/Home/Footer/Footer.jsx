@@ -48,8 +48,10 @@ const Footer = () => {
             <li>Unvan: </li>
 
             <div className="newssettler">
+              <div className="newssettler-inner">
                 <input type="email" placeholder="Email daxil et" />
                 <button className="newssettler-btn">Abonə ol</button>
+              </div>
             </div>
           </div>
         </div>
