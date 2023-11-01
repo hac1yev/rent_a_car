@@ -45,7 +45,7 @@ const SecondStep = ({ values,handleBlur,handleChange,errors,touched }) => {
     const handleCVVChange = (e) => {
         const input = e.target.value;
         // Limit the CVV to 3 digits
-        const truncatedCVV = input.substring(0, 3);
+        const truncatedCVV = input.substring(0, 3); 
         setCVV(truncatedCVV);
         
         if(truncatedCVV.length === 3) {
