@@ -4,11 +4,14 @@ import { stepSliceAction } from '../../store/step-slice';
 import rent_car_cart from '../../assets/images/rent-car/step-form-cart.svg';
 import cart_numbers from '../../assets/images/rent-car/cart-numbers.svg';
 
+import { useState } from 'react';
+
 const SecondStep = ({ values,handleBlur,handleChange,errors,touched }) => {
+    const [cardNumber, setCardNumber] = useState('');
+    const [cvv, setCVV] = useState('');
+    const [expiry, setExpiry] = useState('');
     const step = useSelector(state => state.stepReducer.step);
     const rentCarData = useSelector(state => state.rentCarReducer.rent_car_data);
-
-    console.log(rentCarData);
 
     const dispatch = useDispatch();
 
@@ -18,6 +21,91 @@ const SecondStep = ({ values,handleBlur,handleChange,errors,touched }) => {
         }
         window.scrollTo(0,0);
     };
+
+    const handleCardNumberChange = (e) => {
+        let input = e.target.value;
+        const cursorPosition = e.target.selectionStart;
+
+        // Remove non-digit characters and spaces
+        const formattedValue = input.replace(/[^\d]/g, '').replace(/\s/g, '');
+
+        // Limit the card number to 16 digits
+        const truncatedCardNumber = formattedValue.substring(0, 16);
+
+        // Insert a space after every 4 digits except for the last 4
+        const formattedCardNumber = truncatedCardNumber.replace(/(\d{4})(?!$)/g, '$1 ');
+
+        setCardNumber(formattedCardNumber);
+        values.cartNumbers = formattedCardNumber;
+
+        // Restore the cursor position
+        e.target.setSelectionRange(cursorPosition, cursorPosition);
+    };
+
+    const handleCVVChange = (e) => {
+        const input = e.target.value;
+        // Limit the CVV to 3 digits
+        const truncatedCVV = input.substring(0, 3);
+        setCVV(truncatedCVV);
+        
+        if(truncatedCVV.length === 3) {
+            values.CVV = truncatedCVV;
+        }else{
+            values.CVV = "";
+        }
+    };
+    
+    const handleExpiryChange = (e) => {
+        const input = e.target.value;
+        const cursorPosition = e.target.selectionStart;
+
+        // Limit the expiry date to 5 characters (MM/YY)
+        const truncatedExpiry = input.substring(0, 5);
+
+        // Automatically add a "/" between the month and year if not already present
+        const formattedExpiry = truncatedExpiry.replace(/^(\d{2})([^\d]?)(\d{0,2})/, '$1/$3');
+
+        setExpiry(formattedExpiry);
+        
+        if(formattedExpiry.length === 5) {
+            values.usageDate = formattedExpiry;
+        }else{
+            values.usageDate = "";
+        }
+
+        // Restore the cursor position
+        e.target.setSelectionRange(cursorPosition, cursorPosition);
+    };
+
+    // Input icine herf yazmagin qarsisini alir
+    const handleKeyPress = (e) => {
+        const keyCode = e.which || e.keyCode;
+        if (keyCode < 48 || keyCode > 57) {
+        e.preventDefault(); // Prevent input of non-numeric characters
+        }
+    };
+
+
+    // Input icine reqem yazmagin qarsisini alir
+    const handleKeyPressNumber = (e) => {
+        const keyCode = e.which || e.keyCode;
+        if (!((keyCode >= 65 && keyCode <= 90) || (keyCode >= 97 && keyCode <= 122) || keyCode === 32)) {
+            e.preventDefault(); // Prevent input of non-numeric characters
+        }
+    };
+
+    // const formatCardNumber = (input) => {
+    //     // Remove non-digit characters and spaces
+    //     const formattedValue = input.replace(/[^\d]/g, '').replace(/\s/g, '');
+
+    //     // Limit the card number to 16 digits
+    //     const truncatedCardNumber = formattedValue.substring(0, 16);
+
+    //     // Insert a space after every 4 digits
+    //     const formattedCardNumber = truncatedCardNumber.replace(/(\d{4})/g, '$1 ');
+
+    //     return formattedCardNumber;
+    // };
 
     return (
         <>
@@ -46,13 +134,14 @@ const SecondStep = ({ values,handleBlur,handleChange,errors,touched }) => {
                                 className={errors.fullName && touched.fullName ? 'form-control error' : 'form-control'}
                                 onChange={handleChange}
                                 onBlur={handleBlur} 
+                                onKeyPress={handleKeyPressNumber}
                             />
                             {errors.fullName && touched.fullName && <p className='validation-error'>{errors.fullName}</p>}
                         </div>
                         <div className='row'>
                             <div className='second-step-group col-xl-9 col-md-8 mt-4'>
-                                <label htmlFor="cartNumbers">Kartın üzərindəki rəqəmlər</label>
-                                <div className='paycart-numbers'>
+                                {/* <label htmlFor="cartNumbers">Kartın üzərindəki rəqəmlər</label> */}
+                                {/* <div className='paycart-numbers'>
                                     <input 
                                         type="number" 
                                         id="cartNumbers" 
@@ -60,7 +149,23 @@ const SecondStep = ({ values,handleBlur,handleChange,errors,touched }) => {
                                         value={values.cartNumbers} 
                                         className={errors.cartNumbers && touched.cartNumbers ? 'form-control error' : 'form-control'}
                                         onChange={handleChange}
-                                        onBlur={handleBlur} 
+                                        onBlur={handleBlur}
+                                    />
+                                    <img src={cart_numbers} alt="cart-numbers" />
+                                </div> */}
+                                {/* {errors.cartNumbers && touched.cartNumbers && <p className='validation-error'>{errors.cartNumbers}</p>} */}
+
+                                <label htmlFor="cardNumber">Kartın üzərindəki rəqəmlər</label>
+                                <div className="paycart-numbers">
+                                    <input
+                                        type="text"
+                                        id="cardNumber"
+                                        value={cardNumber}
+                                        className={errors.cartNumbers && touched.cartNumbers ? 'form-control error' : 'form-control'}
+                                        onChange={handleCardNumberChange}
+                                        onBlur={handleBlur}
+                                        placeholder="Kart nömrəsini daxil edin!"
+                                        maxLength={19}
                                     />
                                     <img src={cart_numbers} alt="cart-numbers" />
                                 </div>
@@ -69,26 +174,30 @@ const SecondStep = ({ values,handleBlur,handleChange,errors,touched }) => {
                             <div className='second-step-group col-xl-3 col-md-4 col-6 mt-4'>
                                 <label htmlFor="usageDate">İstifadə tarixi</label>
                                 <input 
-                                    type="number" 
+                                    type="text" 
                                     id="usageDate" 
-                                    placeholder='İstifadə tarixini daxil edin...'
-                                    value={values.usageDate} 
+                                    value={expiry} 
                                     className={errors.usageDate && touched.usageDate ? 'form-control error' : 'form-control'}
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}                                 
+                                    onChange={handleExpiryChange}
+                                    maxLength={5}
+                                    placeholder="MM/YY"
+                                    onBlur={handleBlur}  
+                                    onKeyPress={handleKeyPress}                               
                                 />
                                 {errors.usageDate && touched.usageDate && <p className='validation-error'>{errors.usageDate}</p>}
                             </div>
                             <div className='second-step-group col-xl-3 col-md-4 col-6 mt-4'>
                                 <label htmlFor="CVV">CVV</label>
                                 <input 
-                                    type="password" 
+                                    type="text" 
                                     id="CVV" 
-                                    value={values.CVV} 
+                                    value={cvv} 
                                     placeholder='CVV daxil edin...'
                                     className={errors.CVV && touched.CVV ? 'form-control error' : 'form-control'}
-                                    onChange={handleChange}
+                                    onChange={handleCVVChange}
                                     onBlur={handleBlur} 
+                                    maxLength={3}
+                                    onKeyPress={handleKeyPress}                               
                                 />
                                 {errors.CVV && touched.CVV && <p className='validation-error'>{errors.CVV}</p>}
                             </div>
