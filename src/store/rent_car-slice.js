@@ -13,9 +13,9 @@ const initialRentCarState = {
         },
         {
             fullName: '',
-            card_Numbers: '',
-            usageDate: '',
-            CVV: '',
+            cartNumber: '',
+            expiry: '',
+            cvv: '',
             saveCard: false,
             email: '',
             contactNumber: '',
@@ -87,6 +87,16 @@ export const rentCarSlice = createSlice({
         },
         resetStepForm(state) {
             state.rent_car_data = initialRentCarState.rent_car_data
+        },
+        getExpiryValue(state,action) {
+            state.rent_car_data[1].expiry = action.payload;
+            
+        },
+        getCvvValue(state,action) {
+            state.rent_car_data[1].cvv = action.payload;
+        },
+        getCardNumber(state,action) {
+            state.rent_car_data[1].cartNumber = action.payload;
         }
     }
 });
