@@ -3,13 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { stepSliceAction } from '../../store/step-slice';
 import rent_car_cart from '../../assets/images/rent-car/step-form-cart.svg';
 import cart_numbers from '../../assets/images/rent-car/cart-numbers.svg';
-
-import { useState } from 'react';
+import { rentCarSliceAction } from '../../store/rent_car-slice';
 
 const SecondStep = ({ values,handleBlur,handleChange,errors,touched }) => {
-    const [cardNumber, setCardNumber] = useState('');
-    const [cvv, setCVV] = useState('');
-    const [expiry, setExpiry] = useState('');
     const step = useSelector(state => state.stepReducer.step);
     const rentCarData = useSelector(state => state.rentCarReducer.rent_car_data);
 
@@ -35,7 +31,7 @@ const SecondStep = ({ values,handleBlur,handleChange,errors,touched }) => {
         // Insert a space after every 4 digits except for the last 4
         const formattedCardNumber = truncatedCardNumber.replace(/(\d{4})(?!$)/g, '$1 ');
 
-        setCardNumber(formattedCardNumber);
+        dispatch(rentCarSliceAction.getCardNumber(formattedCardNumber));
         values.cartNumbers = formattedCardNumber;
 
         // Restore the cursor position
@@ -46,7 +42,7 @@ const SecondStep = ({ values,handleBlur,handleChange,errors,touched }) => {
         const input = e.target.value;
         // Limit the CVV to 3 digits
         const truncatedCVV = input.substring(0, 3); 
-        setCVV(truncatedCVV);
+        dispatch(rentCarSliceAction.getCvvValue(truncatedCVV));
         
         if(truncatedCVV.length === 3) {
             values.CVV = truncatedCVV;
@@ -65,7 +61,7 @@ const SecondStep = ({ values,handleBlur,handleChange,errors,touched }) => {
         // Automatically add a "/" between the month and year if not already present
         const formattedExpiry = truncatedExpiry.replace(/^(\d{2})([^\d]?)(\d{0,2})/, '$1/$3');
 
-        setExpiry(formattedExpiry);
+        dispatch(rentCarSliceAction.getExpiryValue(formattedExpiry));
         
         if(formattedExpiry.length === 5) {
             values.usageDate = formattedExpiry;
@@ -81,31 +77,17 @@ const SecondStep = ({ values,handleBlur,handleChange,errors,touched }) => {
     const handleKeyPress = (e) => {
         const keyCode = e.which || e.keyCode;
         if (keyCode < 48 || keyCode > 57) {
-        e.preventDefault(); // Prevent input of non-numeric characters
+        e.preventDefault();
         }
     };
-
 
     // Input icine reqem yazmagin qarsisini alir
     const handleKeyPressNumber = (e) => {
         const keyCode = e.which || e.keyCode;
         if (!((keyCode >= 65 && keyCode <= 90) || (keyCode >= 97 && keyCode <= 122) || keyCode === 32)) {
-            e.preventDefault(); // Prevent input of non-numeric characters
+            e.preventDefault(); 
         }
     };
-
-    // const formatCardNumber = (input) => {
-    //     // Remove non-digit characters and spaces
-    //     const formattedValue = input.replace(/[^\d]/g, '').replace(/\s/g, '');
-
-    //     // Limit the card number to 16 digits
-    //     const truncatedCardNumber = formattedValue.substring(0, 16);
-
-    //     // Insert a space after every 4 digits
-    //     const formattedCardNumber = truncatedCardNumber.replace(/(\d{4})/g, '$1 ');
-
-    //     return formattedCardNumber;
-    // };
 
     return (
         <>
@@ -160,7 +142,7 @@ const SecondStep = ({ values,handleBlur,handleChange,errors,touched }) => {
                                     <input
                                         type="text"
                                         id="cardNumber"
-                                        value={cardNumber}
+                                        value={rentCarData[1].cartNumber}
                                         className={errors.cartNumbers && touched.cartNumbers ? 'form-control error' : 'form-control'}
                                         onChange={handleCardNumberChange}
                                         onBlur={handleBlur}
@@ -176,7 +158,7 @@ const SecondStep = ({ values,handleBlur,handleChange,errors,touched }) => {
                                 <input 
                                     type="text" 
                                     id="usageDate" 
-                                    value={expiry} 
+                                    value={rentCarData[1].expiry} 
                                     className={errors.usageDate && touched.usageDate ? 'form-control error' : 'form-control'}
                                     onChange={handleExpiryChange}
                                     maxLength={5}
@@ -191,7 +173,7 @@ const SecondStep = ({ values,handleBlur,handleChange,errors,touched }) => {
                                 <input 
                                     type="text" 
                                     id="CVV" 
-                                    value={cvv} 
+                                    value={rentCarData[1].cvv} 
                                     placeholder='CVV daxil edin...'
                                     className={errors.CVV && touched.CVV ? 'form-control error' : 'form-control'}
                                     onChange={handleCVVChange}
