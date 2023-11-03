@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { stepSliceAction } from '../../store/step-slice';
 import rent_car_cart from '../../assets/images/rent-car/step-form-cart.svg';
@@ -8,6 +8,9 @@ import { rentCarSliceAction } from '../../store/rent_car-slice';
 const SecondStep = ({ values,handleBlur,handleChange,errors,touched }) => {
     const step = useSelector(state => state.stepReducer.step);
     const rentCarData = useSelector(state => state.rentCarReducer.rent_car_data);
+    const [cartValidation,setCartValidation] = useState(true);
+    const [cvvValidation,setCvvValidation] = useState(true);
+    const [expiryValidation,setExpiryValidation] = useState(true);
 
     const dispatch = useDispatch();
 
@@ -34,6 +37,12 @@ const SecondStep = ({ values,handleBlur,handleChange,errors,touched }) => {
         dispatch(rentCarSliceAction.getCardNumber(formattedCardNumber));
         values.cartNumbers = formattedCardNumber;
 
+        if(values.cartNumbers.length === 19 ) {
+            setCartValidation(false);
+        }else{
+            setCartValidation(true);
+        }
+
         // Restore the cursor position
         e.target.setSelectionRange(cursorPosition, cursorPosition);
     };
@@ -46,8 +55,10 @@ const SecondStep = ({ values,handleBlur,handleChange,errors,touched }) => {
         
         if(truncatedCVV.length === 3) {
             values.CVV = truncatedCVV;
+            setCvvValidation(false);
         }else{
             values.CVV = "";
+            setCvvValidation(true);
         }
     };
     
@@ -65,12 +76,32 @@ const SecondStep = ({ values,handleBlur,handleChange,errors,touched }) => {
         
         if(formattedExpiry.length === 5) {
             values.usageDate = formattedExpiry;
+            setExpiryValidation(false);
         }else{
             values.usageDate = "";
+            setExpiryValidation(true);
         }
 
         // Restore the cursor position
         e.target.setSelectionRange(cursorPosition, cursorPosition);
+    };
+
+    const handleButtonClick = () => {
+        if(values.cartNumbers.length === 19) {
+            setCartValidation(false);
+        }else{
+            setCartValidation(true);
+        }
+        if(values.usageDate.length === 5) {
+            setExpiryValidation(false);
+        }else{
+            setExpiryValidation(true);
+        }
+        if(values.CVV.length === 3) {
+            setCvvValidation(false);
+        }else{
+            setCvvValidation(true);
+        }
     };
 
     // Input icine herf yazmagin qarsisini alir
@@ -143,7 +174,7 @@ const SecondStep = ({ values,handleBlur,handleChange,errors,touched }) => {
                                         type="text"
                                         id="cardNumber"
                                         value={rentCarData[1].cartNumber}
-                                        className={errors.cartNumbers && touched.cartNumbers ? 'form-control error' : 'form-control'}
+                                        className={errors.cartNumbers && touched.cartNumbers && cartValidation ? 'form-control error' : 'form-control'}
                                         onChange={handleCardNumberChange}
                                         onBlur={handleBlur}
                                         placeholder="Kart nömrəsini daxil edin!"
@@ -151,7 +182,7 @@ const SecondStep = ({ values,handleBlur,handleChange,errors,touched }) => {
                                     />
                                     <img src={cart_numbers} alt="cart-numbers" />
                                 </div>
-                                {errors.cartNumbers && touched.cartNumbers && <p className='validation-error'>{errors.cartNumbers}</p>}
+                                {errors.cartNumbers && touched.cartNumbers && cartValidation && <p className='validation-error'>{errors.cartNumbers}</p>}
                             </div>
                             <div className='second-step-group col-xl-3 col-md-4 col-6 mt-4'>
                                 <label htmlFor="usageDate">İstifadə tarixi</label>
@@ -159,14 +190,14 @@ const SecondStep = ({ values,handleBlur,handleChange,errors,touched }) => {
                                     type="text" 
                                     id="usageDate" 
                                     value={rentCarData[1].expiry} 
-                                    className={errors.usageDate && touched.usageDate ? 'form-control error' : 'form-control'}
+                                    className={errors.usageDate && touched.usageDate && expiryValidation ? 'form-control error' : 'form-control'}
                                     onChange={handleExpiryChange}
                                     maxLength={5}
                                     placeholder="MM/YY"
                                     onBlur={handleBlur}  
                                     onKeyPress={handleKeyPress}                               
                                 />
-                                {errors.usageDate && touched.usageDate && <p className='validation-error'>{errors.usageDate}</p>}
+                                {errors.usageDate && touched.usageDate && expiryValidation && <p className='validation-error'>{errors.usageDate}</p>}
                             </div>
                             <div className='second-step-group col-xl-3 col-md-4 col-6 mt-4'>
                                 <label htmlFor="CVV">CVV</label>
@@ -175,13 +206,13 @@ const SecondStep = ({ values,handleBlur,handleChange,errors,touched }) => {
                                     id="CVV" 
                                     value={rentCarData[1].cvv} 
                                     placeholder='CVV daxil edin...'
-                                    className={errors.CVV && touched.CVV ? 'form-control error' : 'form-control'}
+                                    className={errors.CVV && touched.CVV && cvvValidation ? 'form-control error' : 'form-control'}
                                     onChange={handleCVVChange}
                                     onBlur={handleBlur} 
                                     maxLength={3}
                                     onKeyPress={handleKeyPress}                               
                                 />
-                                {errors.CVV && touched.CVV && <p className='validation-error'>{errors.CVV}</p>}
+                                {errors.CVV && touched.CVV && cvvValidation && <p className='validation-error'>{errors.CVV}</p>}
                             </div>
                             <div className='second-step-group col-xl-9 col-md-8 mt-4'>
                                 <label style={{ visibility: 'hidden' }} htmlFor="cartNumbers">Digər Kartlar</label>
@@ -241,7 +272,7 @@ const SecondStep = ({ values,handleBlur,handleChange,errors,touched }) => {
             </div>
             <div className="step-buttons">
                 <button className='step-cancel-button' onClick={backStep}>Öncəkinə qayıt</button>
-                <button type='submit' className='step-continue-button'>Tamamla</button>
+                <button type='submit' className='step-continue-button' onClick={handleButtonClick}>Tamamla</button>
             </div>
         </>
     );

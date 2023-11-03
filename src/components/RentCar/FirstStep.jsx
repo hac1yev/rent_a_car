@@ -20,7 +20,6 @@ const FirstStep = () => {
         setValidation(true);
         window.scrollTo(0,550);
 
-
         if(rentCarData[0].takeDate && rentCarData[0].deliveryDate && rentCarData[0].takePlace && rentCarData[0].deliveryPlace) {
             if(rentCarData[0].deliveryDate >= rentCarData[0].takeDate){
                 dispatch(stepSliceAction.continueStep(1));
@@ -33,7 +32,6 @@ const FirstStep = () => {
     const handleTakeDate = (date) => {
         dispatch(rentCarSliceAction.getTakeDate(date));
     };
-
 
     const cancelStepForm = () => {
         window.scrollTo(0,0);

@@ -8,13 +8,22 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useFormik } from "formik";
 import { rentCarSchema } from '../../assets/schema/rentCarSchema';
 import { stepSliceAction } from '../../store/step-slice';
+import { rentCarSliceAction } from '../../store/rent_car-slice';
 
 const RentCar = () => {
     const step = useSelector(state => state.stepReducer.step);
     const dispatch = useDispatch();
 
+    const rentCarData = useSelector(state => state.rentCarReducer.rent_car_data);
+
     let handleSubmitForm = async (e) => {
+        dispatch(rentCarSliceAction.getAllCartData({
+            fullName: values.fullName,
+            email: values.email,
+            phone: values.phone
+        }));
         dispatch(stepSliceAction.continueStep(1));
+        console.log(rentCarData);
     };
 
     const { values, errors, touched, handleBlur, handleChange, handleSubmit } = useFormik({
@@ -50,18 +59,20 @@ const RentCar = () => {
                         </Stepper>
                     </div>
                 </div>
-                <form className='container step-container mt-5' onSubmit={handleSubmit}>
-                    {step === 0 && <FirstStep />}
-                    {step === 1 && 
-                        <SecondStep 
-                            values={values} 
-                            handleBlur={handleBlur} 
-                            handleChange={handleChange} 
-                            errors={errors}
-                            touched={touched}
-                        />}
+                <div>
+                    <form className='container step-container mt-5' onSubmit={handleSubmit}>
+                        {step === 0 && <FirstStep />}
+                        {step === 1 && 
+                            <SecondStep 
+                                values={values} 
+                                handleBlur={handleBlur} 
+                                handleChange={handleChange} 
+                                errors={errors}
+                                touched={touched}
+                            />}
+                    </form>
                     {step === 2 && <ThirdStep />}
-                </form>
+                </div>
             </div>
         </div>
     );
