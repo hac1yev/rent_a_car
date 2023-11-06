@@ -1,0 +1,88 @@
+.log-reg-section {
+    width: 100%;
+}
+
+.log-reg-form {
+    padding: 0 90px;
+}
+
+.log-reg-form h2 {
+    color: #000;
+    font-family: Inter;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.8px;
+}
+
+.log-reg-form p {
+    color: #000;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.log-reg-form form {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.log-reg-form form > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.log-reg-form form label {
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.72px;
+    margin-bottom: 8px;
+}
+
+.log-reg-img {
+    background-image: url(../../assets/images/login-register/login-register.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.country-code-li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.MuiInputBase-root p {
+    color: #000;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.72px;
+}
+
+.MuiInputBase-root span {
+    color: #A49D9D;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.72px;
+}
+
+
+
+.country-code-li p {
+    margin-bottom: 0;
+}

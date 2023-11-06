@@ -151,7 +151,7 @@
 .first-input-group .select__control, 
 .first-input-group .css-13cymwt-control, 
 .first-input-group .css-t3ipsp-control,
-.first-input-group .MuiSelect-select {
+.first-input-group .MuiInputBase-root {
     width: 100%;
     color: #757575;
     font-family: Inter;
@@ -159,7 +159,7 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    padding: 11px 15px;
+    /* padding: 11px 15px; */
     padding-right: 35px;
     border-radius: 11px!important;
     cursor: pointer;
@@ -167,7 +167,7 @@
     outline: none;
 }
 
-.first-input-col .MuiSelect-select {
+.first-input-col .MuiInputBase-root {
     width: 100%!important;
     color: #757575!important;
     font-family: Inter!important;
@@ -175,7 +175,7 @@
     font-style: normal!important;
     font-weight: 600!important;
     line-height: normal!important;
-    padding: 15px!important;
+    /* padding: 15px!important; */
     padding-right: 35px!important;
     border-radius: 11px!important;
     cursor: pointer!important;
@@ -183,17 +183,17 @@
     outline: none!important;
 }
 
-.first-input-col .MuiInputBase-root:hover .first-input-col .MuiSelect-select {
+.first-input-col .MuiInputBase-root:hover .first-input-col .MuiInputBase-root {
     outline: none!important;
     border: none!important;
 }
 
-.error-input-col .MuiSelect-select {
+.error-input-col .MuiInputBase-root {
     border: 1px solid rgb(248, 52, 52)!important;
     box-shadow: 0 0 0 0.15rem rgba(248, 52, 52, 0.25);
 }
 
-.error-input-col .MuiSelect-select:hover {
+.error-input-col .MuiInputBase-root:hover {
     outline: none;
 }
 
@@ -796,9 +796,9 @@
         padding: 8px 15px;
     }
 
-    .first-input-col .MuiSelect-select {
+    /* .first-input-col .MuiSelect- {
         padding: 12px 15px!important ;
-    }
+    } */
 
     .car-info-first img {
         width: 80px;
