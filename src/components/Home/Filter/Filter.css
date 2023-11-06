@@ -134,6 +134,7 @@
     transform: translateY(50%);
     right: 10px;
     z-index: 10;
+    font-size: 23px;
 }
 
 .select__value-container,

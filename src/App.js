@@ -6,6 +6,7 @@ import Navbar from "./components/Home/Navbar/Navbar";
 import SearchResult from "./pages/SearchResult/SearchResult";
 import CarDetail from "./pages/CarDetail/CarDetail";
 import RentCar from "./pages/RentCar/RentCar";
+import Login from "./pages/LoginRegister/Login";
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
         <Route path="/search-result" element={<SearchResult />} />
         <Route path="/detail" element={<CarDetail />} />
         <Route path="/rent-car" element={<RentCar />} />
+        <Route path="/login" element={<Login />} />
+
       </Routes>
       <Footer />
     </div>
