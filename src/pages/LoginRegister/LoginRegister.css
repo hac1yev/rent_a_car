@@ -46,6 +46,11 @@
     outline: none;
     height: 58px;
     margin-top: 30px;
+    transition: all 0.2s ease;
+}
+
+.log-reg-form form button:hover {
+    opacity: 0.8;
 }
 
 .log-reg-form form a {
@@ -64,6 +69,11 @@
     border: 2px solid #000;
     outline: none;
     height: 58px;
+    transition: all 0.2s ease;
+}
+
+.log-reg-form form a:hover {
+    background-color: #f5f5f5;
 }
 
 .log-reg-img {
@@ -91,6 +101,12 @@
     outline: none;
     width: 268px;
     height: 68px;
+    transition: all 0.2s ease;
+}
+
+.log-reg-img a:hover {
+    background-color: #fff;
+    color: #000;
 }
 
 .log-reg-img h2 {
