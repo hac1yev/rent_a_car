@@ -10,15 +10,15 @@ const Contact = () => {
        <h1>Bizimle Elaqe</h1>
       <div className="contact-tabs">
         <div className="tab1">
-          <button className={`${tabsOpen ? 'activee' : ''}`} onClick={() => setTabOpens(true)}>
+          <button className={`${tabsOpen ? 'active2' : ''}`} onClick={() => setTabOpens(true)}>
           Sualınız var? <br />
-          <p className={`${tabsOpen ? 'activee' : ''}`}>Sualınıza ən qısa zamanda cavab alın</p>
+          <p className={`${tabsOpen ? 'active2' : ''}`}>Sualınıza ən qısa zamanda cavab alın</p>
           </button>
         </div>
         <div className="tab2">
-          <button className={`${tabsOpen ? '' : 'activee'} `} onClick={() => setTabOpens(false)}>
+          <button className={`${tabsOpen ? '' : 'active2'} `} onClick={() => setTabOpens(false)}>
           Şikayətiniz var? <br />
-          <p className={`${tabsOpen ? '' : 'activee'}`}>Yaranan problemi aradan qalxsın</p>
+          <p className={`${tabsOpen ? '' : 'active2'}`}>Yaranan problemi aradan qalxsın</p>
           </button>
         </div>
       </div>

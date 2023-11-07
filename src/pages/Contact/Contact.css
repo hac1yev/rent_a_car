@@ -13,17 +13,17 @@
   line-height: normal;
 }
 
-.show {
+.showw {
   display: flex;
   justify-content: space-between;
   gap: 80px;
 }
 
-.hide {
+.hidee {
   display: none;
 }
 
-.activee {
+.active2 {
   color: #000 !important;
 }
 
@@ -68,8 +68,8 @@
   margin-bottom: 0;
 }
 
-.tab1 button.activee::after,
-.tab2 button.activee::after {
+.tab1 button.active2::after,
+.tab2 button.active2::after {
   content: "";
   height: 11px;
   background: #475ee9;
@@ -192,7 +192,7 @@
 }
 
 @media screen and (max-width: 900px) {
-  .show {
+  .showw {
     flex-wrap: wrap;
     justify-content: center;
   }
