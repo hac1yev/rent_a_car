@@ -3,7 +3,8 @@ import './SearchResult.css';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { FaRegCalendarAlt } from 'react-icons/fa';
 import { RxCountdownTimer } from 'react-icons/rx';
-import { BiDroplet, BiPlus } from 'react-icons/bi';
+import { BiDroplet } from 'react-icons/bi';
+import { FiChevronDown } from 'react-icons/fi';
 import Select from 'react-select';
 import { Accordion, AccordionDetails, AccordionSummary, Checkbox, FormControlLabel, Typography } from '@mui/material';
 import { carApis } from '../../assets/api/dummyCarsApi';
@@ -21,7 +22,7 @@ const SearchResult = () => {
     return (
         <div className='search-result-wrapper'>
             <div className="search-result-top">
-                <div className="container-xl">
+                <div style={{ padding: '0 1.6%' }}>
                     <div className="row">
                         <div className="col-12">
                             <h2 className='search-result-title'>
@@ -78,7 +79,7 @@ const SearchResult = () => {
                 </div>
             </div>
             <div className="row result-row ms-0">
-                <div className="col-lg-4 px-0">
+                <div className="col-lg-3 px-0">
                     <div className='result-high-filter'>
                         <div className='high-filter-top'>
                             <h3>Yüksək filtr</h3>
@@ -87,9 +88,7 @@ const SearchResult = () => {
                         <div className='select-group-high mt-5'>
                             <label className='select-group-high-label' htmlFor="surqut">Marka</label>
                             <div className="select2-icon-wrap">
-                                <svg className='select2-icon' xmlns="http://www.w3.org/2000/svg" width="19" height="10" viewBox="0 0 19 10" fill="none">
-                                    <path d="M0.421688 0.412833C-0.140562 0.956456 -0.140562 1.83795 0.421688 2.38157L7.46558 9.18547C8.59036 10.2719 10.4129 10.2715 11.5371 9.18451L18.5783 2.37656C19.1406 1.83294 19.1406 0.951445 18.5783 0.407822C18.016 -0.135941 17.1044 -0.135941 16.5421 0.407822L10.5155 6.23468C9.95315 6.7783 9.0416 6.7783 8.47935 6.23468L2.45788 0.412833C1.89563 -0.13079 0.983938 -0.13079 0.421688 0.412833Z" fill="#0F0F0F"/>
-                                </svg>
+                                <FiChevronDown className='select2-icon' />
                                 <Select
                                     defaultValue={options[0].value}
                                     name="colors"
@@ -102,9 +101,7 @@ const SearchResult = () => {
                         <div className='select-group-high mt-3'>
                             <label className='select-group-high-label' htmlFor="surqut">Model</label>
                             <div className="select2-icon-wrap">
-                                <svg className='select2-icon' xmlns="http://www.w3.org/2000/svg" width="19" height="10" viewBox="0 0 19 10" fill="none">
-                                    <path d="M0.421688 0.412833C-0.140562 0.956456 -0.140562 1.83795 0.421688 2.38157L7.46558 9.18547C8.59036 10.2719 10.4129 10.2715 11.5371 9.18451L18.5783 2.37656C19.1406 1.83294 19.1406 0.951445 18.5783 0.407822C18.016 -0.135941 17.1044 -0.135941 16.5421 0.407822L10.5155 6.23468C9.95315 6.7783 9.0416 6.7783 8.47935 6.23468L2.45788 0.412833C1.89563 -0.13079 0.983938 -0.13079 0.421688 0.412833Z" fill="#0F0F0F"/>
-                                </svg>
+                                <FiChevronDown className='select2-icon' />
                                 <Select
                                     defaultValue={options[0].value}
                                     name="colors"
@@ -124,7 +121,7 @@ const SearchResult = () => {
                             <div className='mt-5'>
                                 <Accordion className="result-accordion">
                                     <AccordionSummary
-                                        expandIcon={<BiPlus className='plus-icon' />}
+                                        expandIcon={<FiChevronDown className='plus-icon' />}
                                         aria-controls="panel1a-content"
                                         id="panel1a-header"
                                     >
@@ -137,7 +134,7 @@ const SearchResult = () => {
                                 </Accordion>
                                 <Accordion className="result-accordion">
                                     <AccordionSummary
-                                        expandIcon={<BiPlus className='plus-icon' />}
+                                        expandIcon={<FiChevronDown className='plus-icon' />}
                                         aria-controls="panel2a-content"
                                         id="panel2a-header"
                                     >
@@ -150,7 +147,7 @@ const SearchResult = () => {
                                 </Accordion>
                                 <Accordion className="result-accordion">
                                     <AccordionSummary
-                                        expandIcon={<BiPlus className='plus-icon' />}
+                                        expandIcon={<FiChevronDown className='plus-icon' />}
                                         aria-controls="panel2a-content"
                                         id="panel2a-header"
                                     >
@@ -163,7 +160,7 @@ const SearchResult = () => {
                                 </Accordion>
                                 <Accordion className="result-accordion">
                                     <AccordionSummary
-                                        expandIcon={<BiPlus className='plus-icon' />}
+                                        expandIcon={<FiChevronDown className='plus-icon' />}
                                         aria-controls="panel2a-content"
                                         id="panel2a-header"
                                     >
@@ -176,7 +173,7 @@ const SearchResult = () => {
                                 </Accordion>
                                 <Accordion className="result-accordion">
                                     <AccordionSummary
-                                        expandIcon={<BiPlus className='plus-icon' />}
+                                        expandIcon={<FiChevronDown className='plus-icon' />}
                                         aria-controls="panel2a-content"
                                         id="panel2a-header"
                                     >
@@ -191,7 +188,7 @@ const SearchResult = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-8">
+                <div className="col-lg-9">
                     <div className='result-all-cars row'>
                         <div className="row">
                             <div className="col-12">
@@ -200,7 +197,7 @@ const SearchResult = () => {
                         </div>
                         <div className="row">
                         {carApis.map((item) => (
-                            <div className="col-md-6 car-card-col" key={item.id}>
+                            <div className="col-md-6 col-xl-4 car-card-col" key={item.id}>
                                 <div className="card car-card mt-4">
                                     <div className='car-imgs'>
                                         <img className="card-img-top" src={item.car_img.default} alt={item.car_name} />

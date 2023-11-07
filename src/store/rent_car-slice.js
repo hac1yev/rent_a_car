@@ -13,13 +13,13 @@ const initialRentCarState = {
         },
         {
             fullName: '',
-            card_Numbers: '',
-            usageDate: '',
-            CVV: '',
-            saveCard: false,
+            cartNumber: '',
+            expiry: '',
+            cvv: '',
             email: '',
-            contactNumber: '',
-            contition: false,
+            phone: '',
+            saveCard: false,
+            condition: false,
         }
     ],
     isTakeOverDelivery: false
@@ -87,6 +87,18 @@ export const rentCarSlice = createSlice({
         },
         resetStepForm(state) {
             state.rent_car_data = initialRentCarState.rent_car_data
+        },
+        getExpiryValue(state,action) {
+            state.rent_car_data[1].expiry = action.payload;
+        },
+        getCvvValue(state,action) {
+            state.rent_car_data[1].cvv = action.payload;
+        },
+        getCardNumber(state,action) {
+            state.rent_car_data[1].cartNumber = action.payload;
+        },
+        getAllCartData(state,action) {
+            state.rent_car_data[1] = {...state.rent_car_data[1], ...action.payload};
         }
     }
 });
