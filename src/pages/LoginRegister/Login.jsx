@@ -56,7 +56,7 @@ const Login = () => {
                         <Link to="/register">Qeydiyyatdan keç</Link>
                     </form>
                 </div>
-                <div className='log-reg-img col-lg-6'>
+                <div className='log-img col-lg-6'>
                     <h2>Yenisiniz ?</h2>
                     <p>O zaman qeydiyyatdan keç</p>
                     <Link to="/register">Qeydiyyat</Link>
