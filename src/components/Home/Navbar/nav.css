@@ -136,25 +136,25 @@
   margin: 15px 0;
 }
 
-.hidden-inner li a svg{
-    fill: #8c8e99;
+.hidden-inner li a svg {
+  fill: #8c8e99;
 }
 
 .hidden-inner li a {
   color: #8b8b8b;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-size: 21px;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0.63px;
 }
 
-.hidden-inner li a:hover{
-    color: #fff;
+.hidden-inner li a:hover {
+  color: #fff;
 }
 
-.hidden-inner li a:hover  svg{
-    fill: #fff;
+.hidden-inner li a:hover svg {
+  fill: #fff;
 }
 
 .hidden-inner svg {
@@ -173,6 +173,6 @@
   }
 
   .rent {
-    display: none;
+    display: none !important;
   }
 }

@@ -3,7 +3,7 @@ import React from "react";
 const ContactInner = ({ tabsOpen }) => {
   return (
     <div className="contact-inner-container">
-      <div className={`${tabsOpen ? "show" : "hide"}`}>
+      <div className={`${tabsOpen ? "showw" : "hidee"}`}>
       <div className="social-side">
           <div>
             <div className="circle">
@@ -87,7 +87,7 @@ const ContactInner = ({ tabsOpen }) => {
           </form>
         </div>
       </div>
-      <div className={`${tabsOpen ? "hide" : "show"}`}>
+      <div className={`${tabsOpen ? "hidee" : "showw"}`}>
       <div className="form-side">
           <form action="">
             <input type="text" placeholder="Ad və soyad" /> <br />
