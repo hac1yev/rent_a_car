@@ -6,6 +6,7 @@ import Navbar from "./components/Home/Navbar/Navbar";
 import SearchResult from "./pages/SearchResult/SearchResult";
 import CarDetail from "./pages/CarDetail/CarDetail";
 import RentCar from "./pages/RentCar/RentCar";
+import Contact from "./pages/Contact/Contact";
 import Login from "./pages/LoginRegister/Login";
 import Register from "./pages/LoginRegister/Register";
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/search-result" element={<SearchResult />} />
         <Route path="/detail" element={<CarDetail />} />
         <Route path="/rent-car" element={<RentCar />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>
