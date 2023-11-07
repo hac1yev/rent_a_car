@@ -1,0 +1,264 @@
+.log-reg-section {
+    width: 100%;
+}
+
+.log-reg-form {
+    padding: 250px 90px;
+}
+
+.log-reg-form h2 {
+    color: #000;
+    font-family: Inter;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.8px;
+}
+
+.log-reg-form p {
+    color: #000;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.log-reg-form form {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.log-reg-form form button {
+    border-radius: 13px;
+    background: #475EE9;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.87px;
+    border: none;
+    outline: none;
+    height: 58px;
+    margin-top: 30px;
+    transition: all 0.2s ease;
+}
+
+.log-reg-form form button:hover {
+    opacity: 0.8;
+}
+
+.log-reg-form form a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 13px;
+    background: transparent;
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.87px;
+    border: 2px solid #000;
+    outline: none;
+    height: 58px;
+    transition: all 0.2s ease;
+}
+
+.log-reg-form form a:hover {
+    background-color: #f5f5f5;
+}
+
+.log-reg-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.log-reg-img a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 13px;
+    background: transparent;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.87px;
+    border: 2px solid #fff;
+    outline: none;
+    width: 268px;
+    height: 68px;
+    transition: all 0.2s ease;
+}
+
+.log-reg-img a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.log-reg-img h2 {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.log-reg-img p {
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.log-reg-form form > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.log-reg-form form label {
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.72px;
+    margin-bottom: 8px;
+}
+
+.log-reg-form form .MuiSelect-select,
+.log-reg-form form .MuiInputBase-root input {
+    padding: 20.5px 14px 16.5px!important;
+}
+
+.log-reg-form form .MuiInputBase-root {
+    border-radius: 13px;
+}
+
+.log-reg-img {
+    background-image: url(../../assets/images/login-register/login-register.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.country-code-li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.MuiInputBase-root p {
+    color: #000;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.72px;
+}
+
+.MuiInputBase-root input {
+    color: #000;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.72px;
+}
+
+.MuiInputBase-root span {
+    color: #A49D9D;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.72px;
+}
+
+.country-code-li p {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 991.5px) {
+    .log-reg-img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .log-reg-form {
+        padding: 200px 70px;
+    }
+
+    .log-reg-form h2 {
+        font-size: 45px;
+    }
+    
+    .log-reg-form p {
+        font-size: 22px;
+    }       
+}
+@media screen and (max-width: 568px) {
+    .log-reg-form {
+        padding: 150px 50px;
+    }
+
+    .log-reg-form h2 {
+        font-size: 40px;
+    }
+    
+    .log-reg-form p {
+        font-size: 20px;
+    }     
+    
+    .log-reg-form form label {
+        font-size: 18px;
+    }
+
+    .log-reg-form form .MuiSelect-select, .log-reg-form form .MuiInputBase-root input {
+        padding: 18.5px 14px 14.5px!important;
+    }
+
+    .log-reg-form form {
+        margin-top: 50px;
+        gap: 17px;
+    }
+
+    .log-reg-form form button {
+        font-size: 18px;
+        height: 52px;
+        margin-top: 20px;
+    }
+
+    .log-reg-form form a {
+        font-size: 18px;
+        height: 52px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .log-reg-form {
+        padding: 100px 20px;
+    }
+}
