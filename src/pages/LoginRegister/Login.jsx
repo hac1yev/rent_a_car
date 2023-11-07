@@ -1,6 +1,7 @@
 import React from 'react';
 import { MenuItem, OutlinedInput, Select, TextField } from '@mui/material';
 import './LoginRegister.css';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     return (
@@ -44,16 +45,21 @@ const Login = () => {
                         <div>
                             <label htmlFor="password">Parol</label>
                             <TextField
+                                type='password'
                                 id="password"
                                 maxRows={4}
                             />
                         </div>
+                        <button>
+                            Davam et
+                        </button>
+                        <Link to="/register">Qeydiyyatdan keç</Link>
                     </form>
                 </div>
                 <div className='log-reg-img col-lg-6'>
                     <h2>Yenisiniz ?</h2>
                     <p>O zaman qeydiyyatdan keç</p>
-                    <button>Qeydiyyat</button>
+                    <Link to="/register">Qeydiyyat</Link>
                 </div>
             </div>
         </div>
