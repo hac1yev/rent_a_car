@@ -76,7 +76,8 @@
     background-color: #f5f5f5;
 }
 
-.log-reg-img {
+.log-img,
+.reg-img {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,7 +85,8 @@
     gap: 25px;
 }
 
-.log-reg-img a {
+.log-img a,
+.reg-img a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -104,12 +106,14 @@
     transition: all 0.2s ease;
 }
 
-.log-reg-img a:hover {
+.log-img a:hover,
+.reg-img a:hover {
     background-color: #fff;
     color: #000;
 }
 
-.log-reg-img h2 {
+.log-img h2,
+.reg-img h2 {
     color: #FFF;
     font-family: Inter;
     font-size: 48px;
@@ -118,7 +122,8 @@
     line-height: normal;
 }
 
-.log-reg-img p {
+.log-img p,
+.reg-img p {
     color: #FFF;
     text-align: center;
     font-family: Inter;
@@ -146,15 +151,22 @@
 
 .log-reg-form form .MuiSelect-select,
 .log-reg-form form .MuiInputBase-root input {
-    padding: 20.5px 14px 16.5px!important;
+    padding: 16.5px 14px!important;
 }
 
 .log-reg-form form .MuiInputBase-root {
     border-radius: 13px;
 }
 
-.log-reg-img {
-    background-image: url(../../assets/images/login-register/login-register.svg);
+.log-img{    
+    background-image: url(../../assets/images/login-register/login-img.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.reg-img {
+    background-image: url(../../assets/images/login-register/register-img.svg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -192,7 +204,6 @@
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
-    line-height: normal;
     letter-spacing: 0.72px;
 }
 
@@ -201,7 +212,8 @@
 }
 
 @media screen and (max-width: 991.5px) {
-    .log-reg-img {
+    .log-img,
+    .reg-img {
         display: none;
     }
 }
@@ -237,7 +249,7 @@
     }
 
     .log-reg-form form .MuiSelect-select, .log-reg-form form .MuiInputBase-root input {
-        padding: 18.5px 14px 14.5px!important;
+        padding: 14.5px!important;
     }
 
     .log-reg-form form {
