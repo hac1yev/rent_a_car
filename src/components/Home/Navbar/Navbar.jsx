@@ -32,13 +32,13 @@ const Navbar = () => {
         <div className="hidden-inner">
           <div className="nav-first-sec">
             <li>
-              <Link>Daxil ol</Link>
+              <Link onClick={() => setShowSec(!showSec)} to='/login'>Daxil ol</Link>
             </li>
             <li>
-              <Link>Qeydiyyatdan keç</Link>
+              <Link onClick={() => setShowSec(!showSec)} to='/register'>Qeydiyyatdan keç</Link>
             </li>
             <li>
-              <Link>
+              <Link onClick={() => setShowSec(!showSec)}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="25"
@@ -66,7 +66,7 @@ const Navbar = () => {
           <hr />
           <div className="nav-second-sec">
             <li>
-              <Link>
+              <Link onClick={() => setShowSec(!showSec)}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -85,7 +85,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link>
+              <Link onClick={() => setShowSec(!showSec)}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="23"
@@ -116,7 +116,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link>
+              <Link onClick={() => setShowSec(!showSec)}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="21"
@@ -133,7 +133,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link>
+              <Link onClick={() => setShowSec(!showSec)} to='/contact'>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="19"
