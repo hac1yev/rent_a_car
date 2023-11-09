@@ -1,10 +1,39 @@
 import React from "react";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import { validationSchema, validationSchema2 } from "./contactSchema";
 
 const ContactInner = ({ tabsOpen }) => {
+  const initialValues = {
+    name: "",
+    email: "",
+    number: "",
+    topic: "",
+  };
+
+  const initialValues2 = {
+    name: "",
+    email: "",
+    number: "",
+    topic: "",
+  };
+
+
+
+  const handleSubmit = (values) => {
+    // Handle form submission here, e.g., make an API request or perform an action with the form data
+    console.log("Form submitted with values:", values);
+  };
+
+  
+  const handleSubmit2 = (values) => {
+    // Handle form submission here, e.g., make an API request or perform an action with the form data
+    console.log("Form submitted with values:", values);
+  };
+
   return (
     <div className="contact-inner-container">
       <div className={`${tabsOpen ? "showw" : "hidee"}`}>
-      <div className="social-side">
+        <div className="social-side">
           <div>
             <div className="circle">
               <svg
@@ -76,30 +105,78 @@ const ContactInner = ({ tabsOpen }) => {
           </div>
         </div>
         <div className="form-side">
-          <form action="">
-            <input type="text" placeholder="Ad və soyad" /> <br />
-            <input type="email" placeholder="Email" /> <br />
-            <input type="number" placeholder="Əlaqə nömrəsi" /> <br />
-            <input type="text" placeholder="Mövzu" /> <br />
-            <div className="send-form">
-              <button type="submit">Daxil Et</button>
-            </div>
-          </form>
+        <Formik
+            initialValues={initialValues2}
+            validationSchema={validationSchema2}
+            onSubmit={handleSubmit2}
+          >
+            <Form>
+              <Field
+                placeholder="Ad və soyad"
+                type="text"
+                id="name"
+                name="name"
+              />
+              <ErrorMessage name="name" component="p" className="error1" />
+
+              <Field placeholder="Email" type="text" id="email" name="email" />
+              <ErrorMessage name="email" component="p" className="error1" />
+
+              <Field
+                placeholder="Əlaqə nömrəsi"
+                type="text"
+                id="number"
+                name="number"
+              />
+              <ErrorMessage name="number" component="p" className="error1" />
+
+              <Field placeholder="Şikayətin Mövzusu" type="text" name="topic" />
+              <ErrorMessage name="topic" component="p" className="error1" />
+
+              <div className="send-form">
+                <button type="submit">Şikayəti bildir</button>
+              </div>
+            </Form>
+          </Formik>
         </div>
       </div>
       <div className={`${tabsOpen ? "hidee" : "showw"}`}>
-      <div className="form-side">
-          <form action="">
-            <input type="text" placeholder="Ad və soyad" /> <br />
-            <input type="email" placeholder="Email" /> <br />
-            <input type="number" placeholder="Əlaqə nömrəsi" /> <br />
-            <input type="text" placeholder="Şikayət mövzusu" /> <br />
-            <div className="send-form">
-              <button type="submit">Şikayəti bildir</button>
-            </div>
-          </form>
+        <div className="form-side">
+          <Formik
+            initialValues={initialValues}
+            validationSchema={validationSchema}
+            onSubmit={handleSubmit}
+          >
+            <Form>
+              <Field
+                placeholder="Ad və soyad"
+                type="text"
+                id="name"
+                name="name"
+              />
+              <ErrorMessage name="name" component="p" className="error1" />
+
+              <Field placeholder="Email" type="text" id="email" name="email" />
+              <ErrorMessage name="email" component="p" className="error1" />
+
+              <Field
+                placeholder="Əlaqə nömrəsi"
+                type="text"
+                id="number"
+                name="number"
+              />
+              <ErrorMessage name="number" component="p" className="error1" />
+
+              <Field placeholder="Şikayətin Mövzusu" type="text" name="topic" />
+              <ErrorMessage name="topic" component="p" className="error1" />
+
+              <div className="send-form">
+                <button type="submit">Şikayəti bildir</button>
+              </div>
+            </Form>
+          </Formik>
         </div>
-      <div className="social-side">
+        <div className="social-side">
           <div>
             <div className="circle">
               <svg
@@ -169,8 +246,7 @@ const ContactInner = ({ tabsOpen }) => {
             </div>
             <p className="con-place">Bakı ş Gənclik</p>
           </div>
-      </div>
-        
+        </div>
       </div>
     </div>
   );

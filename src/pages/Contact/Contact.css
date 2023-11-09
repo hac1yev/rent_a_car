@@ -191,6 +191,12 @@
   line-height: normal;
 }
 
+.error1{
+  color: red;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
 @media screen and (max-width: 900px) {
   .showw {
     flex-wrap: wrap;
