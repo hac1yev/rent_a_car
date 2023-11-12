@@ -53,7 +53,7 @@ const Login = () => {
                         <button>
                             Davam et
                         </button>
-                        <Link to="/register">Qeydiyyatdan keç</Link>
+                        <Link className='mobile-register-button' to="/register">Qeydiyyatdan keç</Link>
                     </form>
                 </div>
                 <div className='log-img col-lg-6'>

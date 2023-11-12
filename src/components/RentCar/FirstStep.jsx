@@ -38,7 +38,7 @@ const FirstStep = () => {
         dispatch(rentCarSliceAction.resetStepForm());
     };
 
-    const options = ['ilkin','shggdsd','shydgysd','sdhusfhs'];
+    const options = ['Arif Hacıyev küç. 650','Daş karxanası 404','Aşıb Qərib küç. 324','Heydər Aliyev prospekti'];
 
     return (
         <>
@@ -94,23 +94,6 @@ const FirstStep = () => {
                 <div className={(!rentCarData[0].takePlace && validation) ? "col-lg-6 error-input-col first-input-col" : "col-lg-6 first-input-col"}>
                     <FormControl sx={{ m: 1, minWidth: 80 }} className='first-input-group'>
                         <label htmlFor="">Götürülmə yeri</label>
-                        {/* <Select
-                            labelId="demo-simple-select-autowidth-label"
-                            id="demo-simple-select-autowidth"
-                            value={rentCarData[0].takePlace}
-                            onChange={(e) => dispatch(rentCarSliceAction.getTakePlace(e.target.value))}
-                            autoWidth
-                            input={<OutlinedInput />}
-                            displayEmpty
-                            label="Age"
-                        >
-                            <MenuItem value="">
-                                <em>None</em>
-                            </MenuItem>
-                            <MenuItem value='Twenty'>Twenty</MenuItem>
-                            <MenuItem value='Twenty one'>Twenty one</MenuItem>
-                            <MenuItem value='Twenty one and a half'>Twenty one and a half</MenuItem>
-                        </Select> */}
                         <Autocomplete
                             disablePortal
                             id="combo-box-demo1"
@@ -125,23 +108,6 @@ const FirstStep = () => {
                 <div className={(!rentCarData[0].deliveryPlace && validation) ? "col-lg-6 error-input-col first-input-col" : "col-lg-6 first-input-col"}>
                     <FormControl sx={{ m: 1, minWidth: 80 }} className='first-input-group'>
                         <label htmlFor="">Qaytarılma yeri</label>
-                        {/* <Select
-                            labelId="demo-simple-select-autowidth-label"
-                            id="demo-simple-select-autowidth"
-                            value={rentCarData[0].deliveryPlace}
-                            onChange={(e) => dispatch(rentCarSliceAction.getDeliveryPlace(e.target.value))}
-                            autoWidth
-                            input={<OutlinedInput />}
-                            displayEmpty
-                            label="Age"
-                        >
-                            <MenuItem value="">
-                                <em>None</em>
-                            </MenuItem>
-                            <MenuItem value='Twenty'>Twenty</MenuItem>
-                            <MenuItem value='Twenty one'>Twenty one</MenuItem>
-                            <MenuItem value='Twenty one and a half'>Twenty one and a half</MenuItem>
-                        </Select> */}
                         <Autocomplete
                             disablePortal
                             id="combo-box-demo2"

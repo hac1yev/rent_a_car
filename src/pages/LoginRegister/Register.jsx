@@ -56,7 +56,7 @@ const Register = () => {
                         <button>
                             Davam et
                         </button>
-                        <Link to="/register">Qeydiyyatdan keç</Link>
+                        <Link to="/login">Daxil ol</Link>
                     </form>
                 </div>
             </div>

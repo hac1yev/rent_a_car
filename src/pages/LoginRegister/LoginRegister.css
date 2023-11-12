@@ -54,7 +54,7 @@
 }
 
 .log-reg-form form a {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     border-radius: 13px;
@@ -159,14 +159,14 @@
 }
 
 .log-img{    
-    background-image: url(../../assets/images/login-register/login-img.svg);
+    background-image: url(../../assets/images/login-register/login-img.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .reg-img {
-    background-image: url(../../assets/images/login-register/register-img.svg);
+    background-image: url(../../assets/images/login-register/register-img.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -216,6 +216,15 @@
     .reg-img {
         display: none;
     }
+
+    .log-reg-form form a {
+        display: flex;
+    }
+
+    .log-reg-form h2,
+    .log-reg-form p {
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -225,10 +234,12 @@
 
     .log-reg-form h2 {
         font-size: 45px;
+        text-align: center;
     }
     
     .log-reg-form p {
         font-size: 22px;
+        text-align: center;
     }       
 }
 @media screen and (max-width: 568px) {
