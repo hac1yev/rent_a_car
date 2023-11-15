@@ -9,6 +9,7 @@ import RentCar from "./pages/RentCar/RentCar";
 import Contact from "./pages/Contact/Contact";
 import Login from "./pages/LoginRegister/Login";
 import Register from "./pages/LoginRegister/Register";
+import StepperRegister from "./pages/LoginRegister/StepperRegister";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/register/step" element={<StepperRegister />} />
       </Routes>
       <Footer />
     </div>
