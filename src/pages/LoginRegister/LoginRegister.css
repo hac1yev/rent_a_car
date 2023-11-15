@@ -211,6 +211,45 @@
     margin-bottom: 0;
 }
 
+
+/* START STEPPER REGISTER */
+
+.MuiLinearProgress-root {
+    width: 100%!important;
+    height: 16px!important;
+    border-radius: 8px;
+}
+
+.stepper-register-container h2 {
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.stepper-register-wrapper {
+    background-color: #fff;
+    border-top-right-radius: 60px;
+    border-top-left-radius: 60px;
+}
+
+.stepper-register-container p {
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+/* END STEPPER REGISTER */
+
+
+
 @media screen and (max-width: 991.5px) {
     .log-img,
     .reg-img {
