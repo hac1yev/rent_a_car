@@ -1,9 +1,18 @@
 import React from 'react';
 import { Button, MobileStepper } from '@mui/material';
 import './LoginRegister.css';
+import ŞəxsiyyətVəsiqəsi from '../../components/LoginRegister/ŞəxsiyyətVəsiqəsi';
+import SürücülükVəsiqəsi from '../../components/LoginRegister/SürücülükVəsiqəsi';
+import ŞərtQayda from '../../components/LoginRegister/ŞərtQayda';
+import CompleteRegister from '../../components/LoginRegister/CompleteRegister';
 
 const StepperRegister = () => {
     const [activeStep, setActiveStep] = React.useState(1);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    };
 
     const handleNext = () => {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -12,7 +21,7 @@ const StepperRegister = () => {
     const handleBack = () => {
         setActiveStep((prevActiveStep) => prevActiveStep - 1);
     };
-
+    
     return (
         <div style={{ background: '#060b1f' }}>
             <div className='stepper-register-wrapper'>
@@ -28,22 +37,17 @@ const StepperRegister = () => {
                 </div>
                 <MobileStepper
                     variant="progress"
-                    steps={6}
+                    steps={5}
                     position="static"
                     activeStep={activeStep}
                     sx={{ width: '100%', flexGrow: 1, marginTop: '20px' }}
                 />
-                {activeStep === 1 && <p>AAAAAAAAAAAAAAAAAA</p>}
-                {activeStep === 2 && <p>BBBBBBBBBBBBBBBBBB</p>}
-                {activeStep === 3 && <p>CCCCCCCCCCCCCCCCCC</p>}
-                {activeStep === 4 && <p>DDDDDDDDDDDDDDDDDD</p>}
-                {activeStep === 5 && <p>FFFFFFFFFFFFFFFFFF</p>}
-                <Button size="small" onClick={handleNext} disabled={activeStep === 5}>
-                        Next
-                        </Button>
-                <Button size="small" onClick={handleBack} disabled={activeStep === 1}>
-                        Back
-                        </Button>
+                <form onSubmit={handleSubmit} className='step-register-form'>
+                    {activeStep === 1 && <ŞəxsiyyətVəsiqəsi handleNext={handleNext} />}
+                    {activeStep === 2 && <SürücülükVəsiqəsi handleNext={handleNext} />}
+                    {activeStep === 3 && <ŞərtQayda />}
+                    {activeStep === 4 && <CompleteRegister />}
+                </form>
             </div>
         </div>
         </div>
