@@ -22,7 +22,7 @@ const StepperRegister = () => {
         <div style={{ background: '#060b1f' }}>
             <div className='stepper-register-wrapper'>
             <div className='container stepper-register-container'>
-                <div className="row d-flex justify-content-center pt-5">
+                <div className="row d-flex justify-content-center">
                     <div className="col-md-7">
                         <h2>Qeydiyyatı tamamla</h2>
                         <p className='mt-4'>
