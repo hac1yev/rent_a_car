@@ -220,6 +220,10 @@
     border-radius: 8px;
 }
 
+.stepper-register-container {
+    padding: 130px 0;
+}
+
 .stepper-register-container h2 {
     color: #000;
     text-align: center;
@@ -292,6 +296,18 @@
     flex-direction: column;
     gap: 20px;  
     margin-top: 50px;
+}
+
+.step-file-div {
+    position: relative;
+}
+
+.step-file-div svg {
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
 }
 
 /* END STEPPER REGISTER */
