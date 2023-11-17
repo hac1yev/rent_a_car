@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, MobileStepper } from '@mui/material';
+import { MobileStepper } from '@mui/material';
 import './LoginRegister.css';
 import ŞəxsiyyətVəsiqəsi from '../../components/LoginRegister/ŞəxsiyyətVəsiqəsi';
 import SürücülükVəsiqəsi from '../../components/LoginRegister/SürücülükVəsiqəsi';
@@ -16,10 +16,6 @@ const StepperRegister = () => {
 
     const handleNext = () => {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    };
-
-    const handleBack = () => {
-        setActiveStep((prevActiveStep) => prevActiveStep - 1);
     };
     
     return (
