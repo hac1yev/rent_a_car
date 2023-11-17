@@ -12,7 +12,7 @@ const ŞərtQayda = () => {
                 <input type="checkbox" id='condition' />
                 <label htmlFor="condition">Oxudum və təsdiq edirəm</label>
             </div>
-            <button type='submit'>Qeydiyyatı tamamla</button>
+            <button className='btn btn-lg btn-primary' type='submit'>Qeydiyyatı tamamla</button>
         </>
     );
 };

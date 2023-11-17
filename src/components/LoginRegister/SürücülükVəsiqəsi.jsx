@@ -7,7 +7,7 @@ const SürücülükVəsiqəsi = ({ handleNext }) => {
                 <label htmlFor="">Sürücülük vəsiqəsinin fotosu</label>
                 <input type="file" placeholder='Jpg, png və ya pdf format' />
             </div>
-            <button type='button' onClick={handleNext}>Növbəti</button>
+            <button className='btn btn-lg btn-primary' type='button' onClick={handleNext}>Növbəti</button>
         </>
     );
 };
