@@ -8,6 +8,7 @@ const RentServices = () => {
       </div>
       <div className="rent-services-cards">
         <div className="rent-services-card">
+          <div className="service-card-inner">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="55"
@@ -69,9 +70,11 @@ const RentServices = () => {
             Müştərilərin daima rastlaşdığı problemləri aradan qaldırmaq üçün
             7/24 müştəri dəstəyi təhciz edə bilirk.
           </p>
+          </div>
         </div>
 
         <div className="rent-services-card">
+          <div className="service-card-inner">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="71"
@@ -97,14 +100,16 @@ const RentServices = () => {
               </clipPath>
             </defs>
           </svg>
-          <h2>7/24 müştəri dəstəyi</h2>
+          <h2>Rahat və güvənli sistem</h2>
           <p>
             Müştərilərin daima rastlaşdığı problemləri aradan qaldırmaq üçün
             7/24 müştəri dəstəyi təhciz edə bilirk.
           </p>
+          </div>
         </div>
 
         <div className="rent-services-card">
+          <div className="service-card-inner">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="46"
@@ -120,11 +125,12 @@ const RentServices = () => {
               stroke-linejoin="round"
             />
           </svg>
-          <h2>7/24 müştəri dəstəyi</h2>
+          <h2>Asan sifariş sistem</h2>
           <p>
             Müştərilərin daima rastlaşdığı problemləri aradan qaldırmaq üçün
             7/24 müştəri dəstəyi təhciz edə bilirk.
           </p>
+          </div>
         </div>
       </div>
     </div>
