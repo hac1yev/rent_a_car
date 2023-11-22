@@ -54,7 +54,7 @@
 }
 
 .log-reg-form form a {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     border-radius: 13px;
@@ -159,14 +159,14 @@
 }
 
 .log-img{    
-    background-image: url(../../assets/images/login-register/login-img.svg);
+    background-image: url(../../assets/images/login-register/login-img.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .reg-img {
-    background-image: url(../../assets/images/login-register/register-img.svg);
+    background-image: url(../../assets/images/login-register/register-img.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -211,10 +211,122 @@
     margin-bottom: 0;
 }
 
+
+/* START STEPPER REGISTER */
+
+.MuiLinearProgress-root {
+    width: 100%!important;
+    height: 16px!important;
+    border-radius: 8px;
+}
+
+.stepper-register-container {
+    padding: 130px 0;
+}
+
+.stepper-register-container h2 {
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.stepper-register-wrapper {
+    background-color: #fff;
+    border-top-right-radius: 60px;
+    border-top-left-radius: 60px;
+}
+
+.stepper-register-container p {
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.step-register-form button {
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    background: #475EE9;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    transition: all 0.2s ease;
+    padding: 12px 45px;
+    margin-top: 50px;
+}
+
+.step-register-form button:hover {
+    opacity: 0.8;
+}
+
+.şexs-sürücü-div input {
+    border-radius: 15px;
+    border: 2px solid #E5E8EC;
+    padding: 16px 20px;
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.step-register-form label {
+    color: #000;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.şexs-sürücü-div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;  
+    margin-top: 50px;
+}
+
+.step-file-div {
+    position: relative;
+}
+
+.step-file-div svg {
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+}
+
+/* END STEPPER REGISTER */
+
+
+
 @media screen and (max-width: 991.5px) {
     .log-img,
     .reg-img {
         display: none;
+    }
+
+    .log-reg-form form a {
+        display: flex;
+    }
+
+    .log-reg-form h2,
+    .log-reg-form p {
+        text-align: center;
     }
 }
 
@@ -225,10 +337,12 @@
 
     .log-reg-form h2 {
         font-size: 45px;
+        text-align: center;
     }
     
     .log-reg-form p {
         font-size: 22px;
+        text-align: center;
     }       
 }
 @media screen and (max-width: 568px) {

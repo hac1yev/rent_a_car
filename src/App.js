@@ -10,6 +10,7 @@ import Contact from "./pages/Contact/Contact";
 import Login from "./pages/LoginRegister/Login";
 import Register from "./pages/LoginRegister/Register";
 import RentIt from "./pages/RentIt/RentIt";
+import StepperRegister from "./pages/LoginRegister/StepperRegister";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/rent-it" element={<RentIt />} />
+        <Route path="/register/step" element={<StepperRegister />} />
       </Routes>
       <Footer />
     </div>
