@@ -1,0 +1,172 @@
+.rentcar-container {
+  background: #060b1f;
+}
+
+.rentcar-wrapper {
+  border-radius: 60px 60px 0 0;
+  background: #fff;
+}
+
+/* .rentcar-container-inner {
+  padding: 40px 0;
+} */
+
+/* RENT UP */
+
+.rentup-h1 {
+  position: relative;
+  color: #000;
+  font-family: "Inter";
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.4px;
+  margin-bottom: 40px;
+}
+
+.rentup-h1::after,
+.rent-services h1:after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  max-width: 575px;
+  width: 60%;
+  height: 21px;
+  flex-shrink: 0;
+  background: #475ee9;
+}
+
+.rentup-container {
+  margin: 0 auto;
+  max-width: 900px;
+  width: 100%;
+  padding-top: 90px;
+}
+
+.rentup-container p {
+  color: #000;
+  font-family: "Inter";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.81px;
+  margin-bottom: 40px;
+}
+
+.rentup-container a {
+  border-radius: 16px;
+  background: #475ee9;
+  max-width: 302px;
+  width: 100%;
+  height: 77px;
+  color: #fff;
+  font-family: "Inter";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* RENT UP */
+
+/* RENT ONLY */
+
+.rentonly img {
+  width: 100%;
+  margin: 40px 0;
+  max-height: 747px;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* RENT ONLY */
+
+/* rent services */
+
+.rent-services {
+  margin: 0 auto;
+  /* max-width: 1200px; */
+  width: 100%;
+  padding-top: 90px;
+}
+
+.rent-services-h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rent-services-h1 h1 {
+  color: #000;
+  font-family: "Inter";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.2px;
+  position: relative;
+  margin-bottom: 90px;
+}
+
+.rent-services-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rent-services-card {
+  border-radius: 38px;
+  background: #fff;
+  box-shadow: 0px 10px 10px 3px rgba(167, 163, 163, 0.23);
+  max-width: 363px;
+  width: 100%;
+  height: 309px;
+  flex-shrink: 0;
+  padding: 50px 20px;
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  /* gap: 10px; */
+  justify-content: space-between
+  ;
+}
+
+.rent-services-card svg {
+  width: 60px;
+}
+
+.rent-services-card h2 {
+  color: #000;
+  font-family: "Inter";
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.63px;
+}
+
+.rent-services-card p {
+  color: #000;
+  font-family: 'Inter';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.45px;
+}
+
+@media screen and (max-width: 1200px) {
+  .rent-services-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+  }
+}
+
+/* rent services */
