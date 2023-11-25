@@ -207,6 +207,10 @@
     display: none !important;
   }
 
+  .vip-container-1 h1{
+    font-size: 25px;
+  }
+
   .vip-slider-cards{
     margin: 30px 0;
   }

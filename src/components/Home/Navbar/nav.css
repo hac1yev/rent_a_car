@@ -12,6 +12,10 @@
   /* padding: 0; */
 }
 
+.rent-mobile{
+  display: none !important;
+}
+
 .middle-sec li {
   height: 52px;
   width: 177px;
@@ -304,5 +308,9 @@
 
   .rent {
     display: none !important;
+  }
+
+  .rent-mobile{
+    display: block !important;
   }
 }

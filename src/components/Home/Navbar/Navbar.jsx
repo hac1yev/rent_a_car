@@ -22,7 +22,7 @@ const Navbar = () => {
           </div>
 
           <div className="right-sec">
-            <button className="rent"><span style={{fontSize: '25px'}}>+</span>&nbsp;&nbsp;İcarəyə ver</button>
+            <Link to='/rent-it' className="rent"><span style={{fontSize: '25px'}}>+</span>&nbsp;&nbsp;İcarəyə ver</Link>
             <button onClick={() => setShowSec(!showSec)} className="menu">
               <img src={menupng} alt="" />
             </button>
@@ -39,13 +39,13 @@ const Navbar = () => {
           <div className="hidden-inner">
             <div className="nav-first-sec">
               <li>
-                <p onClick={handleAuth}>Daxil ol</p>
+                <Link to='/login' onClick={handleAuth}>Daxil ol</Link>
               </li>
               <li>
-                <p onClick={handleAuth}>Qeydiyyatdan keç</p>
+                <Link to='/register'  onClick={handleAuth}>Qeydiyyatdan keç</Link>
               </li>
               <li>
-                <Link onClick={() => setShowSec(!showSec)}>
+                <Link className="rent-mobile" to='/rent-it' onClick={() => setShowSec(!showSec)}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="25"

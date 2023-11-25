@@ -182,10 +182,10 @@
     width: 100%;
 }
 
-.react-datepicker__day,
+/* .react-datepicker__day,
 .react-datepicker__day-name {
-    /* width: 12%; */
-}
+    width: 12%;
+} */
 
 .filter-date-wrap {
     height: 90px;
@@ -207,7 +207,7 @@
     align-items: flex-end;
 }
 
-.filter-search-button button {
+.filter-search-button a {
     width: 157px;
     height: 56px;
     border-radius: 11px;
@@ -228,7 +228,7 @@
     transition: all 0.2s ease;
 }
 
-.filter-search-button button:hover {
+.filter-search-button a:hover {
     opacity: 0.8;
 }
 
