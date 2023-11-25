@@ -4,7 +4,7 @@ const RentQuest = () => {
   return (
     <div className="ren-quest">
       <div className="rent-quest-h1">
-        <h1>Daima xidmətinizdəyik</h1>
+        <h1>Tez-tez verilən suallar</h1>
       </div>
 
       <div className="rent-quest-cols">
