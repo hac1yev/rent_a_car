@@ -75,6 +75,14 @@
   justify-content: center;
 }
 
+.rentup-container span {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  font-weight: lighter;
+}
+
 /* RENT UP */
 
 /* RENT ONLY */
@@ -98,7 +106,8 @@
   padding-top: 90px;
 }
 
-.rent-services-h1, .rent-quest-h1 {
+.rent-services-h1,
+.rent-quest-h1 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -182,14 +191,13 @@
 
 /* rent quest */
 
-
-.ren-quest{
+.ren-quest {
   padding: 90px 0;
 }
 
 .rent-quest-h1 h1 {
   color: #000;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-size: 40px;
   font-style: normal;
   font-weight: 600;
@@ -198,8 +206,7 @@
   position: relative;
 }
 
-
-.rent-quest-cols{
+.rent-quest-cols {
   display: flex;
   /* align-items: center; */
   /* justify-content: space-between; */
@@ -207,29 +214,115 @@
   gap: 40px;
 }
 
-.rent-quest-col{
+.rent-quest-col {
   width: 100%;
 }
 
-.rent-quest-col .accordion-button{
+.rent-quest-col .accordion-button {
   padding: 20px 0;
+  color: #000;
+  font-family: "Inter";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.66px;
 }
 
-.rent-quest-col .accordion-button:not(.collapsed){
+.rent-quest-col .accordion-button:not(.collapsed) {
   background: #fff !important;
 }
 
-
-.rent-quest-col .accordion-button , .rent-quest-col .accordion-button:focus{
+.rent-quest-col .accordion-button,
+.rent-quest-col .accordion-button:focus {
   border-top: 1px solid #919191 !important;
   /* border-bottom: 1px solid #919191 !important; */
   box-shadow: none !important;
 }
 
 @media screen and (max-width: 768px) {
-  .rent-quest-cols{
+  .rent-quest-cols {
     flex-wrap: wrap;
   }
 }
 
 /* rent quest */
+
+@media screen and (max-width: 850px) {
+  .rentup-h1 {
+    font-size: 40px;
+  }
+
+  .rentcar-container-inner {
+    padding: 0 30px;
+  }
+
+  .rentup-container a {
+    width: 200px;
+    font-size: 20px;
+    height: 60px;
+  }
+
+  .rentup-container span {
+    font-size: 35px;
+    margin-bottom: 8px;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .rentup-h1,.rent-services-h1 h1,.rent-quest-h1 h1{
+    font-size: 25px !important;
+  }
+
+  .rentup-h1::after, .rent-services h1:after, .rent-quest-h1 h1::after{
+    bottom: -15px;
+    height: 10px;
+  }
+
+  .rentup-container p, .rent-quest-col .accordion-button{
+    font-size: 16px;
+  }
+
+  .rent-quest-cols{
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .rentup-h1, .rent-services-h1 h1, .rent-quest-h1 h1,.rent-services-card h2{
+    font-size: 16px !important;
+  }
+
+  .rent-services-h1 h1{
+    margin-bottom: 50px;
+  }
+
+  .rent-services{
+    padding-top: 20px;
+  }
+
+  .rentup-container{
+    padding-top: 50px;
+  }
+
+  .rent-services-card {
+    height: 270px;
+    padding: 35px 20px;
+}
+
+  .rent-services-card p{
+    font-size: 12px;
+  }
+
+  .rentup-container a{
+    width: 150px;
+    font-size: 15px;
+    height: 40px;
+    border-radius: 10px;
+  }
+
+  .footer-info{
+    justify-content: initial !important;
+  }
+}
