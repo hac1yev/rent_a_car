@@ -49,9 +49,19 @@ const Register = () => {
                                 maxRows={4}
                             />
                         </div>
-                        <div>
-                            <p>Fiziki şəxs</p>
-
+                        <div className='register-check' >
+                            <label className='checkbox' htmlFor='fiziki'>Fiziki şəxs
+                                <input type="checkbox" name="fiziki" id="fiziki" />
+                                <span className='checkmark'></span>
+                            </label>
+                           
+                        </div>
+                        <div className='register-check' >
+                            <label className='checkbox' htmlFor='comp'>Rent a car şirkəti
+                                <input type="checkbox" name="comp" id="comp" />
+                                <span className='checkmark'></span>
+                            </label>
+                           
                         </div>
                         <button>
                             Davam et

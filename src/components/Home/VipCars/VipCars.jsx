@@ -42,6 +42,10 @@ const VipCars = () => {
       },
     ],
   };
+
+  const handleLink = () =>{
+    window.scrollTo(0,0)
+  }
   return (
     <div className="container">
       <div className="vip-container">
@@ -52,7 +56,7 @@ const VipCars = () => {
         </div>
         <div className="vip-slider-cards">
           <Slider {...settings2}>
-            <Link to='#' className="vip-cards">
+            <Link to='/detail' onClick={handleLink} className="vip-cards">
               <div>
                 <div className="vip-card">
                   <div className="vip-img">
@@ -85,7 +89,7 @@ const VipCars = () => {
               </div>
             </Link>
 
-            <Link className="vip-cards">
+            <Link to='/detail' onClick={handleLink}  className="vip-cards">
               <div>
                 <div className="vip-card">
                   <div className="vip-img">
@@ -118,7 +122,7 @@ const VipCars = () => {
               </div>
             </Link>
 
-            <Link className="vip-cards">
+            <Link to='/detail' onClick={handleLink}  className="vip-cards">
               <div>
                 <div className="vip-card">
                   <div className="vip-img">
@@ -151,7 +155,7 @@ const VipCars = () => {
               </div>
             </Link>
 
-            <Link className="vip-cards">
+            <Link to='/detail' onClick={handleLink}  className="vip-cards">
               <div>
                 <div className="vip-card">
                   <div className="vip-img">

@@ -6,6 +6,7 @@ import Select from 'react-select';
 import filterIcon from '../../../assets/images/home/menu.png';
 import './Filter.css';
 import moment from 'moment';
+import { Link } from 'react-router-dom';
 
 const Filter = () => {
   const [startDate, setStartDate] = useState(new Date());
@@ -180,10 +181,10 @@ const Filter = () => {
                 </>}
 
                 <div className="filter-search-button col-lg-2 col-md-4">
-                  <button>
+                  <Link to='/search-result'>
                     Axtar
                     <AiOutlineSearch />
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

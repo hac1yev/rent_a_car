@@ -145,6 +145,11 @@
     text-align: center;
     line-height: initial;
   }
+
+  .info-container {
+    background: #060b1f;
+    padding: 60px 0;
+  }
 }
 
 
