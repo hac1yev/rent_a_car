@@ -1,5 +1,5 @@
 import React from 'react'
-import rentit from '../../assets/images/rentit.svg'
+import rentit from '../../assets/images/rentit.jpg'
 
 const RentOnly = () => {
     return (

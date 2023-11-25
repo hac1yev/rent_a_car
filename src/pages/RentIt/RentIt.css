@@ -291,8 +291,13 @@
 
 @media screen and (max-width: 375px) {
   .rentup-h1, .rent-services-h1 h1, .rent-quest-h1 h1,.rent-services-card h2{
-    font-size: 16px !important;
+    font-size: 19px !important;
   }
+
+  .rentcar-container-inner {
+    padding: 0 18px;
+  }
+
 
   .rent-services-h1 h1{
     margin-bottom: 50px;
@@ -300,6 +305,10 @@
 
   .rent-services{
     padding-top: 20px;
+  }
+
+  .rent-services-cards{
+    margin-top: 20px;
   }
 
   .rentup-container{
